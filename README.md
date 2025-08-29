@@ -1,10 +1,7 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Portfolio 
+based on [dillionverma/portfolio](https://github.com/dillionverma/portfolio)
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
-
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Yueqiao borrowing this before they finish their own page. Since they might need this page for a job.
 
 # Features
 
@@ -45,3 +42,6 @@ Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
 # License
 
 Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+You allow anyone to use, copy, modify, merge, publish, distribute, sublicense, and sell your code.
+They must keep your copyright notice and the license text in copies/substantial portions.
+No warranty / no liability: your code is provided “as is”.
