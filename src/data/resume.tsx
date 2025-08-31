@@ -1,6 +1,8 @@
 // src/data/resume.ts
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { navbar, socials } from "@/config/site";
+
 
 export const DATA = {
   name: "Yueqiao Wang",
@@ -16,7 +18,7 @@ export const DATA = {
   avatarUrl: "/me.png",
 
   skills: [
-    "Chinese","English","C", "C++", "Assembly", "Verilog", "RISC-V",
+    "Chinese", "English", "C", "C++", "Assembly", "Verilog", "RISC-V",
     "Linux", "Git", "Docker",
     "Python", "MATLAB/Simulink",
     "Java", "JavaScript", "TypeScript", "Vue", "Node.js",
@@ -83,34 +85,8 @@ export const DATA = {
     ]
   },
 
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
-  ],
-
-  contact: {
-    email: "career@wic.monster",
-    tel: "+1 (812) 223-2167",
-    social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/WillWYQ",
-        icon: Icons.github,
-        navbar: true,
-      },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/yueqiaowang/",
-        icon: Icons.linkedin,
-        navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "mailto:career@wic.monster",
-        navbar: false,
-      },
-    },
-  },
+  navbar,
+  contact: { /* … */ social: socials },
 
   work: [
     {
@@ -155,7 +131,7 @@ export const DATA = {
       badges: ["Teaching"],
       location: "Terre Haute, IN",
       title: "Embedded Systems Development — Teaching Assistant",
-      logoUrl: "/rhit.png",
+      logoUrl: "/rhitece.png",
       start: "Nov 2024",
       end: "Mar 2025",
       description:
@@ -167,7 +143,7 @@ export const DATA = {
       badges: ["Teaching"],
       location: "Terre Haute, IN",
       title: "Direct Current Circuits — Lab Assistant",
-      logoUrl: "/rhit.png",
+      logoUrl: "/rhitece.png",
       start: "Mar 2024",
       end: "May 2024",
       description:

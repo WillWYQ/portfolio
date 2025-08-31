@@ -1,4 +1,3 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -6,6 +5,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { socials, site } from "@/config/site";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -167,22 +167,19 @@ export default function Page() {
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.email.url}
-                  className="text-blue-500 hover:underline"
-                >
+                <Link href={socials.Email.url} className="text-blue-500 hover:underline">
                   with a direct email
-                </Link>{" "}
+                </Link>
                 and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
         </div>
-      </section>
+      </section >
 
       <footer><center><small>Template by <a href="https://github.com/dillionverma/portfolio">Dillion Verma</a> (MIT) ·
         Code MIT · Content © 2025 Yueqiao Wang</small></center>
       </footer>
-    </main>
+    </main >
   );
 }
