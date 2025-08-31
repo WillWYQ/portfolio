@@ -21,15 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 使用 Node 运行时（如需指定版本可加 node-version: 20）
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'pnpm'
 
-      - name: Enable corepack (pnpm)
-        run: corepack enable
+      # 关键：安装 pnpm（用官方 action，最省心）
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -37,9 +39,8 @@ jobs:
       - name: Build & Export static site
         run: pnpm build && pnpm export
 
-      # 确保包含自定义域和 nojekyll（如果你放在 public，就会被导出到 out/）
-      # 如果没放到 public，也可以在这里“再保险”：
-      - name: Add CNAME and .nojekyll (safety)
+      # （保险）确保 CNAME / .nojekyll 在 out/ 里
+      - name: Add CNAME and .nojekyll
         run: |
           echo "career.wic.monster" > out/CNAME
           touch out/.nojekyll
