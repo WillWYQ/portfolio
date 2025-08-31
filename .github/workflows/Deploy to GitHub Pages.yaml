@@ -49,7 +49,7 @@ jobs:
 
       # 5) 构建 & 导出静态站点（Next.js）
       - name: Build & Export static site
-        run: pnpm build && pnpm export
+        run: pnpm build
 
       # 6) 保险：把 CNAME 和 .nojekyll 放进 out/
       - name: Add CNAME and .nojekyll
