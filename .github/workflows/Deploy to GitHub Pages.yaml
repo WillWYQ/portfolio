@@ -21,30 +21,43 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      # 关键：安装 pnpm（用官方 action，最省心）
+      # 1) 安装 pnpm（关键修复点）
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      # 2) 安装 Node，并让缓存策略识别 pnpm（可选但推荐）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
+      # 3) 打个版本号，确认 pnpm 已可用（调试用）
+      - name: Check pnpm
+        run: pnpm -v
+
+      # 4) 装依赖（有 lock 就用 --frozen-lockfile；没有就普通装）
+      - name: Install dependencies
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
+
+      # 5) 构建 & 导出静态站点（Next.js）
       - name: Build & Export static site
         run: pnpm build && pnpm export
 
-      # （保险）确保 CNAME / .nojekyll 在 out/ 里
+      # 6) 保险：把 CNAME 和 .nojekyll 放进 out/
       - name: Add CNAME and .nojekyll
         run: |
           echo "career.wic.monster" > out/CNAME
           touch out/.nojekyll
 
+      # 7) 上传制品给 Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
