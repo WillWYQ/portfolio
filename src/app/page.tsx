@@ -190,7 +190,7 @@ export default function Page() {
         <div className="text-center mx-auto w-full max-w-4xl space-y-4 py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-share-tech-mono">
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
