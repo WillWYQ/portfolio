@@ -19,7 +19,7 @@ const BLUR_FADE_DELAY = 0.04;
 type RolesMap = Record<string, { label: string; skills: string[] }>;
 type CategoriesMap = Record<string, string[]>;
 
-function dedupe<T>(arr: T[] = []): T[] {
+function dedupe(arr: readonly string[] = []): string[] {
   return Array.from(new Set(arr));
 }
 
@@ -232,18 +232,25 @@ function SkillsSection() {
 
   // —— 角色画像分支 —— //
   const [selectedRole, setSelectedRole] = useState<"all" | string>("all");
-  const roleEntries = useMemo(() => (roles ? Object.entries(roles) : []), [roles]);
-  const roleVisibleSkills = useMemo(() => {
-    if (selectedRole === "all") return dedupe((DATA as any).skills);
+  const roleEntries = useMemo<[string, { label: string; skills: string[] }][]>(
+    () => (roles ? Object.entries(roles) : []),
+    [roles]
+  );
+  const roleVisibleSkills = useMemo<string[]>(() => {
+    if (selectedRole === "all") return dedupe((DATA as any).skills as string[]);
     const list = roles?.[selectedRole]?.skills ?? [];
     return dedupe(list);
   }, [selectedRole, roles]);
 
+
   // —— 分类分支（回退） —— //
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const categoryKeys = useMemo(() => (categorized ? Object.keys(categorized) : []), [categorized]);
-  const categoryVisibleSkills = useMemo(() => {
-    if (selectedCategory === "all") return dedupe((DATA as any).skills);
+  const categoryKeys = useMemo<string[]>(
+    () => (categorized ? Object.keys(categorized) : []),
+    [categorized]
+  );
+  const categoryVisibleSkills = useMemo<string[]>(() => {
+    if (selectedCategory === "all") return dedupe((DATA as any).skills as string[]);
     const list = categorized?.[selectedCategory] ?? [];
     return dedupe(list);
   }, [selectedCategory, categorized]);
@@ -265,11 +272,10 @@ function SkillsSection() {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedRole("all")}
-                className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                  selectedRole === "all"
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                }`}
+                className={`px-3 py-1.5 text-sm rounded-full transition-colors ${selectedRole === "all"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
               >
                 All
               </button>
@@ -278,11 +284,10 @@ function SkillsSection() {
                 <button
                   key={key}
                   onClick={() => setSelectedRole(key)}
-                  className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                    selectedRole === key
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
+                  className={`px-3 py-1.5 text-sm rounded-full transition-colors ${selectedRole === key
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
                   aria-label={role.label}
                   title={role.label}
                 >
@@ -307,7 +312,7 @@ function SkillsSection() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              （回退）选择分类查看技能 / Fallback to categories.
+              Fallback to categories.
             </p>
           </BlurFade>
 
@@ -315,11 +320,10 @@ function SkillsSection() {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedCategory("all")}
-                className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                  selectedCategory === "all"
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                }`}
+                className={`px-3 py-1.5 text-sm rounded-full transition-colors ${selectedCategory === "all"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
               >
                 All
               </button>
@@ -328,11 +332,10 @@ function SkillsSection() {
                 <button
                   key={key}
                   onClick={() => setSelectedCategory(key)}
-                  className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                    selectedCategory === key
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
+                  className={`px-3 py-1.5 text-sm rounded-full transition-colors ${selectedCategory === key
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
                   title={key}
                 >
                   {key}
@@ -348,7 +351,7 @@ function SkillsSection() {
   }
 
   // 最后回退：仅展示全部 skills（同样折叠/滚动）
-  const allSkills = dedupe((DATA as any).skills);
+  const allSkills: string[] = dedupe((DATA as any).skills as string[]);
   return (
     <section id="skills">
       <div className="mx-auto w-full max-w-4xl space-y-4">
@@ -370,7 +373,7 @@ function SkillsSection() {
 function CollapsibleBadges({ skills }: { skills: string[] }) {
   // 折叠/展开的高度设定（更“松弛”）
   const COLLAPSED_MAX_H_CLASS = "max-h-64 md:max-h-72";     // 折叠高度更宽松 ≈ 12–14 行
-  const EXPANDED_MAX_H_CLASS  = "max-h-[70vh]";             // 展开后限制到 70vh，避免撑满页面
+  const EXPANDED_MAX_H_CLASS = "max-h-[70vh]";             // 展开后限制到 70vh，避免撑满页面
 
   const [collapsed, setCollapsed] = useState(true);
   const containerRef = useRef<HTMLDivElement | null>(null);
