@@ -5,11 +5,25 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import { Patrick_Hand, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import { Pointer } from "@/components/magicui/pointer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontPatrick = Patrick_Hand({
+  subsets: ["latin"],
+  variable: "--font-patrick",
+  weight: "400",
+});
+
+const fontShareTechMono = Share_Tech_Mono({
+  subsets: ["latin"],
+  variable: "--font-share-tech-mono",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -73,7 +87,9 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased mx-auto py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl",
-          fontSans.variable
+          fontSans.variable,
+          fontPatrick.variable,
+          fontShareTechMono.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
@@ -82,6 +98,9 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        <Pointer>
+          <div className="text-2xl">👆</div>
+        </Pointer>
       </body>
     </html>
   );

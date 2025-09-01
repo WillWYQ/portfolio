@@ -13,20 +13,10 @@ export const DATA = {
   description:
     "Computer Engineering @ RHIT ('26). OS & Computer Architecture • Embedded/Robotics • Web.",
   summary:
-    "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on embedded/robotics. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or say hi below.",
-
+    "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
 
-  skills: [
-    "Chinese", "English", "C", "C++", "Assembly", "Verilog", "RISC-V",
-    "Linux", "Git", "Docker",
-    "Python", "MATLAB/Simulink",
-    "Java", "JavaScript", "TypeScript", "Vue", "Node.js",
-    "FPGA", "Quartus", "ModelSim",
-    "uPIMulator", "gem5", "Ramulator", "ZSim",
-    "Firebase", "MySQL", "MongoDB",
-    "TailwindCSS", "shadcn/ui"
-  ],
+  skills: ["3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "NextCloud", "Nginx", "Node.js", "OAuth", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "Scheduling", "Scientific Computing", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPS", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",],
 
   categorizedSkills: {
     Language: ["Native Chinese", "Professional English"],
@@ -85,6 +75,83 @@ export const DATA = {
     ]
   },
 
+  roles: {
+    SystemsKernelEngineer: {
+      label: "Systems / Kernel",
+      skills: [
+        "C", "C++", "Assembly", "RISC-V", "QEMU", "OpenSBI", "GDB", "Make",
+        "Linux", "Unix System Operation", "Interrupts", "System Calls",
+        "Scheduling", "Virtual Memory", "File System",
+        "Concurrency & Synchronization", "GCC", "CMake", "bash", "shell"
+      ]
+    },
+    ComputerArchitectureRTL: {
+      label: "Computer Architecture / RTL",
+      skills: [
+        "Verilog", "RISC-V", "Micro Architecture", "Instruction Set Architecture",
+        "FPGA", "RTL Simulation", "ModelSim", "Quartus Prime",
+        "gem5", "Ramulator", "ZSim", "uPIMulator",
+        "Performance & Power Analysis", "Research & Experimental Design"
+      ]
+    },
+    FPGAEngineer: {
+      label: "FPGA / Digital Design",
+      skills: [
+        "Verilog", "FPGA", "Quartus Prime", "ModelSim",
+        "Finite State Machines (FSM)", "Timing Closure Basics",
+        "PCB Layout", "Cadence OrCAD", "PSpice", "Signal Integrity"
+      ]
+    },
+    EmbeddedFirmwareEngineer: {
+      label: "Embedded / Firmware",
+      skills: [
+        "C", "Embedded C Development", "MSP432", "ESP32", "Raspberry Pi", "Arduino", "micro:bit",
+        "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control",
+        "I2C", "UART", "BLE", "Wi-Fi", "ADC", "DAC", "Low-Power Embedded Design", "Robotics"
+      ]
+    },
+    HPCPerformanceEngineer: {
+      label: "HPC / Performance",
+      skills: [
+        "Linux", "Python", "MATLAB & Simulink",
+        "Omniperf", "Performance Metrics", "Roofline Analysis", "Analytical Modeling",
+        "Multi-GPU", "MFMA", "gem5", "uPIMulator", "Bash Automation", "Data Analysis"
+      ]
+    },
+    RoboticsMechatronics: {
+      label: "Robotics / Mechatronics",
+      skills: [
+        "Raspberry Pi", "ESP32", "Arduino", "Sensor and Actuator Integration",
+        "Real-Time Event Control", "Robotics", "SolidWorks", "3D Modeling", "3D Printing"
+      ]
+    },
+    FullStackWebEngineer: {
+      label: "Full-Stack Web",
+      skills: [
+        "JavaScript", "TypeScript", "HTML", "CSS", "Vue", "Node.js", "Express.js",
+        "TailwindCSS", "shadcn/ui", "Firebase", "MySQL", "MariaDB", "MongoDB",
+        "REST API", "Async/Await", "OAuth", "SSL/TLS", "WebSockets", "Figma"
+      ]
+    },
+    DevOpsInfra: {
+      label: "DevOps / Infra",
+      skills: [
+        "Linux", "Docker", "Git", "GitHub", "GitLab",
+        "Nginx", "Apache", "VPS", "Server Hardening",
+        "AWS", "GCP", "Azure", "Debian", "Ubuntu"
+      ]
+    },
+    DataMLEngineer: {
+      label: "Data / ML",
+      skills: [
+        "Python", "Transformer-Based Neural Networks (TNN)", "Attention Mechanisms",
+        "Multilayer Perceptron", "AI Model Training & Inference",
+        "Running AI Workloads on HPC Systems", "Data Analysis"
+      ]
+    },
+
+  },
+
   navbar,
   contact: { /* … */ social: socials },
 
@@ -92,7 +159,7 @@ export const DATA = {
     {
       company: "MERL (Multidisciplinary Educational Robotics Lab), RHIT",
       href: "https://www.rose-hulman.edu/",
-      badges: ["Research"],
+      badges: ["Research", "Leadership"],
       location: "Terre Haute, IN",
       title: "Undergraduate Researcher",
       logoUrl: "/merl.png",
@@ -104,7 +171,7 @@ export const DATA = {
     {
       company: "Maker Lab (RHIT)",
       href: "https://www.rose-hulman.edu/",
-      badges: [],
+      badges: ["Leadership", "Documentation"],
       location: "Terre Haute, IN",
       title: "Archivist",
       logoUrl: "/makerlab.png",
@@ -116,7 +183,7 @@ export const DATA = {
     {
       company: "International Student Association (RHIT)",
       href: "https://www.rose-hulman.edu/",
-      badges: ["Leadership"],
+      badges: ["Leadership", "Finances"],
       location: "Terre Haute, IN",
       title: "Treasury",
       logoUrl: "/isa.png",
@@ -171,6 +238,53 @@ export const DATA = {
       logoUrl: "/rhit.png",
       start: "2022",
       end: "2026",
+      gpa: "3.28",
+      honors: "Dean’s List *4 | Rose-Hulman Merit Scholar ",
+      relatedCourses: {
+        "Signals & Systems": [
+          "Signal Processing",
+          "Continuous-Time Signals & Systems"
+        ],
+        "Circuit Theory": [
+          "Direct Current Circuits",
+          "Alternating Current Circuits",
+          "Circuit and System"
+        ],
+        "Electronic Devices": [
+          "Electronic Device Modeling"
+        ],
+        "Digital Systems": [
+          "Digital System",
+          "High-Speed Digital Design"
+        ],
+        "Embedded Systems": [
+          "Embedded Systems"
+        ],
+        "Computer Systems": [
+          "Operating Systems",
+          "Computer Architecture I",
+          "Computer Architecture II",
+          "Advanced Computer Architecture"
+        ],
+        "Networking & Communication": [
+          "Communication Networks"
+        ],
+        "Software Development": [
+          "Object-Oriented Software Development",
+          "Web Development"
+        ],
+        "Algorithms & Programming": [
+          "Competitive Programming",
+          "Data structure & Algorithm Analysis"
+        ],
+        "High Performance Computing": [
+          "High Performance Computing & AI"
+        ],
+        "Others": [
+          "Principles of Design",
+          "Technical Communication"
+        ]
+      }
     },
   ],
 
@@ -184,7 +298,7 @@ export const DATA = {
         "Boot/bring-up, trap/exception paths, timer-driven preemption, and PLIC external interrupts on RISC-V; integrates OpenSBI and verified on QEMU with GDB; authored teaching docs and labs.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
       links: [],
-      image: "",
+      image: "/MorpheOS.png",
       video: "",
     },
     {
@@ -196,7 +310,7 @@ export const DATA = {
         "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
       technologies: ["uPIMulator", "Python", "Bash", "Linux"],
       links: [],
-      image: "",
+      image: "/pimdpu.png",
       video: "",
     },
     {
@@ -207,8 +321,8 @@ export const DATA = {
       description:
         "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
-      links: [],
-      image: "",
+      links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
+      image: "/merl.png",
       video: "",
     },
     {

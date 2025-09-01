@@ -21,6 +21,8 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        patrick: ["Patrick Hand", "cursive"],
+        "share-tech-mono": ["var(--font-share-tech-mono)", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
