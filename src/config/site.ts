@@ -1,7 +1,7 @@
 // src/config/site.ts
 export const site = {
   name: "Yueqiao Wang",
-  url: "https://career.wic.monster",
+  url: "https://career.yueqiao.dev",
   email: "career@wic.monster",
 } as const;
 
