@@ -92,14 +92,14 @@ export default function RootLayout({
           fontShareTechMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider>
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
         <Pointer>
-          <div className="text-2xl">👆</div>
+          <div className="text-2xl max-sm:hidden">👆</div>
         </Pointer>
       </body>
     </html>
