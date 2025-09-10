@@ -33,19 +33,30 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  // Use existing assets to avoid 404s
   icons: {
-    icon: [
-      { url: "/favicon-16.png",  sizes: "16x16",  type: "image/png" },
-      { url: "/favicon-32.png",  sizes: "32x32",  type: "image/png" },
-      { url: "/favicon-48.png",  sizes: "48x48",  type: "image/png" },
-      { url: "/favicon-64.png",  sizes: "64x64",  type: "image/png" },
-      { url: "/favicon-128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicon-256.png", sizes: "256x256", type: "image/png" },
-      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon-180.png",
+    icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "Yueqiao Wang",
+    "Portfolio",
+    "Computer Engineering",
+    "RISC-V",
+    "Embedded",
+    "Robotics",
+    "Web Development",
+    "Rose-Hulman Institute of Technology",
+    "Computer Science",
+    "Computer Architecture",
+    "Operating System",
+
+  ],
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
+  publisher: DATA.name,
   // manifest: "/manifest.webmanifest",
   openGraph: {
     title: `${DATA.name}`,
@@ -54,6 +65,14 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og?title=Yueqiao%20Wang",
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name}`,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -69,6 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: ["/og?title=Yueqiao%20Wang"],
   },
   verification: {
     google: "",

@@ -5,7 +5,7 @@ import type { Social } from "./types";
 export const socials = {
   GitHub:   { name: "GitHub",   url: "https://github.com/WillWYQ",              navbar: true,  icon: Github },
   LinkedIn: { name: "LinkedIn", url: "https://www.linkedin.com/in/yueqiaowang/", navbar: true,  icon: Linkedin },
-  Website:  { name: "Website",  url: "https://career.wic.monster",              navbar: true,  icon: Globe },
+  Website:  { name: "Website",  url: "https://career.yueqiao.dev",              navbar: true,  icon: Globe },
   Email:    { name: "Send Email", url: "mailto:career@wic.monster",             navbar: false }, // 不展示在 dock
 } as const satisfies Record<string, Social>;
 

@@ -7,7 +7,7 @@ import { navbar, socials } from "@/config/site";
 export const DATA = {
   name: "Yueqiao Wang",
   initials: "YW",
-  url: "https://en.wic.monster",
+  url: "https://career.yueqiao.dev",
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",
   description:
@@ -15,6 +15,7 @@ export const DATA = {
   summary:
     "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
+  avatarStatement: "Explore • build • share",
 
   skills: ["3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "NextCloud", "Nginx", "Node.js", "OAuth", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "Scheduling", "Scientific Computing", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPS", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",],
 
@@ -296,6 +297,8 @@ export const DATA = {
       active: true,
       description:
         "Boot/bring-up, trap/exception paths, timer-driven preemption, and PLIC external interrupts on RISC-V; integrates OpenSBI and verified on QEMU with GDB; authored teaching docs and labs.",
+      longDescription:
+        "MorpheOS is a teaching-focused microkernel for RISC-V. It covers early boot/bring-up, trap/exception handling, timer-driven preemption, and PLIC external interrupts. The kernel integrates OpenSBI and is validated on QEMU with GDB-based bring-up and debugging. I also authored hands-on documentation and lab materials to guide students through kernel subsystems and debugging workflows.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
       links: [],
       image: "/MorpheOS.png",
@@ -308,6 +311,8 @@ export const DATA = {
       active: false,
       description:
         "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
+      longDescription:
+        "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
       technologies: ["uPIMulator", "Python", "Bash", "Linux"],
       links: [],
       image: "/pimdpu.png",
@@ -320,6 +325,8 @@ export const DATA = {
       active: true,
       description:
         "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
+      longDescription:
+        "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
       image: "/merl.png",
@@ -332,6 +339,8 @@ export const DATA = {
       active: true,
       description:
         "Mobile-friendly web app for reporting/viewing real-time parking availability on campus; UI design, implementation, user feedback loop.",
+      longDescription:
+        "ParkSmart is a mobile-first web app for reporting and viewing campus parking availability in real time. I iterated on UI/UX, implemented the frontend, and ran a user feedback loop to refine reporting flows, map overlays, and moderation. Focus on low-friction interactions and quick glanceability.",
       technologies: ["JavaScript", "HTML", "CSS", "Firebase"],
       links: [],
       image: "",
@@ -344,6 +353,8 @@ export const DATA = {
       active: false,
       description:
         "Event management mini-app built with Vue + WeChat platform; improved registration efficiency for 200+ users.",
+      longDescription:
+        "A WeChat mini program built with Vue and cloud functions for event registration, scheduling, and announcements. Streamlined registration and roster management for 200+ users with simple flows and admin tooling.",
       technologies: ["Vue", "Cloud Functions", "WeChat Mini Program"],
       links: [],
       image: "",
@@ -356,6 +367,8 @@ export const DATA = {
       active: false,
       description:
         "Two-person chat using TCP sockets in C; custom reliability protocol over UDP; focused on error handling and robustness.",
+      longDescription:
+        "Built a simple chat system in C using TCP for reliable streams and an experimental UDP layer with a custom reliability protocol (sequence numbers, retransmission, and ACKs). Emphasis on error handling, timeouts, and robustness under lossy conditions.",
       technologies: ["C", "TCP/UDP", "Sockets"],
       links: [],
       image: "",
@@ -368,8 +381,10 @@ export const DATA = {
       active: false,
       description:
         "MSP432-based automated plant care; low-power modes, interrupts, DAC, SPI, RTC, NeoPixel, and instrumentation.",
+      longDescription:
+        "Embedded plant care controller on MSP432: sensor sampling and control loops with low-power modes and interrupts; peripherals including DAC, SPI, RTC, and NeoPixel for feedback. Instrumented power/perf behavior and tuned duty cycles for longevity.",
       technologies: ["MSP432", "Embedded C", "SPI", "RTC"],
-      links: [],
+      links: [{ type: "Website", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
       image: "",
       video: "",
     },
@@ -380,6 +395,8 @@ export const DATA = {
       active: false,
       description:
         "Designed datapath/control; Verilog implementation, ModelSim simulation, tests/benchmarks, and simple compiler pipeline.",
+      longDescription:
+        "Designed a multi-cycle CPU (RISC-V-like) including datapath and control, implemented in Verilog and verified in ModelSim with tests/benchmarks. Built a minimal compiler/assembler pipeline to run small programs and diagnose hazards.",
       technologies: ["Verilog", "ModelSim", "Computer Architecture"],
       links: [],
       image: "",
@@ -392,6 +409,8 @@ export const DATA = {
       active: false,
       description:
         "Automated power supply/load control and data collection via MATLAB/Simulink, Python, PyVISA, and Raspberry Pi; ~30% efficiency gain.",
+      longDescription:
+        "Automated cell test workflows: instrument control and data capture via MATLAB/Simulink, Python, and PyVISA with Raspberry Pi integration. Reduced manual overhead and improved throughput by ~30%, with scripts for repeatable experiments and safety checks.",
       technologies: ["MATLAB", "Simulink", "Python", "PyVISA", "Raspberry Pi"],
       links: [],
       image: "",
@@ -404,6 +423,8 @@ export const DATA = {
       active: false,
       description:
         "Altera DE2 design with combinational/sequential logic, SRAM, and FSM for real-time gameplay.",
+      longDescription:
+        "An FPGA rhythm game on Altera DE2 using combinational and sequential logic with SRAM and a central FSM for real-time gameplay and scoring.",
       technologies: ["FPGA", "Verilog", "Quartus", "SRAM", "FSM"],
       links: [],
       image: "",
@@ -416,6 +437,8 @@ export const DATA = {
       active: false,
       description:
         "Java-based evolutionary simulator with real-time GUI visualization; OOP design and parallelization.",
+      longDescription:
+        "Java evolutionary simulator with real-time Swing GUI. Emphasized clean OOP design, fitness/selection operators, and optional parallelization to accelerate generations.",
       technologies: ["Java", "Swing/GUI", "OOP"],
       links: [],
       image: "",
@@ -428,6 +451,8 @@ export const DATA = {
       active: true,
       description:
         "Self-hosted WordPress + Nextcloud + mail + file distribution; hardened and optimized on Debian/Apache/PHP/MySQL.",
+      longDescription:
+        "Self-hosted WordPress, Nextcloud, mail, and file services on Debian/Apache/PHP/MySQL. Hardened and tuned for reliability and performance with backups and monitoring; custom domain and TLS.",
       technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud"],
       links: [{ type: "Website", href: "https://career.wic.monster/", icon: <Icons.globe className="size-3" /> }],
       image: "",

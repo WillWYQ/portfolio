@@ -1,8 +1,8 @@
 // src/config/site.ts
 export const site = {
   name: "Yueqiao Wang",
-  url: "https://career.wic.monster",
-  email: "career@wic.monster",
+  url: "https://career.yueqiao.dev",
+  email: "career@yueqiao.dev",
 } as const;
 
 // 统一从这里 re-export，外部只引入一个模块就够了

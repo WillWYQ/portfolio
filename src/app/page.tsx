@@ -3,7 +3,9 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { CoolMode } from "@/components/magicui/cool-mode";
+import { SpinningText } from "@/components/magicui/spinning-text";
 import { ProjectCard } from "@/components/project-card";
+import { ProjectModal } from "@/components/project-modal";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -27,8 +29,35 @@ function dedupe(arr: readonly string[] = []): string[] {
 //           Page
 // ==============================
 export default function Page() {
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: DATA.name,
+            url: DATA.url,
+            description: DATA.description,
+            sameAs: [
+              socials.GitHub.url,
+              socials.LinkedIn.url,
+              socials.Website.url,
+            ],
+            author: {
+              "@type": "Person",
+              name: DATA.name,
+              url: DATA.url,
+            },
+          }),
+        }}
+      />
       {/* HERO */}
       <section id="hero">
         <div className="mx-auto w-full max-w-4xl space-y-8">
@@ -48,10 +77,17 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <CoolMode>
-                <Avatar className="size-28 border">
-                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                  <AvatarFallback>{DATA.initials}</AvatarFallback>
-                </Avatar>
+                <SpinningText
+                  text={DATA.avatarStatement}
+                  radius={100}
+                  speed={14}
+                  className="fill-foreground text-foreground/70"
+                >
+                  <Avatar className="size-28 border">
+                    <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                    <AvatarFallback>{DATA.initials}</AvatarFallback>
+                  </Avatar>
+                </SpinningText>
               </CoolMode>
             </BlurFade>
           </div>
@@ -178,10 +214,19 @@ export default function Page() {
                   image={project.image}
                   video={project.video}
                   links={project.links}
+                  onClick={() => {
+                    setSelectedProject(project);
+                    setOpen(true);
+                  }}
                 />
               </BlurFade>
             ))}
           </div>
+          <ProjectModal
+            project={selectedProject}
+            open={open}
+            onClose={() => setOpen(false)}
+          />
         </div>
       </section>
 
@@ -207,16 +252,20 @@ export default function Page() {
       </section>
 
       {/* FOOTER */}
-      <footer>
-        <center>
-          <small>
-            Template by{" "}
-            <a href="https://github.com/dillionverma/portfolio" target="_blank" rel="noreferrer">
-              Dillion Verma
-            </a>{" "}
-            (MIT) · Code MIT · Content © {new Date().getFullYear()} {DATA.name}
-          </small>
-        </center>
+      <footer className="py-6 text-center text-sm text-gray-500">
+        <p>
+          Template by{" "}
+          <a
+            href="https://github.com/dillionverma/portfolio"
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-gray-700"
+          >
+            Dillion Verma
+          </a>{" "}
+          · Code MIT
+        </p>
+        <p>Modified & Content © {new Date().getFullYear()} {DATA.name}</p>
       </footer>
     </main>
   );
