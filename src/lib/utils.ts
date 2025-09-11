@@ -49,9 +49,30 @@ export function importImagesFromFolder(folderName: string): string[] {
       '/MorpheOS/MorpheOS.png',
       '/MorpheOS/MorpheOSQemu.png'
     ],
+    // OAOfirmware 项目图片集合（按文件名排序）
     'OAOfirmware': [
-      '/OAOfirmware/OAOfirmware.png'
-    ]
+      '/OAOfirmware/Autonomous Vehicle Dashboard.png',
+      '/OAOfirmware/IMG_0077.png',
+      '/OAOfirmware/IMG_0755.png',
+      '/OAOfirmware/OAOfirmware.png',
+    ],
+    // MERL（教育机器人）图片集合
+    'MERL': [
+      '/MERL/logo.png',
+      '/MERL/IMG_1021.png',
+      '/MERL/IMG_1041.png',
+      '/MERL/IMG_1043.png',
+      '/MERL/IMG_1058.png',
+      '/MERL/IMG_1104.png',
+      '/MERL/IMG_1105.png',
+      '/MERL/IMG_4040.png',
+    ],
+    // LazyPlant 项目图片集合
+    'LazyPlant': [
+      '/LazyPlant/IMG_8267.png',
+      '/LazyPlant/IMG_8352.png',
+      '/LazyPlant/IMG_8353.png',
+    ],
   };
   
   // 如果在映射中找到对应文件夹，返回预定义的图片路径数组

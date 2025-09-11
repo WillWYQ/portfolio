@@ -163,7 +163,7 @@ export const DATA = {
       badges: ["Research", "Leadership"],
       location: "Terre Haute, IN",
       title: "Undergraduate Researcher",
-      logoUrl: "/merl.png",
+      logoUrl: "/MERL/logo.png",
       start: "May 2024",
       end: "Present",
       description:
@@ -330,7 +330,8 @@ export const DATA = {
         "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
-      imageFolder: "merl",
+      // images: ["/MERL/logo.png"],
+      imageFolder: "MERL",
       video: "",
     },
     {
@@ -341,7 +342,10 @@ export const DATA = {
       longDescription:
         "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing. Practiced embedded C++, I²C drivers, Wi-Fi networking, CSV logging, and Git-based code review workflow.",
       technologies: ["ESP32", "C++", "PID Control", "WebSocket", "LittleFS", "I²C"],
+      // 指定文件夹并提供多图以保证正确加载与轮播
       imageFolder: "OAOfirmware",
+      video: "",
+      
     },
     {
       title: "ParkSmart — Campus Parking App",
@@ -395,7 +399,12 @@ export const DATA = {
         "Built an embedded system on a TI MSP432 to automate plant care. Integrated soil moisture, light, and temperature sensors; controlled pump, grow light, and fan via configurable profiles. Wrote drivers for NeoPixel LEDs and sensor interfacing, using interrupts and ADC sampling. Implemented real-time scheduling with the microcontroller RTC. Led a 2-person team, collaborating on mechanical and hardware integration. Practiced low-power firmware design, SPI/UART/I²C protocols, and oscilloscope-based debugging.",
       technologies: ["MSP432", "Embedded C", "SPI", "I²C", "RTC"],
       links: [{ type: "GitHub", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
-      image: "",
+      imageFolder: "LazyPlant",
+      images: [
+        "/LazyPlant/IMG_8267.png",
+        "/LazyPlant/IMG_8352.png",
+        "/LazyPlant/IMG_8353.png",
+      ],
       video: "",
     },
     {

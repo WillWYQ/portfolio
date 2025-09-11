@@ -169,7 +169,7 @@ export function ProjectModal({
                       loop
                       muted
                       playsInline
-                      className="h-full w-full object-cover object-top"
+                      className="h-full w-full object-contain bg-black/5 dark:bg-white/5"
                     />
                   ) : (
                     <Image
@@ -178,7 +178,7 @@ export function ProjectModal({
                       width={1200}
                       height={640}
                       sizes="(max-width: 768px) 100vw, 800px"
-                      className="h-full w-full object-cover object-top"
+                      className="h-full w-full object-contain bg-black/5 dark:bg-white/5"
                     />
                   )}
                 </div>

@@ -163,7 +163,7 @@ export const DATA = {
       badges: ["Research", "Leadership"],
       location: "Terre Haute, IN",
       title: "Undergraduate Researcher",
-      logoUrl: "/merl.png",
+      logoUrl: "/MERL/logo.png",
       start: "May 2024",
       end: "Present",
       description:
@@ -301,7 +301,7 @@ export const DATA = {
         "MorpheOS is a teaching-focused microkernel for RISC-V. It covers early boot/bring-up, trap/exception handling, timer-driven preemption, and PLIC external interrupts. The kernel integrates OpenSBI and is validated on QEMU with GDB-based bring-up and debugging. I also authored hands-on documentation and lab materials to guide students through kernel subsystems and debugging workflows.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
       links: [],
-      image: "/MorpheOS.png",
+      image: "/MorpheOS/MorpheOS.png",
       video: "",
     },
     {
@@ -329,7 +329,7 @@ export const DATA = {
         "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
-      image: "/merl.png",
+      image: "/MERL/logo.png",
       video: "",
     },
     {
