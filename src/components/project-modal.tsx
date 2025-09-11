@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import { importImagesFromFolder } from "@/lib/utils";
 
 type ProjectLink = { icon: React.ReactNode; type: string; href: string };
 
@@ -18,6 +19,7 @@ export interface ProjectData {
   technologies?: readonly string[];
   image?: string;
   images?: readonly string[];
+  imageFolder?: string;
   video?: string;
   links?: readonly ProjectLink[];
 }
@@ -33,6 +35,8 @@ export function ProjectModal({
 }) {
   const [mounted, setMounted] = useState(false);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+  const [autoPlay, setAutoPlay] = useState(true);
+  const autoPlayInterval = useRef<NodeJS.Timeout | null>(null);
 
   // Close on Escape
   useEffect(() => {
@@ -65,9 +69,18 @@ export function ProjectModal({
   // Build slides from video + images (multi-image support)
   const slides: Array<{ type: "video" | "image"; src: string }> = [];
   if (project?.video) slides.push({ type: "video", src: project.video });
-  const imgs = (project?.images && project.images.length > 0)
-    ? project.images
-    : (project?.image ? [project.image] : []);
+  
+  // 优先使用images数组，然后是imageFolder，最后是单个image
+  let imgs: string[] = [];
+  if (project?.images && project.images.length > 0) {
+    imgs = [...project.images];
+  } else if (project?.imageFolder) {
+    // 使用工具函数从文件夹导入图片
+    imgs = importImagesFromFolder(project.imageFolder);
+  } else if (project?.image) {
+    imgs = [project.image];
+  }
+  
   for (const src of imgs) slides.push({ type: "image", src });
 
   const [index, setIndex] = useState(0);
@@ -75,16 +88,42 @@ export function ProjectModal({
   const prev = () => setIndex((i) => (i - 1 + count) % count);
   const next = () => setIndex((i) => (i + 1) % count);
 
+  // Auto-play functionality
+  useEffect(() => {
+    if (!open || count <= 1) return;
+
+    if (autoPlay) {
+      autoPlayInterval.current = setInterval(() => {
+        setIndex((i) => (i + 1) % count);
+      }, 3000); // 每3秒切换一次
+    }
+
+    return () => {
+      if (autoPlayInterval.current) {
+        clearInterval(autoPlayInterval.current);
+      }
+    };
+  }, [open, count, autoPlay]);
+
   // Arrow keys navigate slides
   useEffect(() => {
     if (!open || count <= 1) return;
     const onKey = (e: KeyboardEvent) => {
+      // 按箭头键时暂停自动播放
+      setAutoPlay(false);
+      
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, count]);
+
+  // 点击导航按钮时暂停自动播放
+  const handleManualNavigation = (navigate: () => void) => {
+    setAutoPlay(false);
+    navigate();
+  };
 
   if (!open || !project) return null;
 
@@ -94,6 +133,7 @@ export function ProjectModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="project-modal-title"
+      onMouseMove={() => setAutoPlay(true)}
     >
       {/* Backdrop with frosted blur */}
       <div
@@ -101,7 +141,7 @@ export function ProjectModal({
         onClick={onClose}
       />
 
-      <MagicCard className={`relative z-10 w-full max-w-2xl max-h-[85vh] overflow-hidden flex flex-col transition-all duration-200 ease-out ${mounted ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-95"}`}>
+      <MagicCard className={`relative z-10 w-full max-w-2xl max-h-[85vh] overflow-hidden flex flex-col transition-all duration-200 ease-out ${mounted ? "opacity-100 translate-y-0 scale-100" : "opacity-100 translate-y-2 scale-95"}`}>
         <button
           type="button"
           onClick={onClose}
@@ -150,7 +190,7 @@ export function ProjectModal({
               <>
                 <button
                   type="button"
-                  onClick={prev}
+                  onClick={() => handleManualNavigation(prev)}
                   className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white hover:bg-black/60 px-2 py-1 text-sm"
                   aria-label="Previous media"
                 >
@@ -158,7 +198,7 @@ export function ProjectModal({
                 </button>
                 <button
                   type="button"
-                  onClick={next}
+                  onClick={() => handleManualNavigation(next)}
                   className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/40 text-white hover:bg-black/60 px-2 py-1 text-sm"
                   aria-label="Next media"
                 >
@@ -169,7 +209,10 @@ export function ProjectModal({
                     <button
                       key={i}
                       aria-label={`Go to media ${i + 1}`}
-                      onClick={() => setIndex(i)}
+                      onClick={() => {
+                        setAutoPlay(false);
+                        setIndex(i);
+                      }}
                       className={`h-1.5 w-1.5 rounded-full transition-colors ${i === index ? "bg-white" : "bg-white/50"}`}
                     />
                   ))}

@@ -167,7 +167,7 @@ export const DATA = {
       start: "May 2024",
       end: "Present",
       description:
-        "Researched human-interactive robotics with Arduino and Raspberry Pi controllers. Designed modular software architectures in C, JavaScript, and Python. Introduced Git branching, shared TODO tracking, calendars, and wiki systems to streamline a 6-person team. Mentored 5 new researchers, reducing onboarding time by 20%. Built full embedded systems (PCB design, soldering, CAD/SolidWorks, firmware).",
+        "Designed human-interactive robot frameworks (Arduino, Raspberry Pi), contributed code/docs, and presented milestones; improved team workflows with Git, shared TODOs, and calendars.",
     },
     {
       company: "Maker Lab (RHIT)",
@@ -191,7 +191,7 @@ export const DATA = {
       start: "Mar 2023",
       end: "Jun 2025",
       description:
-        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
+        "Handled org budgeting and finances; coordinated with campus stakeholders.",
     },
     {
       company: "RHIT ECE",
@@ -203,7 +203,7 @@ export const DATA = {
       start: "Nov 2024",
       end: "Mar 2025",
       description:
-        "Assisted students in debugging C/assembly code on microcontrollers, reinforcing interrupt handling and real-time design. Graded assignments and explained embedded programming best practices. Strengthened teaching, technical communication, and low-level debugging skills.",
+        "Supported labs on MSP432/embedded C, interrupts, timers, and real-time event control.",
     },
     {
       company: "RHIT ECE",
@@ -215,7 +215,7 @@ export const DATA = {
       start: "Mar 2024",
       end: "May 2024",
       description:
-        "Provided hands-on support in DC circuits labs, including safe use of oscilloscopes, multimeters, and power supplies. Guided students through measurement and troubleshooting exercises, ensuring understanding of circuit fundamentals.",
+        "Assisted DC circuits labs; instrumentation, measurement, troubleshooting.",
     },
     {
       company: "RHIT CSSE",
@@ -227,7 +227,7 @@ export const DATA = {
       start: "Sep 2023",
       end: "Nov 2023",
       description:
-        "Facilitated labs and supported project evaluation. Tutored students in OOP concepts, inheritance, and design patterns, while also assisting in debugging Java GUI applications. Developed skills in teaching programming and mentoring peers.",
+        "Helped students with Java OOP, data structures, testing, and tooling.",
     },
   ],
 
@@ -301,8 +301,7 @@ export const DATA = {
         "MorpheOS is a teaching-focused microkernel for RISC-V. It covers early boot/bring-up, trap/exception handling, timer-driven preemption, and PLIC external interrupts. The kernel integrates OpenSBI and is validated on QEMU with GDB-based bring-up and debugging. I also authored hands-on documentation and lab materials to guide students through kernel subsystems and debugging workflows.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
       links: [],
-      images: ["/MorpheOS/MorpheOS.png", "/MorpheOS/MorpheOSQemu.png"],
-      imageFolder: "MorpheOS",
+      image: "/MorpheOS.png",
       video: "",
     },
     {
@@ -330,18 +329,8 @@ export const DATA = {
         "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
-      imageFolder: "merl",
+      image: "/merl.png",
       video: "",
-    },
-    {
-      title: "OAO Autonomous Vehicle Firmware",
-      dates: "Mar 2025 – May 2025",
-      description:
-        "ESP32 modular firmware with PID steering, Wi-Fi telemetry, and real-time web dashboard.",
-      longDescription:
-        "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing. Practiced embedded C++, I²C drivers, Wi-Fi networking, CSV logging, and Git-based code review workflow.",
-      technologies: ["ESP32", "C++", "PID Control", "WebSocket", "LittleFS", "I²C"],
-      imageFolder: "OAOfirmware",
     },
     {
       title: "ParkSmart — Campus Parking App",
@@ -351,8 +340,9 @@ export const DATA = {
       description:
         "Mobile-friendly web app for reporting/viewing real-time parking availability on campus; UI design, implementation, user feedback loop.",
       longDescription:
-        "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption. Strengthened skills in full-stack development, requirement analysis, and stakeholder communication.",
-      technologies: ["JavaScript", "HTML", "CSS", "Firebase", "UX Design"],
+        "ParkSmart is a mobile-first web app for reporting and viewing campus parking availability in real time. I iterated on UI/UX, implemented the frontend, and ran a user feedback loop to refine reporting flows, map overlays, and moderation. Focus on low-friction interactions and quick glanceability.",
+      technologies: ["JavaScript", "HTML", "CSS", "Firebase"],
+      links: [],
       image: "",
       video: "",
     },
@@ -364,8 +354,8 @@ export const DATA = {
       description:
         "Event management mini-app built with Vue + WeChat platform; improved registration efficiency for 200+ users.",
       longDescription:
-        "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback. Enhanced skills in full-stack JavaScript (Vue, cloud functions, database management) and cross-functional communication.",
-      technologies: ["Vue.js", "WeChat Cloud", "JavaScript", "Database"],
+        "A WeChat mini program built with Vue and cloud functions for event registration, scheduling, and announcements. Streamlined registration and roster management for 200+ users with simple flows and admin tooling.",
+      technologies: ["Vue", "Cloud Functions", "WeChat Mini Program"],
       links: [],
       image: "",
       video: "",
@@ -378,8 +368,8 @@ export const DATA = {
       description:
         "Two-person chat using TCP sockets in C; custom reliability protocol over UDP; focused on error handling and robustness.",
       longDescription:
-        "Built an IP-based chat application in C supporting both TCP and UDP. Designed and implemented a custom reliable UDP messaging protocol that ensured message ordering and integrity over unreliable channels. Debugged with packet captures and refined error handling for networked systems. Collaborated in a 2-person team, sharing workload evenly; took primary responsibility for protocol design and sockets API usage. Strengthened skills in low-level network programming, custom protocol design, and debugging distributed systems.",
-      technologies: ["C", "TCP/UDP", "Sockets API", "Wireshark"],
+        "Built a simple chat system in C using TCP for reliable streams and an experimental UDP layer with a custom reliability protocol (sequence numbers, retransmission, and ACKs). Emphasis on error handling, timeouts, and robustness under lossy conditions.",
+      technologies: ["C", "TCP/UDP", "Sockets"],
       links: [],
       image: "",
       video: "",
@@ -392,9 +382,9 @@ export const DATA = {
       description:
         "MSP432-based automated plant care; low-power modes, interrupts, DAC, SPI, RTC, NeoPixel, and instrumentation.",
       longDescription:
-        "Built an embedded system on a TI MSP432 to automate plant care. Integrated soil moisture, light, and temperature sensors; controlled pump, grow light, and fan via configurable profiles. Wrote drivers for NeoPixel LEDs and sensor interfacing, using interrupts and ADC sampling. Implemented real-time scheduling with the microcontroller RTC. Led a 2-person team, collaborating on mechanical and hardware integration. Practiced low-power firmware design, SPI/UART/I²C protocols, and oscilloscope-based debugging.",
-      technologies: ["MSP432", "Embedded C", "SPI", "I²C", "RTC"],
-      links: [{ type: "GitHub", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
+        "Embedded plant care controller on MSP432: sensor sampling and control loops with low-power modes and interrupts; peripherals including DAC, SPI, RTC, and NeoPixel for feedback. Instrumented power/perf behavior and tuned duty cycles for longevity.",
+      technologies: ["MSP432", "Embedded C", "SPI", "RTC"],
+      links: [{ type: "Website", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
       image: "",
       video: "",
     },
@@ -406,8 +396,8 @@ export const DATA = {
       description:
         "Designed datapath/control; Verilog implementation, ModelSim simulation, tests/benchmarks, and simple compiler pipeline.",
       longDescription:
-        "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration. Practiced RTL design trade-offs between multi-cycle vs pipelined approaches, reinforcing understanding of assembly-level execution and microarchitecture fundamentals.",
-      technologies: ["Verilog", "ISA Design", "ALU/Control Unit", "ModelSim", "Computer Architecture"],
+        "Designed a multi-cycle CPU (RISC-V-like) including datapath and control, implemented in Verilog and verified in ModelSim with tests/benchmarks. Built a minimal compiler/assembler pipeline to run small programs and diagnose hazards.",
+      technologies: ["Verilog", "ModelSim", "Computer Architecture"],
       links: [],
       image: "",
       video: "",
@@ -420,7 +410,7 @@ export const DATA = {
       description:
         "Automated power supply/load control and data collection via MATLAB/Simulink, Python, PyVISA, and Raspberry Pi; ~30% efficiency gain.",
       longDescription:
-        "Developed an automated test program to control power supply/load and collect data via MATLAB, Simulink, Python, PyVISA, and Raspberry Pi. Standardized testing workflows across sub-teams, improving efficiency by ~30% and reducing manual effort. Implemented CSV logging, automated batch runs, and register-level device interfacing. Collaborated with cross-functional hardware/software teams to unify procedures, enhance data reliability, and increase throughput.",
+        "Automated cell test workflows: instrument control and data capture via MATLAB/Simulink, Python, and PyVISA with Raspberry Pi integration. Reduced manual overhead and improved throughput by ~30%, with scripts for repeatable experiments and safety checks.",
       technologies: ["MATLAB", "Simulink", "Python", "PyVISA", "Raspberry Pi"],
       links: [],
       image: "",
@@ -434,7 +424,7 @@ export const DATA = {
       description:
         "Altera DE2 design with combinational/sequential logic, SRAM, and FSM for real-time gameplay.",
       longDescription:
-        "Implemented a Guitar Hero-style game on an Altera DE2 FPGA in Verilog. Developed sequential and combinational logic for note timing and state-machine driven game flow. Led a 2-person team, coordinating feature planning and module integration. Gained experience in FPGA workflow, Verilog design, and real-time digital logic implementation.",
+        "An FPGA rhythm game on Altera DE2 using combinational and sequential logic with SRAM and a central FSM for real-time gameplay and scoring.",
       technologies: ["FPGA", "Verilog", "Quartus", "SRAM", "FSM"],
       links: [],
       image: "",
@@ -448,7 +438,7 @@ export const DATA = {
       description:
         "Java-based evolutionary simulator with real-time GUI visualization; OOP design and parallelization.",
       longDescription:
-        "Developed a simulator with Java Swing to visualize population evolution under genetic algorithm operators (selection, crossover, mutation). Designed the class structure with one teammate, integrating components through regular design reviews. Practiced Java OOP, GUI development, exception handling, and concurrency for parallel fitness evaluations. Strengthened ability to translate algorithmic design into interactive visualization.",
+        "Java evolutionary simulator with real-time Swing GUI. Emphasized clean OOP design, fitness/selection operators, and optional parallelization to accelerate generations.",
       technologies: ["Java", "Swing/GUI", "OOP"],
       links: [],
       image: "",
@@ -462,8 +452,8 @@ export const DATA = {
       description:
         "Self-hosted WordPress + Nextcloud + mail + file distribution; hardened and optimized on Debian/Apache/PHP/MySQL.",
       longDescription:
-      "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
-    technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud","Slef-initialized", "WordPress", "Email Server"],
+        "Self-hosted WordPress, Nextcloud, mail, and file services on Debian/Apache/PHP/MySQL. Hardened and tuned for reliability and performance with backups and monitoring; custom domain and TLS.",
+      technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud"],
       links: [{ type: "Website", href: "https://career.wic.monster/", icon: <Icons.globe className="size-3" /> }],
       image: "",
       video: "",

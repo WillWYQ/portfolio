@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { cn, importImagesFromFolder } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -19,6 +19,8 @@ interface Props {
   tags: readonly string[];
   link?: string;
   image?: string;
+  images?: readonly string[];
+  imageFolder?: string;
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -37,11 +39,26 @@ export function ProjectCard({
   tags,
   link,
   image,
+  images,
+  imageFolder,
   video,
   links,
   className,
   onClick,
 }: Props) {
+  // 优先使用images数组，然后是imageFolder，最后是单个image
+  let imageSources: string[] = [];
+  if (images && images.length > 0) {
+    imageSources = [...images];
+  } else if (imageFolder) {
+    // 使用工具函数从文件夹导入图片
+    imageSources = importImagesFromFolder(imageFolder);
+  } else if (image) {
+    imageSources = [image];
+  }
+  
+  const displayImage = imageSources.length > 0 ? imageSources[0] : null;
+
   return (
     <Card
       onClick={onClick}
@@ -73,9 +90,9 @@ export function ProjectCard({
               className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
             />
           )}
-          {image && (
+          {displayImage && (
             <Image
-              src={image}
+              src={displayImage}
               alt={title}
               width={500}
               height={300}
@@ -95,9 +112,9 @@ export function ProjectCard({
               className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
             />
           )}
-          {image && (
+          {displayImage && (
             <Image
-              src={image}
+              src={displayImage}
               alt={title}
               width={500}
               height={300}

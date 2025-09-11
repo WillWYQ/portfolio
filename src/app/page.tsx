@@ -212,6 +212,8 @@ export default function Page() {
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
+                  images={project.images}
+                  imageFolder={project.imageFolder}
                   video={project.video}
                   links={project.links}
                   onClick={() => {
