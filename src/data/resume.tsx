@@ -16,6 +16,23 @@ export const DATA = {
     "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
   avatarStatement: "Explore • build • share",
+  heroResumeButtons: [
+    {
+      label: "General Resume",
+      filePath: "/Full_Resume_Yueqiao_Wang_Oct_1.docx",
+      downloadName: "Yueqiao-Wang-General-Resume.docx",
+    },
+    {
+      label: "Embedded Systems",
+      filePath: "/Embedded_System_Yueqiao_Wang_Oct_1.docx",
+      downloadName: "Yueqiao-Wang-Embedded-Resume.docx",
+    },
+    {
+      label: "Comp Arch & OS",
+      filePath: "/CompArch_OS_Resume_Yueqiao_Wang_Oct_1.docx",
+      downloadName: "Yueqiao-Wang-CompArch-OS-Resume.docx",
+    },
+  ],
 
   skills: ["3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "NextCloud", "Nginx", "Node.js", "OAuth", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "Scheduling", "Scientific Computing", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPS", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",],
 
