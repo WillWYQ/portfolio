@@ -18,17 +18,17 @@ export const DATA = {
   avatarStatement: "Explore • build • share",
   heroResumeButtons: [
     {
-      label: "General Resume",
+      label: "Full Resume",
       filePath: "/Full_Resume_Yueqiao_Wang_Oct_1.docx",
       downloadName: "Yueqiao-Wang-General-Resume.docx",
     },
     {
-      label: "Embedded Systems",
+      label: "Embedded/Firmware/Robotics Resume",
       filePath: "/Embedded_System_Yueqiao_Wang_Oct_1.docx",
       downloadName: "Yueqiao-Wang-Embedded-Resume.docx",
     },
     {
-      label: "Comp Arch & OS",
+      label: "Comp Arch & OS Resume",
       filePath: "/CompArch_OS_Resume_Yueqiao_Wang_Oct_1.docx",
       downloadName: "Yueqiao-Wang-CompArch-OS-Resume.docx",
     },
