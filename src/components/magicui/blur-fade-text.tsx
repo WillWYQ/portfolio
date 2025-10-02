@@ -74,6 +74,7 @@ const BlurFadeText = ({
             ease: "easeOut",
           }}
           className={cn("inline-block", className)}
+          style={{ whiteSpace: "pre-line" }}
         >
           {text}
         </motion.span>

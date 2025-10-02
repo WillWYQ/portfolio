@@ -11,11 +11,11 @@ export const DATA = {
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",
   description:
-    "Computer Engineering @ RHIT ('26). OS & Computer Architecture • Embedded/Robotics • Web.",
+    "Computer Engineering @ RHIT ('26).\n Minor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
   summary:
-    "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
+    "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
-  avatarStatement: "Explore • build • share",
+  avatarStatement: "Explore • Build • Share",
   heroResumeButtons: [
     {
       label: "Full Resume",
