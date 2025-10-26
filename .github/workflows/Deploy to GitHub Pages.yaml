@@ -24,8 +24,6 @@ jobs:
       # 1) 安装 pnpm（关键修复点）
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
 
       # 2) 安装 Node，并让缓存策略识别 pnpm（可选但推荐）
       - name: Setup Node.js
