@@ -143,7 +143,12 @@ export default function Page() {
       <section id="work">
         <div className="mx-auto w-full max-w-4xl space-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold font-share-tech-mono">Work Experience</h2>
+            <div>
+              <h2 className="text-xl font-bold font-share-tech-mono">Work Experience</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                For each card, you can click to view the details or jump to the corresponding link.
+              </p>
+            </div>
           </BlurFade>
           {DATA.work.map((work: any, id: number) => (
             <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>

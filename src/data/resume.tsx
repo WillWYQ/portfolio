@@ -181,7 +181,7 @@ export const DATA = {
       location: "Terre Haute, IN",
       title: "Researcher ",
       logoUrl: "/rhit.png",
-      start: "May 2024",
+      start: "May 2025",
       end: "Present",
       description:
       "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"  
