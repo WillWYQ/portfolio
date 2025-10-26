@@ -1,6 +1,8 @@
+// utils.ts
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { format, parseISO } from "date-fns";
+import imageManifest from "@/generated/image-manifest.json";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -38,48 +40,30 @@ export function formatDate(date: string) {
  * @param folderName - public目录下的文件夹名称
  * @returns 图片路径数组
  */
+const IMAGE_MANIFEST = imageManifest as Record<string, string[]>;
+const folderCache: Record<string, string[]> = {};
+
 export function importImagesFromFolder(folderName: string): string[] {
-  // 移除开头和结尾的斜杠（如果有的话）
-  const cleanFolderName = folderName.replace(/^\/|\/$/g, '');
-  
-  // 预定义的文件夹与图片映射关系
-  // 在实际项目中，这应该根据你的实际文件夹结构进行调整
-  const folderImageMap: Record<string, string[]> = {
-    'MorpheOS': [
-      '/MorpheOS/MorpheOS.png',
-      '/MorpheOS/MorpheOSQemu.png'
-    ],
-    // OAOfirmware 项目图片集合（按文件名排序）
-    'OAOfirmware': [
-      '/OAOfirmware/Autonomous Vehicle Dashboard.png',
-      '/OAOfirmware/IMG_0077.png',
-      '/OAOfirmware/IMG_0755.png',
-      '/OAOfirmware/OAOfirmware.png',
-    ],
-    // MERL（教育机器人）图片集合
-    'MERL': [
-      '/MERL/logo.png',
-      '/MERL/IMG_1021.png',
-      '/MERL/IMG_1041.png',
-      '/MERL/IMG_1043.png',
-      '/MERL/IMG_1058.png',
-      '/MERL/IMG_1104.png',
-      '/MERL/IMG_1105.png',
-      '/MERL/IMG_4040.png',
-    ],
-    // LazyPlant 项目图片集合
-    'LazyPlant': [
-      '/LazyPlant/IMG_8267.png',
-      '/LazyPlant/IMG_8352.png',
-      '/LazyPlant/IMG_8353.png',
-    ],
-  };
-  
-  // 如果在映射中找到对应文件夹，返回预定义的图片路径数组
-  if (folderImageMap[cleanFolderName]) {
-    return folderImageMap[cleanFolderName];
+  if (!folderName) return [];
+
+  const cleanFolderName = folderName.trim().replace(/^\/+|\/+$/g, "");
+  if (!cleanFolderName) return [];
+
+  if (folderCache[cleanFolderName]) {
+    return folderCache[cleanFolderName];
   }
-  
-  // 默认返回空数组
-  return [];
+
+  const directMatch = IMAGE_MANIFEST[cleanFolderName];
+  if (directMatch) {
+    folderCache[cleanFolderName] = [...directMatch];
+    return folderCache[cleanFolderName];
+  }
+
+  // Case-insensitive fallback to avoid issues on case-insensitive filesystems
+  const normalizedKey = Object.keys(IMAGE_MANIFEST).find(
+    (key) => key.toLowerCase() === cleanFolderName.toLowerCase()
+  );
+  const result = normalizedKey ? [...IMAGE_MANIFEST[normalizedKey]] : [];
+  folderCache[cleanFolderName] = result;
+  return result;
 }

@@ -1,0 +1,31 @@
+{
+  "LazyPlant": [
+    "/LazyPlant/IMG_8267.png",
+    "/LazyPlant/IMG_8352.png",
+    "/LazyPlant/IMG_8353.png"
+  ],
+  "MERL": [
+    "/MERL/IMG_1021.png",
+    "/MERL/IMG_1041.png",
+    "/MERL/IMG_1043.png",
+    "/MERL/IMG_1058.png",
+    "/MERL/IMG_1104.png",
+    "/MERL/IMG_1105.png",
+    "/MERL/IMG_4040.png",
+    "/MERL/logo.png"
+  ],
+  "MorpheOS": [
+    "/MorpheOS/MorpheOS.png",
+    "/MorpheOS/MorpheOSQemu.png"
+  ],
+  "OAOfirmware": [
+    "/OAOfirmware/Autonomous Vehicle Dashboard.png",
+    "/OAOfirmware/IMG_0077.png",
+    "/OAOfirmware/IMG_0755.png",
+    "/OAOfirmware/OAOfirmware.png"
+  ],
+  "SocketChatProgram": [
+    "/SocketChatProgram/code.png",
+    "/SocketChatProgram/Protocol.png"
+  ]
+}
