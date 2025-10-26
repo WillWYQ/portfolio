@@ -73,6 +73,10 @@ export default function Page() {
         <div className="mx-auto w-full max-w-4xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
+              <div className="inline-flex items-center gap-2 self-start rounded-full border border-black/5 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-900 shadow-sm dark:border-white/10 dark:bg-white/10 dark:text-white/80">
+                <span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.9)]" />
+                Available for Work: Globally
+              </div>
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-patrick"
