@@ -1,4 +1,16 @@
 {
+  "CYRO": [
+    "/CYRO/cold_finger.png",
+    "/CYRO/CRYOPCB.png",
+    "/CYRO/EGS.png",
+    "/CYRO/illu.png",
+    "/CYRO/logo.png",
+    "/CYRO/Magnet.png",
+    "/CYRO/SSW-2 MCU State Machine (Horizontal)-2.png",
+    "/CYRO/UI State Machine-2.png",
+    "/CYRO/vacuum_chamber.png",
+    "/CYRO/whiteBox.png"
+  ],
   "LazyPlant": [
     "/LazyPlant/IMG_8267.png",
     "/LazyPlant/IMG_8352.png",

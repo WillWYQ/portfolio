@@ -175,6 +175,30 @@ export const DATA = {
 
   work: [
     {
+      company: "RHIT CSSE",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Teaching"],
+      location: "Terre Haute, IN",
+      title: "CSSE230 Data Structures & Algorithm Analysis — Grader",
+      logoUrl: "/rhit.png",
+      start: "Dec 2025",
+      end: "Present",
+      description:
+        "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around actionable written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
+    },
+    {
+      company: "RHIT ECE",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Teaching"],
+      location: "Terre Haute, IN",
+      title: "ECE 312 Communication Networks — Grader",
+      logoUrl: "/rhitece.png",
+      start: "Dec 2025",
+      end: "Present",
+      description:
+        "Supported ECE 312 by grading assignments covering layered architectures, circuit vs. packet switching, ISO/OSI reference model flow, point-to-point protocols, framing/error control, shared-medium access, LANs, routing, congestion control, queuing theory, and reliable transport/internetworking. Verified numerical analyses, protocol diagrams, and queuing derivations; provided targeted feedback that linked theory to implementation tradeoffs and kept turnaround under 48 hours.",
+    },
+    {
       company: "R-SURF, RHIT",
       href: "https://www.rose-hulman.edu/",
       badges: ["Research", "Leadership"],
@@ -321,6 +345,21 @@ export const DATA = {
 
   projects: [
     {
+      title: "Cryogenic Superconducting Film Characterization Apparatus",
+      href: "#",
+      dates: "Nov 2025 – Present",
+      active: true,
+      description:
+        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, WebUSB UI, and YAML measurement plans.",
+      longDescription:
+        "Leading the electronics/software that power Rose-Hulman’s cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: a WebUSB dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes. Project is still in progress while fixtures and firmware are iterated to reach fully automated Van der Pauw sweeps.",
+      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML"],
+      links: [],
+      image: "",
+      imageFolder: "CYRO",
+      video: "",
+    },
+    {
       title: "MorpheOS — Teaching-Focused RISC-V Microkernel",
       href: "#",
       dates: "Jun 2025 – Present",
@@ -333,20 +372,6 @@ export const DATA = {
       links: [{ type: "GitHub", href: "https://github.com/rhit-netsos/morpheos", icon: <Icons.github className="size-3" /> }],
       images: ["/MorpheOS/MorpheOS.png", "/MorpheOS/MorpheOSQemu.png"],
       imageFolder: "MorpheOS",
-      video: "",
-    },
-    {
-      title: "Processing-in-Memory DPU Scaling",
-      href: "#",
-      dates: "Nov 2024 – Mar 2025",
-      active: false,
-      description:
-        "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
-      longDescription:
-        "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
-      technologies: ["uPIMulator", "Python", "Bash", "Linux"],
-      links: [],
-      image: "/pimdpu.png",
       video: "",
     },
     {
@@ -365,6 +390,21 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Processing-in-Memory DPU Scaling",
+      href: "#",
+      dates: "Nov 2024 – Mar 2025",
+      active: false,
+      description:
+        "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
+      longDescription:
+        "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
+      technologies: ["uPIMulator", "Python", "Bash", "Linux"],
+      links: [],
+      image: "/pimdpu.png",
+      video: "",
+    },
+    
+    {
       title: "OAO Autonomous Vehicle Firmware",
       dates: "Mar 2025 – May 2025",
       description:
@@ -375,6 +415,7 @@ export const DATA = {
       // 指定文件夹并提供多图以保证正确加载与轮播
       imageFolder: "OAOfirmware",
       video: "",
+      links: [{ type: "GitHub", href: "https://github.com/Rose-Hulman-ECE-Junior-Design/junior-design-project-team13-brtw", icon: <Icons.github className="size-3" /> }],
       
     },
     {
@@ -506,7 +547,7 @@ export const DATA = {
       longDescription:
       "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
     technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud","Slef-initialized", "WordPress", "Email Server"],
-      links: [{ type: "Website", href: "https://career.wic.monster/", icon: <Icons.globe className="size-3" /> }],
+      links: [{ type: "Website", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> },{type: "Website", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
       image: "",
       video: "",
     },
