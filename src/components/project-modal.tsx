@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/registry/magicui/magic-card";
 import { Badge } from "@/components/ui/badge";
@@ -85,8 +85,14 @@ export function ProjectModal({
 
   const [index, setIndex] = useState(0);
   const count = slides.length;
-  const prev = () => setIndex((i) => (i - 1 + count) % count);
-  const next = () => setIndex((i) => (i + 1) % count);
+  const prev = useCallback(() => {
+    if (count === 0) return;
+    setIndex((i) => (i - 1 + count) % count);
+  }, [count]);
+  const next = useCallback(() => {
+    if (count === 0) return;
+    setIndex((i) => (i + 1) % count);
+  }, [count]);
 
   // Auto-play functionality
   useEffect(() => {
@@ -117,7 +123,7 @@ export function ProjectModal({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, count]);
+  }, [open, count, prev, next]);
 
   // 点击导航按钮时暂停自动播放
   const handleManualNavigation = (navigate: () => void) => {

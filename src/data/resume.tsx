@@ -1,5 +1,6 @@
 // src/data/resume.ts
 import { Icons } from "@/components/icons";
+import type { Language } from "@/lib/i18n";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import { navbar, socials } from "@/config/site";
 
@@ -555,3 +556,13 @@ export const DATA = {
 
   hackathons: [],
 } as const;
+
+export type ResumeData = typeof DATA;
+
+const RESUME_DATA_MAP: Record<Language, ResumeData> = {
+  en: DATA,
+  zh: DATA,
+};
+
+export const getResumeData = (language: Language): ResumeData =>
+  RESUME_DATA_MAP[language] ?? DATA;
