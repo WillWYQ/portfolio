@@ -53,6 +53,7 @@ jobs:
       - name: Add CNAME and .nojekyll
         run: |
           echo "career.wic.monster" > out/CNAME
+          echo "career.yueqiao.dev" > out/CNAME
           touch out/.nojekyll
 
       # 7) 上传制品给 Pages
