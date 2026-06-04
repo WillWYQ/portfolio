@@ -27,7 +27,6 @@ export function SpinningText({
   const content = React.useMemo(() => {
     const sep = text.endsWith(" ") ? "" : " ";
     const base = text + sep;
-    // Rough heuristic: circumference / avg char width (~8px at text-sm) -> repetitions
     const circumference = 2 * Math.PI * radius;
     const reps = Math.max(6, Math.ceil(circumference / 80));
     return Array.from({ length: reps }, () => base).join("");
@@ -39,7 +38,7 @@ export function SpinningText({
 
   return (
     <div
-      className="relative inline-grid place-items-center"
+      className="relative inline-grid place-items-center overflow-visible"
       style={{ width: diameter, height: diameter }}
     >
       {/* Center content (below text ring) */}
@@ -49,16 +48,22 @@ export function SpinningText({
 
       {/* Circular text (above) */}
       <svg
-        className="absolute inset-0 z-10 pointer-events-none"
+        // 🔴 关键修复：完全去掉原先写死的 width={diameter} 和 height={diameter}
+        // 使用 absolute 并用一个负的 inset（比如 -top-6 -left-6）配合 w-[calc(100%+48px)]
+        // 让 SVG 画布在四面八方平铺扩大 24px 的纯空气缓冲区。因为 viewBox 没变，圆形和字体的尺寸完全不变！
+        className="absolute -top-6 -left-6 z-10 pointer-events-none overflow-visible"
         viewBox={`0 0 ${diameter} ${diameter}`}
-        width={diameter}
-        height={diameter}
-        style={animationStyle}
+        style={{
+          ...animationStyle,
+          width: `calc(100% + 48px)`,
+          height: `calc(100% + 48px)`,
+        }}
         aria-hidden="true"
       >
         <defs>
           <path
             id={`circlePath-${id}`}
+            // 🔴 关键修复：一字不差地还原官方原版最完美的数学公式，保证 100% 是个完美的正圆
             d={`M ${radius},${radius} m -${radius - 2},0 a ${radius - 2},${radius - 2} 0 1,1 ${
               (radius - 2) * 2
             },0 a ${radius - 2},${radius - 2} 0 1,1 -${(radius - 2) * 2},0`}

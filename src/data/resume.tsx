@@ -12,37 +12,44 @@ export const DATA = {
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",
   description:
-    "Computer Engineering @ RHIT ('26).\n Minor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
+    "Computer Engineering @ RHIT ('26), cum laude.\nMinor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
   summary:
-    "I’m a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics—working at the intersection of the humanities and technology. I’m here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
+    "I'm a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics. I love to work at the intersection of the humanities and technology. I'm here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, a full VPN tunnel in C, an ML pipeline predicting job-search outcomes, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
-  avatarStatement: "Explore • Build • Share",
+  avatarStatement: "Explore • Build • Share • ",
   heroResumeButtons: [
+    // {
+    //   label: "Full Resume",
+    //   filePath: "/Full_Resume_Yueqiao_Wang_Oct_1.docx",
+    //   downloadName: "Yueqiao-Wang-General-Resume.docx",
+    // },
     {
-      label: "Full Resume",
-      filePath: "/Full_Resume_Yueqiao_Wang_Oct_1.docx",
-      downloadName: "Yueqiao-Wang-General-Resume.docx",
+      label: "Comp Arch & OS Resume",
+      filePath: "/E_CompArch_OS_Resume_Yueqiao_Wang_Jun26.docx",
+      downloadName: "Yueqiao-Wang-CompArch-OS-Resume.docx",
     },
     {
       label: "Embedded/Firmware/Robotics Resume",
-      filePath: "/Embedded_System_Yueqiao_Wang_Oct_1.docx",
+      filePath: "/OS_Firmware_Resume_Yueqiao_Wang_Jun26.docx",
       downloadName: "Yueqiao-Wang-Embedded-Resume.docx",
     },
     {
-      label: "Comp Arch & OS Resume",
-      filePath: "/CompArch_OS_Resume_Yueqiao_Wang_Oct_1.docx",
-      downloadName: "Yueqiao-Wang-CompArch-OS-Resume.docx",
-    },
+      label: "AI Software Resume",
+      filePath: "/AI_Software_Resume_Yueqiao_Wang.docx",
+      downloadName: "Yueqiao-Wang-AI-Resume.docx",
+    }
   ],
 
-  skills: ["3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "NextCloud", "Nginx", "Node.js", "OAuth", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "Scheduling", "Scientific Computing", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPS", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",],
+  skills: [
+    "3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Feature Engineering", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "GridSearchCV", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "Next.js", "NextCloud", "Nginx", "Node.js", "NumPy", "OAuth", "ONNX", "ONNX Runtime", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "pandas", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "PyVISA", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "scikit-learn", "Scheduling", "Scientific Computing", "SCPI", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPN", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",
+  ],
 
   categorizedSkills: {
     Language: ["Native Chinese", "Professional English"],
     ProgrammingSystem: [
-      "Assembly", "Verilog", "bash", "shell", "C", "C++", "CMake", "GCC", "Java", "JavaScript", "Python", "HTML", "CSS", "Swift", "MATLAB & Simulink", "Unix System Operation", "Linux", "Debian", "Ubuntu", "MacOS"
+      "Assembly", "Verilog", "bash", "shell", "C", "C++", "CMake", "GCC", "Java", "JavaScript", "TypeScript", "Python", "HTML", "CSS", "Swift", "MATLAB & Simulink", "Unix System Operation", "Linux", "Debian", "Ubuntu", "MacOS"
     ],
-    SoftwareDevelopment: ["Git", "GitHub", "GitLab", "Docker"],
+    SoftwareDevelopment: ["Git", "GitHub", "GitLab", "Docker", "GitHub Actions"],
     GeneralHardware: [
       "Finite State Machines (FSM)", "FPGA", "Quartus Prime", "ModelSim Simulation", "Instrumentation", "Power Supply & Load Programming", "Oscilloscope", "Multimeter", "Function Generator"
     ],
@@ -54,7 +61,7 @@ export const DATA = {
     ],
     ParallelComputing: ["Multi-GPU Processing", "Matrix-Fused Multiply Accumulate (MFMA)"],
     EmbeddedSystem: [
-      "MSP432 Microcontroller", "ESP32 Microcontroller", "Raspberry Pi", "Micro: Bit", "Arduino", "Microcontroller Programming", "Embedded C Development", "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control", "Sensor and Actuator Integration", "Analog Digital Conversion (ADC & DAC)", "Serial Communication (UART, I2C)", "Wireless Communication (RF, Bluetooth, BLE, Wi-Fi)", "Debugging & Verification", "Low-Power Embedded Design", "Robotics"
+      "MSP432 Microcontroller", "ESP32 Microcontroller", "Raspberry Pi", "Micro: Bit", "Arduino", "Microcontroller Programming", "Embedded C Development", "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control", "Sensor and Actuator Integration", "Analog Digital Conversion (ADC & DAC)", "Serial Communication (UART, I2C, SPI)", "Wireless Communication (RF, Bluetooth, BLE, Wi-Fi)", "Debugging & Verification", "Low-Power Embedded Design", "Robotics"
     ],
     DigitalDesign: [
       "Cadence OrCAD", "Cadence PSpice", "Electrical Component Selection", "PCB Layout", "PCB Fabrication & Testing", "High-Speed Digital Signal Transmission", "Transmission Line Analysis", "Impedance Matching", "Crosstalk Mitigation", "Power Integrity", "Signal Integrity in PCB and Chip-Level Design"
@@ -63,10 +70,10 @@ export const DATA = {
       "Fourier Series & Transform", "Frequency Domain Analysis", "Filter Design", "Feedback Control Systems", "Z-Transform & Discrete-Time Systems", "Digital Signal Processing Implementation"
     ],
     Networking: [
-      "TCP/IP", "OSI Model", "Signal Encoding", "Error Detection", "ARQ Protocols", "Sliding Window Protocols", "Network Switching & Routing", "Multiplexing", "Subnetting", "Ethernet", "Wireless Networks", "Medium Access Control (MAC)"
+      "TCP/IP", "OSI Model", "Signal Encoding", "Error Detection", "ARQ Protocols", "Sliding Window Protocols", "Network Switching & Routing", "Multiplexing", "Subnetting", "Ethernet", "Wireless Networks", "Medium Access Control (MAC)", "VPN", "TUN/TAP", "Socket Programming", "Wireshark", "Network Security"
     ],
     OperationSystem: [
-      "Multi-Thread/Process Programming", "System Call", "Interrupt", "Process Creation & Scheduling", "Memory Virtualization", "Virtual Memory Management", "File System", "Concurrency & Synchronization", "Kernel-Level Programming", "Low-Level System Security & Access Control"
+      "Multi-Thread/Process Programming", "System Call", "Interrupt", "Process Creation & Scheduling", "Memory Virtualization", "Virtual Memory Management", "File System", "Concurrency & Synchronization", "Kernel-Level Programming", "Low-Level System Security & Access Control", "Boot Flow", "OpenSBI", "PLIC", "Linker Scripts", "Context Switching", "Device Drivers"
     ],
     Server: [
       "Apache", "Nginx", "Linux", "IT Service Management", "Web Hosting", "NextCloud", "Composer", "AWS", "GCP", "Azure"
@@ -75,13 +82,13 @@ export const DATA = {
       "MySQL", "MariaDB", "MongoDB", "Firebase Realtime Database"
     ],
     WebDevelopment: [
-      "User Experience (UX) & Design", "Prototyping with Figma", "Front-End Development with HTML, CSS, JavaScript, Vue.js, Bootstrap", "Client-Side Frameworks & Libraries", "Server-Side Development with Node.js, Express.js, Firebase, WordPress", "Authentication & Security with OAuth, SSL/TLS, Web Sockets", "REST API Development & Integration", "Asynchronous Programming with Callbacks, Promises, and Async/Await", "Cloud Deployment & Hosting", "AWS", "Google", "Local Server", "Virtual Private Server"
+      "User Experience (UX) & Design", "Prototyping with Figma", "Next.js", "React", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS", "shadcn/ui", "Bootstrap", "Node.js", "Express.js", "Firebase", "WordPress", "OAuth", "SSL/TLS", "REST API Development & Integration", "Asynchronous Programming with Callbacks, Promises, and Async/Await", "Cloud Deployment & Hosting", "AWS", "Google", "Local Server", "Virtual Private Server", "Cloudflare R2"
     ],
     AIAndMachineLearning: [
-      "Transformer-Based Neural Networks (TNN)", "Attention Mechanisms", "Multilayer Perceptron", "AI Model Training & Inference", "Running AI Workloads on HPC Systems"
+      "Transformer-Based Neural Networks (TNN)", "Attention Mechanisms", "Multilayer Perceptron", "AI Model Training & Inference", "Running AI Workloads on HPC Systems", "scikit-learn", "pandas", "NumPy", "Gradient Boosting", "Random Forests", "SVM", "KNN", "Logistic Regression", "GridSearchCV", "Feature Engineering", "ONNX", "ONNX Runtime", "Data Leakage Detection", "Model Evaluation"
     ],
     AIApplication: [
-      "Integrating AI into software solutions", "local model deployment and optimization"
+      "Integrating AI into software solutions", "Local model deployment and optimization", "Claude Code", "Spec-Driven AI-Assisted Development", "AI Agent Tooling & Skills", "Multi-Pass AI Design Review"
     ],
     SystemEngineering: [
       "System Validation", "System Verification", "Subsystem Verification", "Unit Test", "Functional Architecture Modeling", "Test-Driven Development", "Agile Development"
@@ -90,7 +97,7 @@ export const DATA = {
       "System Design Process", "Open-Ended Project Management", "Team Collaboration & Conflict Management", "Stakeholder-Requirement Analysis", "Technical Report Writing & Poster Presentation", "Ethical Decision Making in Engineering"
     ],
     Other: [
-      "Data Analysis", "Problem-Solving and Analytical Skills", "SolidWorks", "3D Modeling", "3D Printing & 3D Printer Repair", "Group Work", "Teamwork", "Adaptability"
+      "Data Analysis", "Problem-Solving and Analytical Skills", "SolidWorks", "3D Modeling", "3D Printing & 3D Printer Repair", "Group Work", "Teamwork", "Adaptability", "PyVISA", "SCPI"
     ]
   },
 
@@ -126,7 +133,8 @@ export const DATA = {
       skills: [
         "C", "Embedded C Development", "MSP432", "ESP32", "Raspberry Pi", "Arduino", "micro:bit",
         "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control",
-        "I2C", "UART", "BLE", "Wi-Fi", "ADC", "DAC", "Low-Power Embedded Design", "Robotics"
+        "I2C", "UART", "SPI", "BLE", "Wi-Fi", "ADC", "DAC", "Low-Power Embedded Design", "Robotics",
+        "PyVISA", "SCPI"
       ]
     },
     HPCPerformanceEngineer: {
@@ -147,9 +155,10 @@ export const DATA = {
     FullStackWebEngineer: {
       label: "Full-Stack Web",
       skills: [
-        "JavaScript", "TypeScript", "HTML", "CSS", "Vue", "Node.js", "Express.js",
+        "JavaScript", "TypeScript", "HTML", "CSS", "Next.js", "React", "Vue", "Node.js", "Express.js",
         "TailwindCSS", "shadcn/ui", "Firebase", "MySQL", "MariaDB", "MongoDB",
-        "REST API", "Async/Await", "OAuth", "SSL/TLS", "WebSockets", "Figma"
+        "REST API", "Async/Await", "OAuth", "SSL/TLS", "WebSockets", "Figma",
+        "Cloudflare R2", "GitHub Actions"
       ]
     },
     DevOpsInfra: {
@@ -163,9 +172,20 @@ export const DATA = {
     DataMLEngineer: {
       label: "Data / ML",
       skills: [
-        "Python", "Transformer-Based Neural Networks (TNN)", "Attention Mechanisms",
+        "Python", "scikit-learn", "pandas", "NumPy",
+        "Gradient Boosting", "Random Forests", "SVM", "KNN", "Logistic Regression",
+        "GridSearchCV", "Feature Engineering", "ONNX", "ONNX Runtime",
+        "Transformer-Based Neural Networks (TNN)", "Attention Mechanisms",
         "Multilayer Perceptron", "AI Model Training & Inference",
         "Running AI Workloads on HPC Systems", "Data Analysis"
+      ]
+    },
+    NetworkSecurityEngineer: {
+      label: "Network / Security",
+      skills: [
+        "C", "TCP/IP", "UDP", "Socket Programming", "TUN/TAP",
+        "VPN", "Network Security", "Wireshark", "pcap",
+        "SHA3-256", "Docker", "Linux"
       ]
     },
 
@@ -209,7 +229,7 @@ export const DATA = {
       start: "May 2025",
       end: "Present",
       description:
-      "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"  
+        "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
     },
     {
       company: "MERL (Multidisciplinary Educational Robotics Lab), RHIT",
@@ -221,7 +241,7 @@ export const DATA = {
       start: "May 2024",
       end: "Present",
       description:
-      "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."    
+        "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."
     },
     {
       company: "Maker Lab (RHIT)",
@@ -269,8 +289,8 @@ export const DATA = {
       start: "Mar 2024",
       end: "May 2024",
       description:
-      "Supported undergraduate DC Circuits lab sections as a Lab Assistant. Prepared and checked lab stations; set up bench power supplies, digital multimeters, oscilloscopes, and function generators. Assisted students with breadboarding and safe measurement techniques; verified circuit behavior against expected values; helped debug wiring and instrumentation issues. Documented common issues and clarified lab procedures with the instructor."
-        
+        "Supported undergraduate DC Circuits lab sections as a Lab Assistant. Prepared and checked lab stations; set up bench power supplies, digital multimeters, oscilloscopes, and function generators. Assisted students with breadboarding and safe measurement techniques; verified circuit behavior against expected values; helped debug wiring and instrumentation issues. Documented common issues and clarified lab procedures with the instructor."
+
     },
     {
       company: "RHIT CSSE",
@@ -282,7 +302,7 @@ export const DATA = {
       start: "Sep 2023",
       end: "Nov 2023",
       description:
-      "Supported an undergraduate Object-Oriented Software Development course as a Teaching Assistant and project manager for the course project. Provided lab and office-hour support; helped students debug object-oriented code and reason about program design (abstraction, encapsulation, inheritance, polymorphism). Reviewed submissions and graded programming assignments using clear rubrics; delivered targeted feedback. Coordinated with the instructor to clarify requirements and maintain course materials. Organized weekly project meetings, set milestones, tracked risks, and guided teams to completion while reinforcing unit-testing and version-control practices."   
+        "Supported an undergraduate Object-Oriented Software Development course as a Teaching Assistant and project manager for the course project. Provided lab and office-hour support; helped students debug object-oriented code and reason about program design (abstraction, encapsulation, inheritance, polymorphism). Reviewed submissions and graded programming assignments using clear rubrics; delivered targeted feedback. Coordinated with the instructor to clarify requirements and maintain course materials. Organized weekly project meetings, set milestones, tracked risks, and guided teams to completion while reinforcing unit-testing and version-control practices."
     },
   ],
 
@@ -290,16 +310,19 @@ export const DATA = {
     {
       school: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
-      degree: "B.S. in Computer Engineering (Minor: CS, Economics)",
+      degree: "B.S. in Computer Engineering, cum laude",
+      minors: ["Computer Science", "Economics"],
+      certifications: ["Semiconductor Materials and Devices"],
       logoUrl: "/rhit.png",
       start: "2022",
       end: "2026",
-      gpa: "3.28",
-      honors: "Dean’s List *4 | Rose-Hulman Merit Scholar ",
+      gpa: "3.41",
+      honors: "Dean's List | Rose-Hulman Merit Scholar",
       relatedCourses: {
         "Signals & Systems": [
           "Signal Processing",
-          "Continuous-Time Signals & Systems"
+          "Continuous-Time Signals & Systems",
+          "Linear Control Systems"
         ],
         "Circuit Theory": [
           "Direct Current Circuits",
@@ -307,23 +330,28 @@ export const DATA = {
           "Circuit and System"
         ],
         "Electronic Devices": [
-          "Electronic Device Modeling"
+          "Electronic Device Modeling",
+          "Semiconductor Materials & Applications",
+          "Semiconductor Devices & Fabrication"
         ],
         "Digital Systems": [
           "Digital System",
-          "High-Speed Digital Design"
+          "High-Speed Digital Design",
+          "Intro to MEMs: Fabrication & Applications"
         ],
         "Embedded Systems": [
           "Embedded Systems"
         ],
         "Computer Systems": [
           "Operating Systems",
+          "Operating System Design",
           "Computer Architecture I",
           "Computer Architecture II",
           "Advanced Computer Architecture"
         ],
-        "Networking & Communication": [
-          "Communication Networks"
+        "Networking & Security": [
+          "Communication Networks",
+          "Network Security"
         ],
         "Software Development": [
           "Object-Oriented Software Development",
@@ -331,10 +359,11 @@ export const DATA = {
         ],
         "Algorithms & Programming": [
           "Competitive Programming",
-          "Data structure & Algorithm Analysis"
+          "Data Structures & Algorithm Analysis"
         ],
-        "High Performance Computing": [
-          "High Performance Computing & AI"
+        "High Performance Computing & AI": [
+          "High Performance Computing & AI",
+          "Machine Learning"
         ],
         "Others": [
           "Principles of Design",
@@ -345,21 +374,6 @@ export const DATA = {
   ],
 
   projects: [
-    {
-      title: "Cryogenic Superconducting Film Characterization Apparatus",
-      href: "#",
-      dates: "Nov 2025 – Present",
-      active: true,
-      description:
-        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, WebUSB UI, and YAML measurement plans.",
-      longDescription:
-        "Leading the electronics/software that power Rose-Hulman’s cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: a WebUSB dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes. Project is still in progress while fixtures and firmware are iterated to reach fully automated Van der Pauw sweeps.",
-      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML"],
-      links: [],
-      image: "",
-      imageFolder: "CYRO",
-      video: "",
-    },
     {
       title: "MorpheOS — Teaching-Focused RISC-V Microkernel",
       href: "#",
@@ -376,6 +390,66 @@ export const DATA = {
       video: "",
     },
     {
+      title: "UsedExchange — AI-Assisted Static Marketplace",
+      href: "https://github.com/WillWYQ/usedExchange",
+      dates: "Apr 2026 – Present",
+      active: true,
+      description:
+        "Database-free, statically generated marketplace in Next.js 15/TypeScript; client-side geolocation pricing via haversine; spec-first AI-assisted workflow with Claude Code and 10+ consistency audits.",
+      longDescription:
+        "Architected a database-free marketplace (Next.js 15/TypeScript) where all content is driven from a single content folder, letting non-technical sellers manage inventory without touching application code. Designed a distance-tiered pricing engine that resolves buyer location entirely client-side via the browser Geolocation API (haversine, zero server calls), keeping visitor coordinates private. Engineered a git-free image pipeline using Cloudflare R2 CDN with a lightweight JSON manifest, keeping deploys within free static-hosting limits on GitHub Pages. Drove a spec-first, AI-assisted workflow with Claude Code, hardening a ~270 KB internally consistent design corpus (7 versioned docs, v0.2.0–v0.9.0) through 10+ AI-led multi-pass consistency audits that caught orphaned schema fields, broken build ordering, and dependency cycles before any code was written. Authored a 14-phase, agent-executable implementation plan with machine-checkable acceptance criteria (type-check + lint gates). Shipped two portable AI assistant skills (/setup, /update-items) that generate site config and item metadata from seller photos and notes.",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Cloudflare R2", "GitHub Actions", "Claude Code"],
+      links: [{ type: "GitHub", href: "https://github.com/WillWYQ/usedExchange", icon: <Icons.github className="size-3" /> }],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Job-Offer Outcome Prediction — ML Pipeline & Browser App",
+      href: "https://jobprediction-project.willsleep.dev/",
+      dates: "Mar 2026 – May 2026",
+      active: false,
+      description:
+        "End-to-end ML pipeline on 100K records; 7 classifier families with GridSearchCV; 91% accuracy via gradient boosting; ONNX-exported model deployed in a serverless Next.js browser app.",
+      longDescription:
+        "Led model development for a 3-person team (MA 415 final project, Rose-Hulman, Spring 2026). Built a full Python ML pipeline on a 100,000-record public dataset: data cleaning (leakage control, dropped high-missingness columns), preprocessing (one-hot encoding, StandardScaler, 80/20 split), and feature engineering (degree-2 polynomial terms, greedy forward feature selection). Trained and tuned 7 classifier families with GridSearchCV—logistic regression (Ridge/Lasso), linear SVM, KNN, decision tree, random forest, gradient boosting—raising binary offer-prediction accuracy from a 66% baseline to 91% with gradient boosting. Independently diagnosed and investigated data leakage from interview-count features through cascade experiments; framed this openly as a modeling maturity highlight. Also improved harder 4-class accuracy from 34% to ~45%, correctly diagnosing the ceiling as genuine class overlap. Exported the best model to ONNX for fully client-side browser inference; built a Next.js 14 + TypeScript + Tailwind + shadcn/ui prediction app deployed via GitHub Actions CI/CD. Produced a reusable CLI training pipeline (data prep → train → GridSearchCV → serialized models + comparison reports). Achieved 94.64% project score.",
+      technologies: ["Python", "scikit-learn", "pandas", "NumPy", "ONNX", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
+      links: [
+        { type: "Website", href: "https://jobprediction-project.willsleep.dev/", icon: <Icons.globe className="size-3" /> }
+      ],
+      image: "",
+      video: "",
+    },
+    
+    {
+      title: "Cryogenic Superconducting Film Characterization Apparatus",
+      href: "#",
+      dates: "Sep 2025 – May 2026",
+      active: true,
+      description:
+        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, WebUSB UI, and YAML measurement plans.",
+      longDescription:
+        "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: a WebUSB dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes. Project is still in progress while fixtures and firmware are iterated to reach fully automated Van der Pauw sweeps.",
+      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML"],
+      links: [],
+      image: "",
+      imageFolder: "CYRO",
+      video: "",
+    },
+    {
+      title: "VPN Tunnel Program",
+      href: "#",
+      dates: "Jan 2026 – Mar 2026",
+      active: false,
+      description:
+        "Full VPN tunnel in C over UDP; custom WireChild protocol with SHA3-256 encryption, sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
+      longDescription:
+        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: SHA3-256 symmetric encryption, sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
+      technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
       title: "Open-Source Educational Robotics",
       href: "#",
       dates: "May 2024 – Present",
@@ -386,7 +460,6 @@ export const DATA = {
         "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
-      // images: ["/MERL/logo.png"],
       imageFolder: "MERL",
       video: "",
     },
@@ -413,11 +486,10 @@ export const DATA = {
       longDescription:
         "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing. Practiced embedded C++, I²C drivers, Wi-Fi networking, CSV logging, and Git-based code review workflow.",
       technologies: ["ESP32", "C++", "PID Control", "WebSocket", "LittleFS", "I²C"],
-      // 指定文件夹并提供多图以保证正确加载与轮播
       imageFolder: "OAOfirmware",
       video: "",
       links: [{ type: "GitHub", href: "https://github.com/Rose-Hulman-ECE-Junior-Design/junior-design-project-team13-brtw", icon: <Icons.github className="size-3" /> }],
-      
+
     },
     {
       title: "ParkSmart — Campus Parking App",
@@ -546,9 +618,9 @@ export const DATA = {
       description:
         "Self-hosted WordPress + Nextcloud + mail + file distribution; hardened and optimized on Debian/Apache/PHP/MySQL.",
       longDescription:
-      "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
-    technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud","Slef-initialized", "WordPress", "Email Server"],
-      links: [{ type: "Website", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> },{type: "Website", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
+        "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
+      technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud", "Self-initiated", "WordPress", "Email Server"],
+      links: [{ type: "Website", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> }, { type: "Website", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
       image: "",
       video: "",
     },

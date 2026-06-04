@@ -106,19 +106,26 @@ export default function Page() {
                 </div>
               </BlurFade>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <CoolMode>
-                <SpinningText
+            <BlurFade delay={BLUR_FADE_DELAY * 2} className="self-start overflow-visible p-4" yOffset={0}>
+ 
+              <CoolMode >
+                <button className="relative group overflow-visible flex items-center justify-center w-[240px] h-[240px]">
+                  
+                  <SpinningText
                   text={DATA.avatarStatement}
                   radius={100}
-                  speed={14}
-                  className="fill-foreground text-foreground/70"
+                  speed={10}
+                  className="fill-foreground text-foreground/60"
+                  
                 >
-                  <Avatar className="size-28 border">
+                  <Avatar className="size-29 border">
                     <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                     <AvatarFallback>{DATA.initials}</AvatarFallback>
                   </Avatar>
+
                 </SpinningText>
+                </button>
+                
               </CoolMode>
             </BlurFade>
           </div>
@@ -186,6 +193,16 @@ export default function Page() {
                 period={`${education.start} - ${education.end}`}
                 description={
                   <>
+                    {education.minors && (
+                      <p className="text-sm">
+                        Minors: {Array.isArray(education.minors) ? education.minors.join(", ") : education.minors}
+                      </p>
+                    )}
+                    {education.certifications && (
+                      <p className="text-sm">
+                        Certifications: {Array.isArray(education.certifications) ? education.certifications.join(", ") : education.certifications}
+                      </p>
+                    )}
                     {education.gpa && <p className="text-sm">GPA: {education.gpa}</p>}
                     {education.honors && <p className="text-sm">Honors: {education.honors}</p>}
                     {education.relatedCourses && (
