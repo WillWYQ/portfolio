@@ -36,9 +36,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f pnpm-lock.yaml ]; then
-            pnpm install --frozen-lockfile --allow-scripts
+            pnpm install --frozen-lockfile
           else
-            pnpm install --allow-scripts
+            pnpm install
           fi
 
       # Ensure Next.js output is set to export in your next.config.js
