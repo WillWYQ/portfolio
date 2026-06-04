@@ -2,6 +2,9 @@ import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 import { DATA } from "@/data/resume";
 
+// Required: without edge runtime, Next.js static export (output: "export") would
+// fail because this handler reads req.url (a dynamic request property).
+// Edge runtime causes the route to be excluded from the export instead of erroring.
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
