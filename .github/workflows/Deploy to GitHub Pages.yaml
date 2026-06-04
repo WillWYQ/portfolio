@@ -21,22 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1) 安装 pnpm（关键修复点）
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
-      # 2) 安装 Node，并让缓存策略识别 pnpm（可选但推荐）
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
 
-      # 3) 打个版本号，确认 pnpm 已可用（调试用）
       - name: Check pnpm
         run: pnpm -v
 
-      # 4) 装依赖（有 lock 就用 --frozen-lockfile；没有就普通装）
       - name: Install dependencies
         run: |
           if [ -f pnpm-lock.yaml ]; then
@@ -45,18 +41,18 @@ jobs:
             pnpm install
           fi
 
-      # 5) 构建 & 导出静态站点（Next.js）
+      # Ensure Next.js output is set to export in your next.config.js
       - name: Build & Export static site
         run: pnpm build
 
-      # 6) 保险：把 CNAME 和 .nojekyll 放进 out/
       - name: Add CNAME and .nojekyll
         run: |
           echo "career.wic.monster" > out/CNAME
-          echo "career.yueqiao.dev" > out/CNAME
           touch out/.nojekyll
 
-      # 7) 上传制品给 Pages
+      # If you want career.yueqiao.dev to also work, 
+      # do not write it to CNAME. Instead, redirect it via your DNS provider.
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -72,4 +68,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  
