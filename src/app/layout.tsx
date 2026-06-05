@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import { Patrick_Hand, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 import { Pointer } from "@/components/magicui/pointer";
+import { Spotlight } from "@/components/spotlight";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -113,10 +114,21 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider>
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          {/* z-1 — Mouse-following spotlight (client, instant DOM update) */}
+          <Spotlight />
+          {/* z-2 — Noise grain overlay (static, pointer-events: none) */}
+          <div
+            aria-hidden="true"
+            className="noise-bg pointer-events-none fixed inset-0 opacity-[0.028] dark:opacity-[0.045]"
+            style={{ zIndex: 2 }}
+          />
+          {/* z-10 — All page content sits above background layers */}
+          <div className="relative" style={{ zIndex: 10 }}>
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Navbar />
+            </TooltipProvider>
+          </div>
         </ThemeProvider>
         <Pointer>
           <div className="text-2xl max-sm:hidden">👆</div>

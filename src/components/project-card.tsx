@@ -72,8 +72,16 @@ export function ProjectCard({
       role={onClick ? "button" : undefined}
       tabIndex={onClick ? 0 : undefined}
       className={cn(
-        "flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full",
-        onClick ? "hover:shadow-lg cursor-pointer" : "hover:shadow-lg",
+        "flex flex-col overflow-hidden border transition-all duration-200 ease-out h-full",
+        // Linear-style: near-transparent dark surface, crisp thin border
+        "bg-white dark:bg-white/[0.03]",
+        "border-black/[0.08] dark:border-white/[0.08]",
+        "shadow-[0_1px_3px_rgba(0,0,0,0.06)] dark:shadow-none",
+        // Hover: border brightens + indigo-purple glow (matches spotlight hue)
+        "hover:border-black/[0.16] dark:hover:border-white/[0.14]",
+        "hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]",
+        "dark:hover:shadow-[0_0_30px_rgba(120,119,198,0.20)]",
+        onClick ? "cursor-pointer" : "",
         className
       )}
       aria-label={onClick ? `Open details for ${title}` : undefined}
@@ -123,7 +131,7 @@ export function ProjectCard({
           )}
         </Link>
       )}
-      <CardHeader className="px-2">
+      <CardHeader className="px-4 pt-4">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
@@ -135,7 +143,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+      <CardContent className="mt-auto flex flex-col px-4">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
@@ -150,7 +158,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2">
+      <CardFooter className="px-4 pb-4">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
