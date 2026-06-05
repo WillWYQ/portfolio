@@ -196,55 +196,60 @@ export const DATA = {
 
   work: [
     {
-      company: "RHIT CSSE",
+      department:"Department of Computer Science & Software Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
       title: "CSSE332 Operating Systems — Grader",
       logoUrl: "/rhit.png",
-      start: "Nov 2025",
+      start: "Mar 2026",
       end: "May 2026",
       description:
-        "Graded CSSE332 Operating Systems assignments and projects covering boot flow, process scheduling, virtual memory management, system calls, concurrency, synchronization, and file systems. Verified implementation correctness in C against course rubrics; provided targeted written feedback on design decisions, race conditions, and memory-safety issues. Coordinated with faculty to maintain consistent evaluation standards across sections.",
+        "Graded CSSE332 Operating Systems assignments and projects covering boot flow, process scheduling, virtual memory management, system calls, concurrency, synchronization, and file systems; provided targeted written feedback on design decisions, race conditions, and memory-safety issues. Coordinated with faculty to maintain consistent evaluation standards across sections.",
     },
     {
-      company: "RHIT CSSE",
+      department:"Department of Computer Science & Software Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
       title: "CSSE230 Data Structures & Algorithm Analysis — Grader",
       logoUrl: "/rhit.png",
-      start: "Dec 2025",
-      end: "May 2026",
+      start: "Nov 2025",
+      end: "Mar 2026",
       description:
         "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around actionable written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
     },
     {
-      company: "RHIT ECE",
+      department:"Department of Electrical & Computer Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
       title: "ECE312 Communication Networks — Grader",
       logoUrl: "/rhitece.png",
-      start: "Dec 2025",
-      end: "May 2026",
+      start: "Nov 2025",
+      end: "Mar 2026",
       description:
         "Supported ECE 312 by grading assignments covering layered architectures, circuit vs. packet switching, ISO/OSI reference model flow, point-to-point protocols, framing/error control, shared-medium access, LANs, routing, congestion control, queuing theory, and reliable transport/internetworking. Verified numerical analyses, protocol diagrams, and queuing derivations; provided targeted feedback that linked theory to implementation tradeoffs and kept turnaround under 48 hours.",
     },
     {
-      company: "R-SURF, RHIT",
+      department: "Rose-Hulman Summer Undergraduate Research Fellowships",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Research", "Leadership"],
       location: "Terre Haute, IN",
       title: "Researcher ",
       logoUrl: "/rhit.png",
       start: "May 2025",
-      end: "May 2026",
+      end: "Present",
       description:
         "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
     },
     {
-      company: "MERL (Multidisciplinary Educational Robotics Lab), RHIT",
+      department: "MERL (Multidisciplinary Educational Robotics Lab)",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Research", "Leadership"],
       location: "Terre Haute, IN",
@@ -256,19 +261,21 @@ export const DATA = {
         "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."
     },
     {
-      company: "Maker Lab (RHIT)",
+      department: "Maker Lab (Student Organization)",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Leadership", "Documentation"],
       location: "Terre Haute, IN",
       title: "Archivist",
       logoUrl: "/makerlab.png",
-      start: "Mar 2023",
+      start: "Mar 2024",
       end: "Mar 2026",
       description:
         "Maintained lab assets and documentation; supported student projects and maker activities.",
     },
     {
-      company: "International Student Association (RHIT)",
+      department: "International Student Association (Student Organization)",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Leadership", "Finances"],
       location: "Terre Haute, IN",
@@ -280,7 +287,8 @@ export const DATA = {
         "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
     },
     {
-      company: "RHIT ECE",
+      department: "Department of Electrical & Computer Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
@@ -292,7 +300,8 @@ export const DATA = {
         "Assisted in an Embedded Systems course. Helped students debug C/assembly code on microcontrollers, including build setup and peripheral use; guided practices for interrupts, timing, and resource-constrained programming. Checked off labs and graded reports with consistent rubrics. Reinforced systematic debugging habits and clear documentation; collaborated with the instructor to keep sessions on schedule.",
     },
     {
-      company: "RHIT ECE",
+      department: "Department of Electrical & Computer Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
@@ -305,7 +314,8 @@ export const DATA = {
 
     },
     {
-      company: "RHIT CSSE",
+      department: "Department of Computer Science & Software Engineering",
+      company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
