@@ -241,7 +241,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-share-tech-mono">
+                <div className="inline-block rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 text-white px-3 py-1 text-sm font-share-tech-mono">
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -287,23 +287,28 @@ export default function Page() {
 
       {/* CONTACT */}
       <section id="contact">
-        <div className="text-center mx-auto w-full max-w-4xl space-y-4 py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-share-tech-mono">
-                Contact
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <div className="mx-auto w-full max-w-4xl py-12">
+            {/* 1 px aurora gradient border */}
+            <div className="rounded-2xl bg-gradient-to-br from-indigo-500/25 via-violet-500/25 to-teal-400/20 p-px dark:from-indigo-400/35 dark:via-violet-400/35 dark:to-teal-400/30">
+              <div className="rounded-2xl bg-white/80 dark:bg-black/55 backdrop-blur-xl px-8 py-16 text-center">
+                <div className="space-y-3">
+                  <div className="inline-block rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 text-white px-3 py-1 text-sm font-share-tech-mono">
+                    Contact
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
+                  <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Want to chat? Just shoot me a dm{" "}
+                    <Link href={socials.Email.url} className="text-indigo-500 hover:underline dark:text-indigo-400">
+                      with a direct email
+                    </Link>{" "}
+                    and I&apos;ll respond whenever I can.
+                  </p>
+                </div>
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link href={socials.Email.url} className="text-blue-500 hover:underline">
-                  with a direct email
-                </Link>{" "}
-                and I&apos;ll respond whenever I can.
-              </p>
             </div>
-          </BlurFade>
-        </div>
+          </div>
+        </BlurFade>
       </section>
 
       {/* FOOTER */}
