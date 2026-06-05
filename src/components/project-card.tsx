@@ -73,7 +73,13 @@ export function ProjectCard({
       tabIndex={onClick ? 0 : undefined}
       className={cn(
         "flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full",
-        onClick ? "hover:shadow-lg cursor-pointer" : "hover:shadow-lg",
+        // Glassmorphism
+        "bg-white/85 dark:bg-slate-950/65 backdrop-blur-sm",
+        // Starlight border + glow
+        "border-slate-200/60 dark:border-slate-700/30",
+        "shadow-[0_0_22px_rgba(99,102,241,0.07)] dark:shadow-[0_0_28px_rgba(99,102,241,0.20)]",
+        "hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] dark:hover:shadow-[0_0_40px_rgba(99,102,241,0.34)]",
+        onClick ? "cursor-pointer" : "",
         className
       )}
       aria-label={onClick ? `Open details for ${title}` : undefined}
@@ -123,7 +129,7 @@ export function ProjectCard({
           )}
         </Link>
       )}
-      <CardHeader className="px-2">
+      <CardHeader className="px-4 pt-4">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
@@ -135,7 +141,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+      <CardContent className="mt-auto flex flex-col px-4">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
@@ -150,7 +156,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2">
+      <CardFooter className="px-4 pb-4">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (

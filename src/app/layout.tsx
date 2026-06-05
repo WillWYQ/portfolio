@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import { Patrick_Hand, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 import { Pointer } from "@/components/magicui/pointer";
+import { StarField } from "@/components/star-field";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -113,10 +114,48 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider>
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          {/* ── Deep-space nebula ambient layer (CSS, theme-aware) ── */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 overflow-hidden"
+            style={{ zIndex: 0 }}
+          >
+            {/* Dark mode: subtle color nebula tints */}
+            <div
+              className="absolute -inset-[30%] animate-nebula-drift opacity-0 dark:opacity-100 will-change-transform"
+              style={{
+                backgroundImage: [
+                  "radial-gradient(ellipse 75% 55% at 8%  8%,  rgba(99,102,241,0.18), transparent)",
+                  "radial-gradient(ellipse 55% 50% at 92% 5%,  rgba(6,182,212,0.10),  transparent)",
+                  "radial-gradient(ellipse 60% 45% at 48% 92%, rgba(139,92,246,0.14),  transparent)",
+                  "radial-gradient(ellipse 40% 45% at 82% 55%, rgba(20,184,166,0.08),  transparent)",
+                  "radial-gradient(ellipse 35% 40% at 25% 70%, rgba(244,114,182,0.07), transparent)",
+                ].join(", "),
+                filter: "blur(90px)",
+              }}
+            />
+            {/* Light mode: very soft lavender ambient wash */}
+            <div
+              className="absolute -inset-[20%] opacity-100 dark:opacity-0"
+              style={{
+                backgroundImage: [
+                  "radial-gradient(ellipse 65% 45% at 15% 5%,  rgba(199,210,254,0.45), transparent)",
+                  "radial-gradient(ellipse 55% 50% at 88% 8%,  rgba(196,181,253,0.30), transparent)",
+                  "radial-gradient(ellipse 45% 40% at 50% 95%, rgba(167,139,250,0.20), transparent)",
+                ].join(", "),
+                filter: "blur(80px)",
+              }}
+            />
+          </div>
+          {/* ── Star / particle canvas (client component, theme-aware) ── */}
+          <StarField />
+          {/* ── Content sits above (z-10) ── */}
+          <div className="relative" style={{ zIndex: 10 }}>
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Navbar />
+            </TooltipProvider>
+          </div>
         </ThemeProvider>
         <Pointer>
           <div className="text-2xl max-sm:hidden">👆</div>

@@ -73,10 +73,17 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "nebula-drift": {
+          "0%":   { transform: "scale(1)    translate(0,    0)"    },
+          "33%":  { transform: "scale(1.03) translate(-1%,  1%)"   },
+          "66%":  { transform: "scale(0.98) translate(1.5%, -0.5%)"},
+          "100%": { transform: "scale(1.02) translate(-0.5%, 1.5%)"},
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "nebula-drift": "nebula-drift 70s ease-in-out infinite alternate",
       },
     },
   },
