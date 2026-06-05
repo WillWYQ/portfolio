@@ -114,13 +114,38 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider>
-          {/* ── Deep-space nebula ambient layer (CSS, theme-aware) ── */}
+          {/* ── Background ambient layer (theme-aware) ── */}
           <div
             aria-hidden="true"
             className="pointer-events-none fixed inset-0 overflow-hidden"
             style={{ zIndex: 0 }}
           >
-            {/* Dark mode: subtle color nebula tints */}
+            {/* Light mode only: aurora animated gradients */}
+            <div
+              className="absolute -inset-[20%] animate-aurora-drift opacity-25 dark:opacity-0 will-change-transform"
+              style={{
+                backgroundImage: [
+                  "radial-gradient(ellipse 80% 50% at 5%  10%, #6366f1, transparent)",
+                  "radial-gradient(ellipse 60% 45% at 90% 15%, #93c5fd, transparent)",
+                  "radial-gradient(ellipse 50% 60% at 50%  0%, #8b5cf6, transparent)",
+                  "radial-gradient(ellipse 65% 35% at 20% 30%, #2dd4bf, transparent)",
+                  "radial-gradient(ellipse 55% 50% at 80% 40%, #a5b4fc, transparent)",
+                ].join(", "),
+                filter: "blur(72px)",
+              }}
+            />
+            <div
+              className="absolute -inset-[20%] animate-aurora-drift-2 opacity-[0.15] dark:opacity-0 will-change-transform"
+              style={{
+                backgroundImage: [
+                  "radial-gradient(ellipse 50% 45% at 75% 75%, #6366f1, transparent)",
+                  "radial-gradient(ellipse 45% 55% at 15% 65%, #8b5cf6, transparent)",
+                  "radial-gradient(ellipse 55% 40% at 85% 45%, #2dd4bf, transparent)",
+                ].join(", "),
+                filter: "blur(60px)",
+              }}
+            />
+            {/* Dark mode only: deep-space nebula tints */}
             <div
               className="absolute -inset-[30%] animate-nebula-drift opacity-0 dark:opacity-100 will-change-transform"
               style={{
@@ -134,20 +159,8 @@ export default function RootLayout({
                 filter: "blur(90px)",
               }}
             />
-            {/* Light mode: very soft lavender ambient wash */}
-            <div
-              className="absolute -inset-[20%] opacity-100 dark:opacity-0"
-              style={{
-                backgroundImage: [
-                  "radial-gradient(ellipse 65% 45% at 15% 5%,  rgba(199,210,254,0.45), transparent)",
-                  "radial-gradient(ellipse 55% 50% at 88% 8%,  rgba(196,181,253,0.30), transparent)",
-                  "radial-gradient(ellipse 45% 40% at 50% 95%, rgba(167,139,250,0.20), transparent)",
-                ].join(", "),
-                filter: "blur(80px)",
-              }}
-            />
           </div>
-          {/* ── Star / particle canvas (client component, theme-aware) ── */}
+          {/* ── Star canvas (dark mode only, client component) ── */}
           <StarField />
           {/* ── Content sits above (z-10) ── */}
           <div className="relative" style={{ zIndex: 10 }}>
