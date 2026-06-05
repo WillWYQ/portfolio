@@ -14,7 +14,7 @@ export const DATA = {
   description:
     "Computer Engineering @ RHIT ('26), cum laude.\nMinor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
   summary:
-    "I'm a computer engineering student focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics. I love to work at the intersection of the humanities and technology. I'm here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, a full VPN tunnel in C, an ML pipeline predicting job-search outcomes, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
+    "I'm a computer engineering graduate focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics. I love to work at the intersection of the humanities and technology. I'm here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, a full VPN tunnel in C, an ML pipeline predicting job-search outcomes, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.png",
   avatarStatement: "Explore • Build • Share • ",
   heroResumeButtons: [
@@ -41,7 +41,7 @@ export const DATA = {
   ],
 
   skills: [
-    "3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Feature Engineering", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "GridSearchCV", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "Next.js", "NextCloud", "Nginx", "Node.js", "NumPy", "OAuth", "ONNX", "ONNX Runtime", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "pandas", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "PyVISA", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "scikit-learn", "Scheduling", "Scientific Computing", "SCPI", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPN", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",
+    "3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Feature Engineering", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "GridSearchCV", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "LVGL", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "Next.js", "NextCloud", "Nginx", "Node.js", "NumPy", "OAuth", "ONNX", "ONNX Runtime", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "pandas", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "PyVISA", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "scikit-learn", "Scheduling", "Scientific Computing", "SCPI", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPN", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",
   ],
 
   categorizedSkills: {
@@ -61,7 +61,7 @@ export const DATA = {
     ],
     ParallelComputing: ["Multi-GPU Processing", "Matrix-Fused Multiply Accumulate (MFMA)"],
     EmbeddedSystem: [
-      "MSP432 Microcontroller", "ESP32 Microcontroller", "Raspberry Pi", "Micro: Bit", "Arduino", "Microcontroller Programming", "Embedded C Development", "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control", "Sensor and Actuator Integration", "Analog Digital Conversion (ADC & DAC)", "Serial Communication (UART, I2C, SPI)", "Wireless Communication (RF, Bluetooth, BLE, Wi-Fi)", "Debugging & Verification", "Low-Power Embedded Design", "Robotics"
+      "MSP432 Microcontroller", "ESP32 Microcontroller", "Raspberry Pi", "Micro: Bit", "Arduino", "Microcontroller Programming", "Embedded C Development", "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control", "Sensor and Actuator Integration", "Analog Digital Conversion (ADC & DAC)", "Serial Communication (UART, I2C, SPI)", "Wireless Communication (RF, Bluetooth, BLE, Wi-Fi)", "LVGL", "Debugging & Verification", "Low-Power Embedded Design", "Robotics"
     ],
     DigitalDesign: [
       "Cadence OrCAD", "Cadence PSpice", "Electrical Component Selection", "PCB Layout", "PCB Fabrication & Testing", "High-Speed Digital Signal Transmission", "Transmission Line Analysis", "Impedance Matching", "Crosstalk Mitigation", "Power Integrity", "Signal Integrity in PCB and Chip-Level Design"
@@ -133,7 +133,7 @@ export const DATA = {
       skills: [
         "C", "Embedded C Development", "MSP432", "ESP32", "Raspberry Pi", "Arduino", "micro:bit",
         "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control",
-        "I2C", "UART", "SPI", "BLE", "Wi-Fi", "ADC", "DAC", "Low-Power Embedded Design", "Robotics",
+        "I2C", "UART", "SPI", "BLE", "Wi-Fi", "ADC", "DAC", "Low-Power Embedded Design", "LVGL", "Robotics",
         "PyVISA", "SCPI"
       ]
     },
@@ -200,10 +200,22 @@ export const DATA = {
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
+      title: "CSSE332 Operating Systems — Grader",
+      logoUrl: "/rhit.png",
+      start: "Nov 2025",
+      end: "May 2026",
+      description:
+        "Graded CSSE332 Operating Systems assignments and projects covering boot flow, process scheduling, virtual memory management, system calls, concurrency, synchronization, and file systems. Verified implementation correctness in C against course rubrics; provided targeted written feedback on design decisions, race conditions, and memory-safety issues. Coordinated with faculty to maintain consistent evaluation standards across sections.",
+    },
+    {
+      company: "RHIT CSSE",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Teaching"],
+      location: "Terre Haute, IN",
       title: "CSSE230 Data Structures & Algorithm Analysis — Grader",
       logoUrl: "/rhit.png",
       start: "Dec 2025",
-      end: "Present",
+      end: "May 2026",
       description:
         "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around actionable written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
     },
@@ -212,10 +224,10 @@ export const DATA = {
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
       location: "Terre Haute, IN",
-      title: "ECE 312 Communication Networks — Grader",
+      title: "ECE312 Communication Networks — Grader",
       logoUrl: "/rhitece.png",
       start: "Dec 2025",
-      end: "Present",
+      end: "May 2026",
       description:
         "Supported ECE 312 by grading assignments covering layered architectures, circuit vs. packet switching, ISO/OSI reference model flow, point-to-point protocols, framing/error control, shared-medium access, LANs, routing, congestion control, queuing theory, and reliable transport/internetworking. Verified numerical analyses, protocol diagrams, and queuing derivations; provided targeted feedback that linked theory to implementation tradeoffs and kept turnaround under 48 hours.",
     },
@@ -227,7 +239,7 @@ export const DATA = {
       title: "Researcher ",
       logoUrl: "/rhit.png",
       start: "May 2025",
-      end: "Present",
+      end: "May 2026",
       description:
         "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
     },
@@ -239,7 +251,7 @@ export const DATA = {
       title: "Lab Manager & Researcher ",
       logoUrl: "/MERL/logo.png",
       start: "May 2024",
-      end: "Present",
+      end: "May 2026",
       description:
         "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."
     },
@@ -251,7 +263,7 @@ export const DATA = {
       title: "Archivist",
       logoUrl: "/makerlab.png",
       start: "Mar 2023",
-      end: "Present",
+      end: "Mar 2026",
       description:
         "Maintained lab assets and documentation; supported student projects and maker activities.",
     },
@@ -424,12 +436,12 @@ export const DATA = {
       title: "Cryogenic Superconducting Film Characterization Apparatus",
       href: "#",
       dates: "Sep 2025 – May 2026",
-      active: true,
+      active: false,
       description:
-        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, WebUSB UI, and YAML measurement plans.",
+        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, LVGL touchscreen UI, WebUSB host dashboard, and YAML measurement plans.",
       longDescription:
-        "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: a WebUSB dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes. Project is still in progress while fixtures and firmware are iterated to reach fully automated Van der Pauw sweeps.",
-      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML"],
+        "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: an on-device touchscreen graphical UI (LVGL) and a WebUSB host dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes.",
+      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML", "LVGL"],
       links: [],
       image: "",
       imageFolder: "CYRO",
