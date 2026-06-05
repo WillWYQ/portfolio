@@ -1,10 +1,11 @@
 lockfileVersion: '9.0'
 
+onlyBuiltDependencies:
+  - unrs-resolver
+
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
-  onlyBuiltDependencies:
-    - unrs-resolver
 
 importers:
 
