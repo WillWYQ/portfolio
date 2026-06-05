@@ -248,6 +248,19 @@ export const DATA = {
         "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
     },
     {
+      department: "Department of Electrical & Computer Engineering",
+      company: "Rose-Hulman Institute of Technology",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Teaching"],
+      location: "Terre Haute, IN",
+      title: "Embedded Systems Development — Teaching Assistant",
+      logoUrl: "/rhitece.png",
+      start: "Nov 2024",
+      end: "Mar 2025",
+      description:
+        "Assisted in an Embedded Systems course. Helped students debug C/assembly code on microcontrollers, including build setup and peripheral use; guided practices for interrupts, timing, and resource-constrained programming. Checked off labs and graded reports with consistent rubrics. Reinforced systematic debugging habits and clear documentation; collaborated with the instructor to keep sessions on schedule.",
+    },
+    {
       department: "MERL (Multidisciplinary Educational Robotics Lab)",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
@@ -274,32 +287,6 @@ export const DATA = {
         "Maintained lab assets and documentation; supported student projects and maker activities.",
     },
     {
-      department: "International Student Association (Student Organization)",
-      company: "Rose-Hulman Institute of Technology",
-      href: "https://www.rose-hulman.edu/",
-      badges: ["Leadership", "Finances"],
-      location: "Terre Haute, IN",
-      title: "Treasury",
-      logoUrl: "/isa.png",
-      start: "Mar 2023",
-      end: "Jun 2025",
-      description:
-        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
-    },
-    {
-      department: "Department of Electrical & Computer Engineering",
-      company: "Rose-Hulman Institute of Technology",
-      href: "https://www.rose-hulman.edu/",
-      badges: ["Teaching"],
-      location: "Terre Haute, IN",
-      title: "Embedded Systems Development — Teaching Assistant",
-      logoUrl: "/rhitece.png",
-      start: "Nov 2024",
-      end: "Mar 2025",
-      description:
-        "Assisted in an Embedded Systems course. Helped students debug C/assembly code on microcontrollers, including build setup and peripheral use; guided practices for interrupts, timing, and resource-constrained programming. Checked off labs and graded reports with consistent rubrics. Reinforced systematic debugging habits and clear documentation; collaborated with the instructor to keep sessions on schedule.",
-    },
-    {
       department: "Department of Electrical & Computer Engineering",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
@@ -311,7 +298,6 @@ export const DATA = {
       end: "May 2024",
       description:
         "Supported undergraduate DC Circuits lab sections as a Lab Assistant. Prepared and checked lab stations; set up bench power supplies, digital multimeters, oscilloscopes, and function generators. Assisted students with breadboarding and safe measurement techniques; verified circuit behavior against expected values; helped debug wiring and instrumentation issues. Documented common issues and clarified lab procedures with the instructor."
-
     },
     {
       department: "Department of Computer Science & Software Engineering",
@@ -325,6 +311,19 @@ export const DATA = {
       end: "Nov 2023",
       description:
         "Supported an undergraduate Object-Oriented Software Development course as a Teaching Assistant and project manager for the course project. Provided lab and office-hour support; helped students debug object-oriented code and reason about program design (abstraction, encapsulation, inheritance, polymorphism). Reviewed submissions and graded programming assignments using clear rubrics; delivered targeted feedback. Coordinated with the instructor to clarify requirements and maintain course materials. Organized weekly project meetings, set milestones, tracked risks, and guided teams to completion while reinforcing unit-testing and version-control practices."
+    },
+    {
+      department: "International Student Association (Student Organization)",
+      company: "Rose-Hulman Institute of Technology",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Leadership", "Finances"],
+      location: "Terre Haute, IN",
+      title: "Treasury",
+      logoUrl: "/isa.png",
+      start: "Mar 2023",
+      end: "Jun 2025",
+      description:
+        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
     },
   ],
 

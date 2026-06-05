@@ -158,13 +158,13 @@ export default function Page() {
             </div>
           </BlurFade>
           {DATA.work.map((work: any, id: number) => (
-            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+            <BlurFade key={`${work.title}-${work.start}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
-                key={work.company}
+                key={`${work.title}-${work.start}`}
                 logoUrl={work.logoUrl}
                 altText={work.company}
-                title={work.company}
-                subtitle={work.title}
+                title={work.title}
+                subtitle={`${work.department} · ${work.company}`}
                 href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
