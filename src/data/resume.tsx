@@ -627,7 +627,7 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Guitar Arcade Hero (FPGA)",
+      title: "Guitar Hero Arcade (FPGA)",
       href: "#",
       dates: "Mar 2023 – May 2023",
       active: false,
