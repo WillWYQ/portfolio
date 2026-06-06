@@ -4,8 +4,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { CoolMode } from "@/components/magicui/cool-mode";
 import { SpinningText } from "@/components/magicui/spinning-text";
-import { ProjectCard } from "@/components/project-card";
-import { ProjectModal } from "@/components/project-modal";
+import { ExpandableProjectGrid } from "@/components/expandable-project-grid";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -36,8 +35,6 @@ function dedupe(arr: readonly string[] = []): string[] {
 //           Page
 // ==============================
 export default function Page() {
-  const [open, setOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const heroResumeButtons =
     ((DATA as unknown as { heroResumeButtons?: HeroResumeButton[] })
       .heroResumeButtons ?? []) as HeroResumeButton[];
@@ -254,34 +251,9 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DATA.projects.map((project: any, id: number) => (
-              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 13 + id * 0.05}>
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  images={project.images}
-                  imageFolder={project.imageFolder}
-                  video={project.video}
-                  links={project.links}
-                  onClick={() => {
-                    setSelectedProject(project);
-                    setOpen(true);
-                  }}
-                />
-              </BlurFade>
-            ))}
-          </div>
-          <ProjectModal
-            project={selectedProject}
-            open={open}
-            onClose={() => setOpen(false)}
-          />
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <ExpandableProjectGrid projects={DATA.projects as any} />
+          </BlurFade>
         </div>
       </section>
 

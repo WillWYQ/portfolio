@@ -400,6 +400,7 @@ export const DATA = {
       href: "#",
       dates: "Jun 2025 – Present",
       active: true,
+      gridSize: { col: 2, row: 2 } as const,
       description:
         "Boot/bring-up, trap/exception paths, timer-driven preemption, and PLIC external interrupts on RISC-V; integrates OpenSBI and verified on QEMU with GDB; authored teaching docs and labs.",
       longDescription:
@@ -415,6 +416,7 @@ export const DATA = {
       href: "https://github.com/WillWYQ/usedExchange",
       dates: "Apr 2026 – Present",
       active: true,
+      gridSize: { col: 1, row: 2 } as const,
       description:
         "Database-free, statically generated marketplace in Next.js 15/TypeScript; client-side geolocation pricing via haversine; spec-first AI-assisted workflow with Claude Code and 10+ consistency audits.",
       longDescription:
@@ -429,6 +431,7 @@ export const DATA = {
       href: "https://jobprediction-project.willsleep.dev/",
       dates: "Mar 2026 – May 2026",
       active: false,
+      gridSize: { col: 2, row: 1 } as const,
       description:
         "End-to-end ML pipeline on 100K records; 7 classifier families with GridSearchCV; 91% accuracy via gradient boosting; ONNX-exported model deployed in a serverless Next.js browser app.",
       longDescription:
@@ -446,6 +449,7 @@ export const DATA = {
       href: "#",
       dates: "Sep 2025 – May 2026",
       active: false,
+      gridSize: { col: 1, row: 2 } as const,
       description:
         "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, LVGL touchscreen UI, WebUSB host dashboard, and YAML measurement plans.",
       longDescription:
@@ -475,6 +479,7 @@ export const DATA = {
       href: "#",
       dates: "May 2024 – Present",
       active: true,
+      gridSize: { col: 2, row: 1 } as const,
       description:
         "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
       longDescription:
