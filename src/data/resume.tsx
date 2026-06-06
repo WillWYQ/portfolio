@@ -416,7 +416,7 @@ export const DATA = {
       href: "https://github.com/WillWYQ/usedExchange",
       dates: "Apr 2026 – Present",
       active: true,
-      gridSize: { col: 1, row: 2 } as const,
+      gridSize: { col: 1, row: 4 } as const,
       description:
         "Database-free, statically generated marketplace in Next.js 15/TypeScript; client-side geolocation pricing via haversine; spec-first AI-assisted workflow with Claude Code and 10+ consistency audits.",
       longDescription:
@@ -431,12 +431,12 @@ export const DATA = {
       href: "https://jobprediction-project.willsleep.dev/",
       dates: "Mar 2026 – May 2026",
       active: false,
-      gridSize: { col: 2, row: 1 } as const,
+      gridSize: { col: 1, row: 1 } as const,
       description:
         "End-to-end ML pipeline on 100K records; 7 classifier families with GridSearchCV; 91% accuracy via gradient boosting; ONNX-exported model deployed in a serverless Next.js browser app.",
       longDescription:
         "Led model development for a 3-person team (MA 415 final project, Rose-Hulman, Spring 2026). Built a full Python ML pipeline on a 100,000-record public dataset: data cleaning (leakage control, dropped high-missingness columns), preprocessing (one-hot encoding, StandardScaler, 80/20 split), and feature engineering (degree-2 polynomial terms, greedy forward feature selection). Trained and tuned 7 classifier families with GridSearchCV—logistic regression (Ridge/Lasso), linear SVM, KNN, decision tree, random forest, gradient boosting—raising binary offer-prediction accuracy from a 66% baseline to 91% with gradient boosting. Independently diagnosed and investigated data leakage from interview-count features through cascade experiments; framed this openly as a modeling maturity highlight. Also improved harder 4-class accuracy from 34% to ~45%, correctly diagnosing the ceiling as genuine class overlap. Exported the best model to ONNX for fully client-side browser inference; built a Next.js 14 + TypeScript + Tailwind + shadcn/ui prediction app deployed via GitHub Actions CI/CD. Produced a reusable CLI training pipeline (data prep → train → GridSearchCV → serialized models + comparison reports). Achieved 94.64% project score.",
-      technologies: ["Python", "scikit-learn", "pandas", "NumPy", "ONNX", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
+      technologies: ["Python", "ONNX", "Model Tuning", "scikit-learn", "pandas", "NumPy", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
       links: [
         { type: "Website", href: "https://jobprediction-project.willsleep.dev/", icon: <Icons.globe className="size-3" /> }
       ],
@@ -449,7 +449,7 @@ export const DATA = {
       href: "#",
       dates: "Sep 2025 – May 2026",
       active: false,
-      gridSize: { col: 1, row: 2 } as const,
+      gridSize: { col: 2, row: 2 } as const,
       description:
         "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, LVGL touchscreen UI, WebUSB host dashboard, and YAML measurement plans.",
       longDescription:

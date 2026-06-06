@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 
 const STAR_COLORS = ["#ffffff", "#e8f0ff", "#c7d2ff", "#f0ecff", "#ffe8d0"];
@@ -21,6 +21,8 @@ export function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { resolvedTheme } = useTheme();
   const rafRef = useRef<number>(0);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (resolvedTheme !== "dark") return;
@@ -90,7 +92,7 @@ export function StarField() {
     };
   }, [resolvedTheme]);
 
-  if (resolvedTheme !== "dark") return null;
+  if (!mounted || resolvedTheme !== "dark") return null;
 
   return (
     <canvas

@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -396,6 +397,9 @@ export function ExpandableProjectGrid({
   projects: readonly ProjectItem[];
 }) {
   const [activeCard, setActiveCard] = useState<ProjectItem | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!activeCard) return;
@@ -412,6 +416,39 @@ export function ExpandableProjectGrid({
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = orig; };
   }, [activeCard]);
+
+  const overlay = (
+    <AnimatePresence>
+      {activeCard && (
+        <div
+          className="fixed inset-0 z-40 flex items-center justify-center p-4 sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeCard.title}
+        >
+          <motion.div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveCard(null)}
+          />
+          <motion.div
+            className="relative z-10 w-full max-w-2xl"
+            initial={{ opacity: 0, scale: 0.92, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ type: "spring", stiffness: 320, damping: 32 }}
+          >
+            <ExpandedCard
+              project={activeCard}
+              onClose={() => setActiveCard(null)}
+            />
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+  );
 
   return (
     <>
@@ -441,36 +478,7 @@ export function ExpandableProjectGrid({
         })}
       </div>
 
-      <AnimatePresence>
-        {activeCard && (
-          <div
-            className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-y-auto"
-            role="dialog"
-            aria-modal="true"
-            aria-label={activeCard.title}
-          >
-            <motion.div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setActiveCard(null)}
-            />
-            <motion.div
-              className="relative z-10 w-full max-w-2xl my-auto"
-              initial={{ opacity: 0, scale: 0.92, y: 24 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 12 }}
-              transition={{ type: "spring", stiffness: 320, damping: 32 }}
-            >
-              <ExpandedCard
-                project={activeCard}
-                onClose={() => setActiveCard(null)}
-              />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+      {mounted && createPortal(overlay, document.body)}
     </>
   );
 }
