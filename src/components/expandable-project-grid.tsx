@@ -85,14 +85,18 @@ function CardContent({
   const tagLimit = isLarge ? 6 : isWide || isTall ? 4 : 3;
   const extra = (project.technologies?.length ?? 0) - tagLimit;
 
+  // 2×1: wide but not tall — use side-by-side layout
+  const isWideSingle = isWide && !isTall;
+
   return (
     <div
       className={cn(
-        "relative h-full flex flex-col overflow-hidden rounded-2xl border",
+        "relative h-full overflow-hidden rounded-2xl border",
         "bg-white/85 dark:bg-slate-950/70 backdrop-blur-sm",
         accent.border,
         "shadow-[0_2px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_2px_28px_rgba(0,0,0,0.28)]",
-        "transition-shadow duration-300 hover:shadow-[0_4px_32px_rgba(99,102,241,0.15)] dark:hover:shadow-[0_4px_40px_rgba(99,102,241,0.28)]"
+        "transition-shadow duration-300 hover:shadow-[0_4px_32px_rgba(99,102,241,0.15)] dark:hover:shadow-[0_4px_40px_rgba(99,102,241,0.28)]",
+        isWideSingle ? "flex flex-row" : "flex flex-col"
       )}
     >
       {/* Category gradient tint */}
@@ -104,7 +108,7 @@ function CardContent({
         )}
       />
 
-      {/* Image — only for tall / large cards */}
+      {/* Image — tall/large: top strip; wide-single: right panel */}
       {displayImage && (isTall || isLarge) && (
         <div
           className="relative overflow-hidden flex-shrink-0 rounded-t-2xl"
@@ -179,6 +183,20 @@ function CardContent({
           )}
         </div>
       </div>
+
+      {/* 2×1 wide card: image on the right side, no rounded corners on the left (text side) */}
+      {displayImage && isWideSingle && (
+        <div className="relative flex-shrink-0 w-[38%] overflow-hidden">
+          <Image
+            src={displayImage}
+            alt={project.title}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 640px) 100vw, 40vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/20" />
+        </div>
+      )}
     </div>
   );
 }

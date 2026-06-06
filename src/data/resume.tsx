@@ -482,6 +482,7 @@ export const DATA = {
       href: "#",
       dates: "Jan 2026 – Mar 2026",
       active: false,
+      gridSize: { col: 1, row: 2 } as const,
       description:
         "Full VPN tunnel in C over UDP; custom WireChild protocol with SHA3-256 encryption, sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
       longDescription:
@@ -496,7 +497,7 @@ export const DATA = {
       href: "#",
       dates: "May 2024 – Present",
       active: true,
-      gridSize: { col: 2, row: 1 } as const,
+      gridSize: { col: 3, row: 1 } as const,
       description:
         "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
       longDescription:
