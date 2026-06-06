@@ -196,7 +196,7 @@ export const DATA = {
 
   work: [
     {
-      department:"Department of Computer Science & Software Engineering",
+      department: "Department of Computer Science & Software Engineering",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
@@ -209,7 +209,7 @@ export const DATA = {
         "Graded CSSE332 Operating Systems assignments and projects covering boot flow, process scheduling, virtual memory management, system calls, concurrency, synchronization, and file systems; provided targeted written feedback on design decisions, race conditions, and memory-safety issues. Coordinated with faculty to maintain consistent evaluation standards across sections.",
     },
     {
-      department:"Department of Computer Science & Software Engineering",
+      department: "Department of Computer Science & Software Engineering",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
@@ -222,7 +222,7 @@ export const DATA = {
         "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around actionable written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
     },
     {
-      department:"Department of Electrical & Computer Engineering",
+      department: "Department of Electrical & Computer Engineering",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
@@ -396,6 +396,23 @@ export const DATA = {
 
   projects: [
     {
+      title: "Personal Website & Services",
+      href: "https://career.yueqiao.dev/",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "GitHub Pages for static webpage hosting, Azure VPS with Ubuntu, Apache, PHP, and PostgreSQL for NextCloud, Cloudflare for DNS, SSL/TLS, and Tunnel.",
+      longDescription:
+        "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
+      technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
+      links: [
+        {type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" />},
+        {type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" />},
+      ],
+      images: "",
+      video: "",
+    },
+    {
       title: "MorpheOS — Teaching-Focused RISC-V Microkernel",
       href: "#",
       dates: "Jun 2025 – Present",
@@ -443,7 +460,7 @@ export const DATA = {
       image: "",
       video: "",
     },
-    
+
     {
       title: "Cryogenic Superconducting Film Characterization Apparatus",
       href: "#",
@@ -503,7 +520,7 @@ export const DATA = {
       image: "/pimdpu.png",
       video: "",
     },
-    
+
     {
       title: "OAO Autonomous Vehicle Firmware",
       dates: "Mar 2025 – May 2025",
@@ -639,17 +656,21 @@ export const DATA = {
     {
       title: "WIC Personal Website & Services",
       href: "https://career.wic.monster/",
-      dates: "2019 – Present",
-      active: true,
+      dates: "2019 – 2024",
+      active: false,
       description:
         "Self-hosted WordPress + Nextcloud + mail + file distribution; hardened and optimized on Debian/Apache/PHP/MySQL.",
       longDescription:
         "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
       technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud", "Self-initiated", "WordPress", "Email Server"],
-      links: [{ type: "Website", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> }, { type: "Website", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
+      links: [
+        
+        { type: "Website V2 Archive", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> },
+        { type: "V2 Storage Page Archive", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
       image: "",
       video: "",
     },
+    
   ],
 
   hackathons: [],
