@@ -341,7 +341,7 @@ function ExpandedCard({
 
       {/* Scrollable content */}
       <div className="flex-1 overflow-auto p-4 sm:p-6 space-y-3 min-h-0">
-        <div className="flex items-start justify-between gap-2">
+        <div className={cn("flex items-start justify-between gap-2", count === 0 && "pr-10")}>
           <div>
             <h2 className="text-xl font-bold leading-tight">{project.title}</h2>
             <time className="text-xs text-muted-foreground">{project.dates}</time>
