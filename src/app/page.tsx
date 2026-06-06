@@ -281,7 +281,7 @@ export default function Page() {
       {/* FOOTER */}
       <footer className="py-6 text-center text-sm text-gray-500">
         <p>
-          Template by{" "}
+          Inspired by{" "}
           <a
             href="https://github.com/dillionverma/portfolio"
             target="_blank"
@@ -290,9 +290,9 @@ export default function Page() {
           >
             Dillion Verma
           </a>{" "}
-          · Code MIT
+          · License MIT
         </p>
-        <p>Modified & Content © {new Date().getFullYear()} {DATA.name}</p>
+        <p>Created & Content © {new Date().getFullYear()} {DATA.name}</p>
       </footer>
     </main>
   );
