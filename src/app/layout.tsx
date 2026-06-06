@@ -4,8 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { Patrick_Hand, Share_Tech_Mono } from "next/font/google";
+import { Space_Grotesk as FontSans, Patrick_Hand, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 import { Pointer } from "@/components/magicui/pointer";
 import { StarField } from "@/components/star-field";
@@ -13,6 +12,7 @@ import { StarField } from "@/components/star-field";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const fontPatrick = Patrick_Hand({
