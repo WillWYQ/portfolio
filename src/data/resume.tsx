@@ -406,8 +406,8 @@ export const DATA = {
         "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
       technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
       links: [
-        {type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" />},
-        {type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" />},
+        { type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" /> },
+        { type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" /> },
       ],
       images: "",
       video: "",
@@ -439,7 +439,10 @@ export const DATA = {
       longDescription:
         "Architected a database-free marketplace (Next.js 15/TypeScript) where all content is driven from a single content folder, letting non-technical sellers manage inventory without touching application code. Designed a distance-tiered pricing engine that resolves buyer location entirely client-side via the browser Geolocation API (haversine, zero server calls), keeping visitor coordinates private. Engineered a git-free image pipeline using Cloudflare R2 CDN with a lightweight JSON manifest, keeping deploys within free static-hosting limits on GitHub Pages. Drove a spec-first, AI-assisted workflow with Claude Code, hardening a ~270 KB internally consistent design corpus (7 versioned docs, v0.2.0–v0.9.0) through 10+ AI-led multi-pass consistency audits that caught orphaned schema fields, broken build ordering, and dependency cycles before any code was written. Authored a 14-phase, agent-executable implementation plan with machine-checkable acceptance criteria (type-check + lint gates). Shipped two portable AI assistant skills (/setup, /update-items) that generate site config and item metadata from seller photos and notes.",
       technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Cloudflare R2", "GitHub Actions", "Claude Code"],
-      links: [{ type: "GitHub", href: "https://github.com/WillWYQ/usedExchange", icon: <Icons.github className="size-3" /> }],
+      links: [
+        { type: "GitHub", href: "https://github.com/WillWYQ/usedExchange", icon: <Icons.github className="size-3" /> },
+        { type: "Website", href: "https://usedexchangeproject.willsleep.dev", icon: <Icons.globe className="size-3" /> }
+      ],
       image: "",
       video: "",
     },
@@ -665,13 +668,13 @@ export const DATA = {
         "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
       technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud", "Self-initiated", "WordPress", "Email Server"],
       links: [
-        
+
         { type: "Website V2 Archive", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> },
         { type: "V2 Storage Page Archive", href: "https://web.archive.org/web/20240716044735/https://storage.wic.monster/index.php/login", icon: <Icons.googleDrive className="size-3" /> }],
       image: "",
       video: "",
     },
-    
+
   ],
 
   hackathons: [],
