@@ -13,6 +13,7 @@ import { socials } from "@/config/site";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -41,15 +42,8 @@ export default function Page() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      {/* <!-- Google tag (gtag.js) --> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L3QV064E"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      <GoogleAnalytics gaId="G-X4L3QV064E" />
 
-        gtag('config', 'G-X4L3QV064E');
-      </script>
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -113,25 +107,25 @@ export default function Page() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY * 2} className="self-start overflow-visible p-4" yOffset={0}>
-
+ 
               <CoolMode >
                 <button className="relative group overflow-visible flex items-center justify-center w-[240px] h-[240px]">
-
+                  
                   <SpinningText
-                    text={DATA.avatarStatement}
-                    radius={100}
-                    speed={10}
-                    className="fill-foreground text-foreground/60"
+                  text={DATA.avatarStatement}
+                  radius={100}
+                  speed={10}
+                  className="fill-foreground text-foreground/60"
+                  
+                >
+                  <Avatar className="size-29 border">
+                    <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                    <AvatarFallback>{DATA.initials}</AvatarFallback>
+                  </Avatar>
 
-                  >
-                    <Avatar className="size-29 border">
-                      <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                      <AvatarFallback>{DATA.initials}</AvatarFallback>
-                    </Avatar>
-
-                  </SpinningText>
+                </SpinningText>
                 </button>
-
+                
               </CoolMode>
             </BlurFade>
           </div>
