@@ -40,7 +40,6 @@ export default function Page() {
       .heroResumeButtons ?? []) as HeroResumeButton[];
 
   return (
-
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       {/* <!-- Google tag (gtag.js) --> */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L3QV064E"></script>
@@ -52,7 +51,6 @@ export default function Page() {
         gtag('config', 'G-X4L3QV064E');
       </script>
       {/* Structured Data */}
-
       <script
         type="application/ld+json"
         suppressHydrationWarning
