@@ -46,13 +46,14 @@ jobs:
       - name: Build & Export static site
         run: pnpm build
 
+      # career.yueqiao.dev is the canonical domain (matches DATA.url, sitemap,
+      # OG metadata, and the resumes). career.wic.monster currently serves an
+      # SSL error (HTTP 526) — verify the repo's Settings -> Pages custom
+      # domain also says career.yueqiao.dev after the next deploy.
       - name: Add CNAME and .nojekyll
         run: |
-          echo "career.wic.monster" > out/CNAME
+          echo "career.yueqiao.dev" > out/CNAME
           touch out/.nojekyll
-
-      # If you want career.yueqiao.dev to also work, 
-      # do not write it to CNAME. Instead, redirect it via your DNS provider.
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
