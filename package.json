@@ -8,6 +8,7 @@
     "prestart": "node scripts/generate-image-manifest.cjs",
     "generate:image-manifest": "node scripts/generate-image-manifest.cjs",
     "generate:og": "node scripts/generate-og.mjs",
+    "generate:icons": "node scripts/generate-icons.mjs",
     "export:resume-pdfs": "bash scripts/export-resume-pdfs.sh",
     "clean": "rimraf .next out .turbo tsconfig.tsbuildinfo .vercel/output",
     "dev": "next dev",
