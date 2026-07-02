@@ -13,9 +13,9 @@ export const DATA = {
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",
   description:
-    "Computer Engineering @ RHIT ('26), cum laude.\nMinor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
+    "Systems & embedded software engineer — B.S. Computer Engineering, Rose-Hulman '26, cum laude.\nRISC-V microkernel bring-up · VPN tunnel in C · cryogenic instrumentation firmware.\nOpen to systems, kernel, embedded & security roles.",
   summary:
-    "I'm a computer engineering graduate focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics. I love to work at the intersection of the humanities and technology. I'm here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, a full VPN tunnel in C, an ML pipeline predicting job-search outcomes, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
+    "I work below the application layer. For the past year I've been building **MorpheOS**, a teaching-focused RISC-V microkernel: boot flow, trap/exception handling, timer-driven preemption, and PLIC interrupts — validated on QEMU and debugged with GDB down to trap-handler misfires and stack corruption. Along the way I wrote a **VPN tunnel in C** (custom UDP protocol, anti-replay, multi-client sessions), lead the **ESP32-P4 control stack** for a cryogenic superconducting-film tester (±0.5 K at 77 K), and studied **PIM/DPU scaling** with cycle-accurate simulators. I want the problems where the stack trace ends in assembly. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.jpg",
   avatarStatement: "Explore • Build • Share • ",
   heroResumeButtons: [
@@ -282,7 +282,7 @@ export const DATA = {
       location: "Terre Haute, IN",
       title: "Archivist",
       logoUrl: "/makerlab.png",
-      start: "Mar 2024",
+      start: "Mar 2023",
       end: "Mar 2026",
       description:
         "Maintained lab assets and documentation; supported student projects and maker activities.",
@@ -319,7 +319,7 @@ export const DATA = {
       href: "https://www.rose-hulman.edu/",
       badges: ["Leadership", "Finances"],
       location: "Terre Haute, IN",
-      title: "Treasury",
+      title: "Treasurer",
       logoUrl: "/isa.png",
       start: "Mar 2023",
       end: "Jun 2025",
@@ -490,9 +490,9 @@ export const DATA = {
       active: false,
       gridSize: { col: 1, row: 2 } as const,
       description:
-        "Full VPN tunnel in C over UDP; custom WireChild protocol with SHA3-256 encryption, sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
+        "Full VPN tunnel in C over UDP; custom WireChild protocol with a SHA3-256-derived keystream cipher (educational crypto), sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
       longDescription:
-        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: SHA3-256 symmetric encryption, sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
+        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design — deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
       technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
       links: [],
       image: "",

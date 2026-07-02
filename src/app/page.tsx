@@ -161,7 +161,7 @@ export default function Page() {
             <div>
               <h2 className="text-xl font-bold font-share-tech-mono">Work Experience</h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                For each card, you can click to view the details or jump to the corresponding link.
+                Click any card for details.
               </p>
             </div>
           </BlurFade>
@@ -253,11 +253,11 @@ export default function Page() {
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  From bare metal to browser
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple websites to complex web
-                  applications. Here are a few of my favorites.
+                  A RISC-V microkernel, a VPN tunnel in C, firmware for a cryogenic test rig —
+                  plus the occasional web app. Click any card for the design decisions behind it.
                 </p>
               </div>
             </div>
@@ -278,11 +278,11 @@ export default function Page() {
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? <br /> Just shoot me a dm{" "}
+                Talking systems, firmware, or a role you&apos;re hiring for?{" "}
                 <Link href={socials.Email.url} className="text-blue-500 hover:underline">
-                  with a direct email
+                  Email me at career@yueqiao.dev
                 </Link>{" "}
-                and I&apos;ll respond whenever I can.
+                — I read everything and reply quickly.
               </p>
             </div>
           </BlurFade>

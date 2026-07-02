@@ -1,47 +1,44 @@
-# Portfolio 
-based on [dillionverma/portfolio](https://github.com/dillionverma/portfolio)
+# career.yueqiao.dev
 
-Yueqiao borrowing this before they finish their own page. Since they might need this page for a job.
+Personal portfolio of **Yueqiao Wang** — systems, embedded, and security engineering.
+Live at [career.yueqiao.dev](https://career.yueqiao.dev).
 
-# Features
+Based on the excellent [dillionverma/portfolio](https://github.com/dillionverma/portfolio) template (MIT), customized heavily since.
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Stack
 
-# Getting Started Locally
+Next.js 14 (static export), React 18, TypeScript, Tailwind CSS, shadcn/ui, Magic UI, Framer Motion. Deployed to GitHub Pages via GitHub Actions.
 
-1. Clone this repository to your local machine:
+## Editing content
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+- Nearly all page content lives in a single file: [`src/data/resume.tsx`](./src/data/resume.tsx)
+- Site/socials/nav config: [`src/config/`](./src/config/)
+- Images go in `public/` — an image manifest is auto-generated on every dev/build by `scripts/generate-image-manifest.cjs`
 
-2. Move to the cloned directory
+## Development
 
-   ```bash
-   cd portfolio
-   ```
+```bash
+pnpm install
+pnpm dev
+```
 
-3. Install dependencies:
+## Build (static export to `out/`)
 
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm build
+```
 
-4. Start the local Server:
+> **Note:** Next 14.2.4's build worker deadlocks on very new Node (observed on
+> Node 24.x and 22.22.x — hangs at "Creating an optimized production build" with
+> 0% CPU). Node 22.11 builds fine. CI uses `actions/setup-node` with Node 22.
 
-   ```bash
-   pnpm dev
-   ```
+## Utilities
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+```bash
+pnpm generate:og          # regenerate the static OpenGraph image (public/og.png)
+pnpm export:resume-pdfs   # export resume .docx files in public/ to PDF (needs Microsoft Word)
+```
 
-# License
+## License
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
-You allow anyone to use, copy, modify, merge, publish, distribute, sublicense, and sell your code.
-They must keep your copyright notice and the license text in copies/substantial portions.
-No warranty / no liability: your code is provided “as is”.
+MIT — see [LICENSE](./LICENSE). Template © Dillion Verma; site content © Yueqiao Wang.
