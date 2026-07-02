@@ -5,17 +5,15 @@
   "scripts": {
     "predev": "node scripts/generate-image-manifest.cjs",
     "prebuild": "node scripts/generate-image-manifest.cjs",
-    "prestart": "node scripts/generate-image-manifest.cjs",
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "python3 -m http.server 4173 -d out",
+    "lint": "next lint",
+    "clean": "rimraf .next out .turbo tsconfig.tsbuildinfo .vercel/output",
     "generate:image-manifest": "node scripts/generate-image-manifest.cjs",
     "generate:og": "node scripts/generate-og.mjs",
     "generate:icons": "node scripts/generate-icons.mjs",
-    "export:resume-pdfs": "bash scripts/export-resume-pdfs.sh",
-    "clean": "rimraf .next out .turbo tsconfig.tsbuildinfo .vercel/output",
-    "dev": "next dev",
-    "build": "next build",
-    "build:static": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
+    "export:resume-pdfs": "bash scripts/export-resume-pdfs.sh"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.9",
