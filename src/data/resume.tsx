@@ -42,7 +42,7 @@ export const DATA = {
   ],
 
   skills: [
-    "3D Modeling", "3D Printing", "3D Printing & 3D Printer Repair", "ADC", "ADC/DAC", "AI Model Training & Inference", "ARQ Protocols", "AWS", "Adaptability", "Agile Development", "Analytical Modeling", "Apache", "Arduino", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "CMake", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "DAC", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "Ethernet", "ESP32", "Express.js", "Feature Engineering", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GCP", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "GridSearchCV", "HTML", "HPC Profiling", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt", "Interrupt Handling", "I2C", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "LVGL", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Native Chinese", "Networking", "Next.js", "NextCloud", "Nginx", "Node.js", "NumPy", "OAuth", "ONNX", "ONNX Runtime", "Omniperf", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "pandas", "PCB Fabrication & Testing", "PCB Layout", "Performance Metrics", "Performance & Power Analysis", "Power Integrity", "Power Supply & Load Programming", "Problem-Solving and Analytical Skills", "Prototyping with Figma", "Python", "PyVISA", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Research & Experimental Design", "REST API", "Real-Time Event Control", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "scikit-learn", "Scheduling", "Scientific Computing", "SCPI", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "Shell", "shadcn/ui", "Signal Encoding", "Signal Integrity in PCB and Chip-Level Design", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "uPIMulator", "Unix System Operation", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPN", "Vue", "Web Hosting", "Web Sockets", "WebSockets", "WebSockets (WS)", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim", "Chinese", "English", "GCP (Google Cloud)",
+    "3D Modeling", "3D Printing & 3D Printer Repair", "ADC/DAC", "Agile Development", "AI Model Training & Inference", "Analytical Modeling", "Apache", "Arduino", "ARQ Protocols", "Assembly", "Async/Await", "Attention Mechanisms", "AWS", "Azure", "Bash Automation", "BLE", "Bluetooth", "Bootstrap", "C", "C++", "CAD", "Cadence OrCAD", "Cadence PSpice", "Client-Side Frameworks & Libraries", "Cloud Deployment & Hosting", "CMake", "Composer", "Concurrency & Synchronization", "Crosstalk Mitigation", "CSS", "Cycle-Accurate Simulators", "Data Analysis", "Debian", "Debugging & Verification", "Electrical Component Selection", "Embedded C Development", "ESP32", "Ethernet", "Express.js", "Feature Engineering", "Figma", "File System", "Finite State Machines (FSM)", "Firebase", "Firebase Realtime Database", "Fourier Series & Transform", "FPGA", "Function Generator", "GCC", "GDB", "gem5", "Git", "GitHub", "GitLab", "Google Cloud (GCP)", "GridSearchCV", "HPC Profiling", "HTML", "I2C", "Impedance Matching", "Instruction Set Architecture", "Instrumentation", "Interrupt Handling", "Java", "JavaScript", "Kernel-Level Programming", "Linux", "Local Server", "Low-Level System Security & Access Control", "Low-Power Embedded Design", "LVGL", "MacOS", "Make", "MariaDB", "MATLAB & Simulink", "Matrix-Fused Multiply Accumulate (MFMA)", "Micro Architecture", "micro:bit", "Microcontroller Programming", "ModelSim", "MongoDB", "Multi-GPU Processing", "Multi-Thread/Process Programming", "Multimeter", "MySQL", "Networking", "Next.js", "NextCloud", "Nginx", "Node.js", "NumPy", "OAuth", "Omniperf", "ONNX", "ONNX Runtime", "Open-Ended Project Management", "OpenSBI", "Oscilloscope", "OSI Model", "pandas", "PCB Fabrication & Testing", "PCB Layout", "Performance & Power Analysis", "Performance Metrics", "Power Integrity", "Power Supply & Load Programming", "Prototyping with Figma", "Python", "PyVISA", "QEMU", "Quartus Prime", "RAM Simulators", "Ramulator", "Raspberry Pi", "Real-Time Event Control", "Research & Experimental Design", "REST API", "RISC-V", "Robotics", "Roofline Analysis", "RStudio", "Scheduling", "Scientific Computing", "scikit-learn", "SCPI", "Sensor and Actuator Integration", "Serial Communication", "Server Hardening", "shadcn/ui", "Shell", "Signal Encoding", "Signal Integrity", "Silicon Platforms", "Sliding Window Protocols", "Socket Programming", "SolidWorks", "Subsystem Verification", "Swift", "System Calls", "System Design Process", "System Validation", "System Verification", "TailwindCSS", "TCP/IP", "Team Collaboration & Conflict Management", "Technical Report Writing & Poster Presentation", "Test-Driven Development", "Timing Closure Basics", "Transformers", "Transmission Line Analysis", "TypeScript", "UART", "Ubuntu", "Unix System Operation", "uPIMulator", "User Experience (UX) & Design", "Vectorization", "Verilog", "Virtual Memory", "Virtual Private Server", "VPN", "Vue", "Web Hosting", "WebSockets", "Wi-Fi", "Wireless Communication", "Wireless Networks", "WordPress", "Z-Transform & Discrete-Time Systems", "ZSim",
   ],
 
   categorizedSkills: {
@@ -197,6 +197,19 @@ export const DATA = {
 
   work: [
     {
+      department: "Rose-Hulman Summer Undergraduate Research Fellowships",
+      company: "Rose-Hulman Institute of Technology",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Research", "Leadership"],
+      location: "Terre Haute, IN",
+      title: "Researcher ",
+      logoUrl: "/rhit.png",
+      start: "May 2025",
+      end: "Present",
+      description:
+        "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
+    },
+    {
       department: "Department of Computer Science & Software Engineering",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
@@ -208,6 +221,19 @@ export const DATA = {
       end: "May 2026",
       description:
         "Graded CSSE332 Operating Systems assignments and projects covering boot flow, process scheduling, virtual memory management, system calls, concurrency, synchronization, and file systems; provided targeted written feedback on design decisions, race conditions, and memory-safety issues. Coordinated with faculty to maintain consistent evaluation standards across sections.",
+    },
+    {
+      department: "MERL (Multidisciplinary Educational Robotics Lab)",
+      company: "Rose-Hulman Institute of Technology",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Research", "Leadership"],
+      location: "Terre Haute, IN",
+      title: "Lab Manager & Researcher ",
+      logoUrl: "/MERL/logo.png",
+      start: "May 2024",
+      end: "May 2026",
+      description:
+        "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."
     },
     {
       department: "Department of Computer Science & Software Engineering",
@@ -236,17 +262,30 @@ export const DATA = {
         "Supported ECE 312 by grading assignments covering layered architectures, circuit vs. packet switching, ISO/OSI reference model flow, point-to-point protocols, framing/error control, shared-medium access, LANs, routing, congestion control, queuing theory, and reliable transport/internetworking. Verified numerical analyses, protocol diagrams, and queuing derivations; provided targeted feedback that linked theory to implementation tradeoffs and kept turnaround under 48 hours.",
     },
     {
-      department: "Rose-Hulman Summer Undergraduate Research Fellowships",
+      department: "Maker Lab (Student Organization)",
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
-      badges: ["Research", "Leadership"],
+      badges: ["Leadership", "Documentation"],
       location: "Terre Haute, IN",
-      title: "Researcher ",
-      logoUrl: "/rhit.png",
-      start: "May 2025",
-      end: "Present",
+      title: "Archivist",
+      logoUrl: "/makerlab.png",
+      start: "Mar 2023",
+      end: "Mar 2026",
       description:
-        "Designed and implemented core microkernel components on a RISC-V SoC, including boot, trap/exception handling, timer-driven preemption, and PLIC-based external interrupts. Integrated OpenSBI (FW_DYNAMIC) and verified the system on QEMU with GDB. Authored documentation, lab exercises, and code comments for an educational OS stack; maintained reproducible build tooling (Makefiles, scripts) to support students. Practiced low-level debugging (RISC-V assembly, linker scripts, interrupt controller configuration) under faculty mentorship; collaborated remotely with the research team. (Remote; Terre Haute, IN)"
+        "Maintained lab assets and documentation; supported student projects and maker activities.",
+    },
+    {
+      department: "International Student Association (Student Organization)",
+      company: "Rose-Hulman Institute of Technology",
+      href: "https://www.rose-hulman.edu/",
+      badges: ["Leadership", "Finances"],
+      location: "Terre Haute, IN",
+      title: "Treasurer",
+      logoUrl: "/isa.png",
+      start: "Mar 2023",
+      end: "Jun 2025",
+      description:
+        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
     },
     {
       department: "Department of Electrical & Computer Engineering",
@@ -260,32 +299,6 @@ export const DATA = {
       end: "Mar 2025",
       description:
         "Assisted in an Embedded Systems course. Helped students debug C/assembly code on microcontrollers, including build setup and peripheral use; guided practices for interrupts, timing, and resource-constrained programming. Checked off labs and graded reports with consistent rubrics. Reinforced systematic debugging habits and clear documentation; collaborated with the instructor to keep sessions on schedule.",
-    },
-    {
-      department: "MERL (Multidisciplinary Educational Robotics Lab)",
-      company: "Rose-Hulman Institute of Technology",
-      href: "https://www.rose-hulman.edu/",
-      badges: ["Research", "Leadership"],
-      location: "Terre Haute, IN",
-      title: "Lab Manager & Researcher ",
-      logoUrl: "/MERL/logo.png",
-      start: "May 2024",
-      end: "May 2026",
-      description:
-        "Designed and programmed human-interactive robot frameworks using Arduino and Raspberry Pi; implemented software architectures in C, JavaScript, and Python. Built end-to-end embedded systems (circuit design & soldering, HW–SW integration, product design). Used Cadence OrCAD for PCB and SolidWorks for mechanical design. Introduced a Git branching model, TODO tracker, team calendar, and an internal wiki; mentored 5 new student researchers and improved onboarding time by ~20%."
-    },
-    {
-      department: "Maker Lab (Student Organization)",
-      company: "Rose-Hulman Institute of Technology",
-      href: "https://www.rose-hulman.edu/",
-      badges: ["Leadership", "Documentation"],
-      location: "Terre Haute, IN",
-      title: "Archivist",
-      logoUrl: "/makerlab.png",
-      start: "Mar 2023",
-      end: "Mar 2026",
-      description:
-        "Maintained lab assets and documentation; supported student projects and maker activities.",
     },
     {
       department: "Department of Electrical & Computer Engineering",
@@ -312,19 +325,6 @@ export const DATA = {
       end: "Nov 2023",
       description:
         "Supported an undergraduate Object-Oriented Software Development course as a Teaching Assistant and project manager for the course project. Provided lab and office-hour support; helped students debug object-oriented code and reason about program design (abstraction, encapsulation, inheritance, polymorphism). Reviewed submissions and graded programming assignments using clear rubrics; delivered targeted feedback. Coordinated with the instructor to clarify requirements and maintain course materials. Organized weekly project meetings, set milestones, tracked risks, and guided teams to completion while reinforcing unit-testing and version-control practices."
-    },
-    {
-      department: "International Student Association (Student Organization)",
-      company: "Rose-Hulman Institute of Technology",
-      href: "https://www.rose-hulman.edu/",
-      badges: ["Leadership", "Finances"],
-      location: "Terre Haute, IN",
-      title: "Treasurer",
-      logoUrl: "/isa.png",
-      start: "Mar 2023",
-      end: "Jun 2025",
-      description:
-        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
     },
   ],
 
@@ -397,23 +397,6 @@ export const DATA = {
 
   projects: [
     {
-      title: "Personal Website & Services",
-      href: "https://career.yueqiao.dev/",
-      dates: "2025 – Present",
-      active: true,
-      description:
-        "GitHub Pages for static webpage hosting, Azure VPS with Ubuntu, Apache, PHP, and PostgreSQL for NextCloud, Cloudflare for DNS, SSL/TLS, and Tunnel.",
-      longDescription:
-        "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
-      technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
-      links: [
-        { type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" /> },
-        { type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" /> },
-      ],
-      images: "",
-      video: "",
-    },
-    {
       title: "MorpheOS — Teaching-Focused RISC-V Microkernel",
       href: "#",
       dates: "Jun 2025 – Present",
@@ -429,6 +412,65 @@ export const DATA = {
       links: [],
       images: ["/MorpheOS/MorpheOS.jpg", "/MorpheOS/MorpheOSQemu.png"],
       imageFolder: "MorpheOS",
+      video: "",
+    },
+    {
+      title: "VPN Tunnel Program",
+      href: "#",
+      dates: "Jan 2026 – Mar 2026",
+      active: false,
+      gridSize: { col: 1, row: 2 } as const,
+      description:
+        "Full VPN tunnel in C over UDP; custom WireChild protocol with a SHA3-256-derived keystream cipher (educational crypto), sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
+      longDescription:
+        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design — deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
+      technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Cryogenic Superconducting Film Characterization Apparatus",
+      href: "#",
+      dates: "Sep 2025 – May 2026",
+      active: false,
+      gridSize: { col: 2, row: 2 } as const,
+      description:
+        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, LVGL touchscreen UI, WebUSB host dashboard, and YAML measurement plans.",
+      longDescription:
+        "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: an on-device touchscreen graphical UI (LVGL) and a WebUSB host dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes.",
+      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML", "LVGL"],
+      links: [],
+      image: "",
+      imageFolder: "CYRO",
+      video: "",
+    },
+    {
+      title: "Processing-in-Memory DPU Scaling",
+      href: "#",
+      dates: "Nov 2024 – Mar 2025",
+      active: false,
+      description:
+        "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
+      longDescription:
+        "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
+      technologies: ["uPIMulator", "Python", "Bash", "Linux"],
+      links: [],
+      image: "/pimdpu.jpg",
+      video: "",
+    },
+    {
+      title: "Lime ISA — Multi-cycle CPU (RISC-V-like)",
+      href: "#",
+      dates: "Nov 2023 – Mar 2024",
+      active: false,
+      description:
+        "Designed datapath/control; Verilog implementation, ModelSim simulation, tests/benchmarks, and simple compiler pipeline.",
+      longDescription:
+        "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration. Practiced RTL design trade-offs between multi-cycle vs pipelined approaches, reinforcing understanding of assembly-level execution and microarchitecture fundamentals.",
+      technologies: ["Verilog", "ISA Design", "ALU/Control Unit", "ModelSim", "Computer Architecture"],
+      links: [],
+      image: "",
       video: "",
     },
     {
@@ -466,68 +508,6 @@ export const DATA = {
       image: "",
       video: "",
     },
-
-    {
-      title: "Cryogenic Superconducting Film Characterization Apparatus",
-      href: "#",
-      dates: "Sep 2025 – May 2026",
-      active: false,
-      gridSize: { col: 2, row: 2 } as const,
-      description:
-        "Owns the EGS/TSS control stack for a superconducting thin-film tester: ESP32-P4 edge controller, PT1000/ADS124S08 readout, LVGL touchscreen UI, WebUSB host dashboard, and YAML measurement plans.",
-      longDescription:
-        "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: an on-device touchscreen graphical UI (LVGL) and a WebUSB host dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes.",
-      technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML", "LVGL"],
-      links: [],
-      image: "",
-      imageFolder: "CYRO",
-      video: "",
-    },
-    {
-      title: "VPN Tunnel Program",
-      href: "#",
-      dates: "Jan 2026 – Mar 2026",
-      active: false,
-      gridSize: { col: 1, row: 2 } as const,
-      description:
-        "Full VPN tunnel in C over UDP; custom WireChild protocol with a SHA3-256-derived keystream cipher (educational crypto), sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
-      longDescription:
-        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design — deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
-      technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
-      links: [],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Open-Source Educational Robotics",
-      href: "#",
-      dates: "May 2024 – Present",
-      active: true,
-      gridSize: { col: 3, row: 1 } as const,
-      description:
-        "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
-      longDescription:
-        "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
-      technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
-      links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
-      imageFolder: "MERL",
-      video: "",
-    },
-    {
-      title: "Processing-in-Memory DPU Scaling",
-      href: "#",
-      dates: "Nov 2024 – Mar 2025",
-      active: false,
-      description:
-        "Simulated UPMEM PIM systems (1–16 DPUs/rank) with uPIMulator; analyzed latency, throughput, and BW utilization with Python/Bash automation.",
-      longDescription:
-        "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
-      technologies: ["uPIMulator", "Python", "Bash", "Linux"],
-      links: [],
-      image: "/pimdpu.jpg",
-      video: "",
-    },
-
     {
       title: "OAO Autonomous Vehicle Firmware",
       dates: "Mar 2025 – May 2025",
@@ -542,30 +522,18 @@ export const DATA = {
 
     },
     {
-      title: "ParkSmart — Campus Parking App",
+      title: "Open-Source Educational Robotics",
       href: "#",
-      dates: "Jul 2024 – Present",
+      dates: "May 2024 – Present",
       active: true,
+      gridSize: { col: 3, row: 1 } as const,
       description:
-        "Mobile-friendly web app for reporting/viewing real-time parking availability on campus; UI design, implementation, user feedback loop.",
+        "Human-interactive robot frameworks; software in C/JS/Python; PCB design in OrCAD; mechanical parts in SolidWorks; docs and outreach.",
       longDescription:
-        "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption. Strengthened skills in full-stack development, requirement analysis, and stakeholder communication.",
-      technologies: ["JavaScript", "HTML", "CSS", "Firebase", "UX Design"],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Model United Nations App (CYMUNC)",
-      href: "#",
-      dates: "Aug 2024 – Oct 2024",
-      active: false,
-      description:
-        "Event management mini-app built with Vue + WeChat platform; improved registration efficiency for 200+ users.",
-      longDescription:
-        "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback. Enhanced skills in full-stack JavaScript (Vue, cloud functions, database management) and cross-functional communication.",
-      technologies: ["Vue.js", "WeChat Cloud", "JavaScript", "Database"],
-      links: [],
-      image: "",
+        "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
+      technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
+      links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
+      imageFolder: "MERL",
       video: "",
     },
     {
@@ -602,20 +570,6 @@ export const DATA = {
         "/LazyPlant/IMG_8352.jpg",
         "/LazyPlant/IMG_8353.jpg",
       ],
-      video: "",
-    },
-    {
-      title: "Lime ISA — Multi-cycle CPU (RISC-V-like)",
-      href: "#",
-      dates: "Nov 2023 – Mar 2024",
-      active: false,
-      description:
-        "Designed datapath/control; Verilog implementation, ModelSim simulation, tests/benchmarks, and simple compiler pipeline.",
-      longDescription:
-        "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration. Practiced RTL design trade-offs between multi-cycle vs pipelined approaches, reinforcing understanding of assembly-level execution and microarchitecture fundamentals.",
-      technologies: ["Verilog", "ISA Design", "ALU/Control Unit", "ModelSim", "Computer Architecture"],
-      links: [],
-      image: "",
       video: "",
     },
     {
@@ -661,6 +615,50 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Personal Website & Services",
+      href: "https://career.yueqiao.dev/",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "GitHub Pages for static webpage hosting, Azure VPS with Ubuntu, Apache, PHP, and PostgreSQL for NextCloud, Cloudflare for DNS, SSL/TLS, and Tunnel.",
+      longDescription:
+        "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
+      technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
+      links: [
+        { type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" /> },
+        { type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" /> },
+      ],
+      images: "",
+      video: "",
+    },
+    {
+      title: "ParkSmart — Campus Parking App",
+      href: "#",
+      dates: "Jul 2024 – Present",
+      active: true,
+      description:
+        "Mobile-friendly web app for reporting/viewing real-time parking availability on campus; UI design, implementation, user feedback loop.",
+      longDescription:
+        "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption. Strengthened skills in full-stack development, requirement analysis, and stakeholder communication.",
+      technologies: ["JavaScript", "HTML", "CSS", "Firebase", "UX Design"],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Model United Nations App (CYMUNC)",
+      href: "#",
+      dates: "Aug 2024 – Oct 2024",
+      active: false,
+      description:
+        "Event management mini-app built with Vue + WeChat platform; improved registration efficiency for 200+ users.",
+      longDescription:
+        "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback. Enhanced skills in full-stack JavaScript (Vue, cloud functions, database management) and cross-functional communication.",
+      technologies: ["Vue.js", "WeChat Cloud", "JavaScript", "Database"],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
       title: "WIC Personal Website & Services",
       href: "https://career.wic.monster/",
       dates: "2019 – 2024",
@@ -677,7 +675,6 @@ export const DATA = {
       image: "",
       video: "",
     },
-
   ],
 
   hackathons: [],

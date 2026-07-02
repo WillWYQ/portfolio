@@ -318,7 +318,8 @@ function SkillsSection() {
   const categorized = (DATA as any).categorizedSkills as CategoriesMap | undefined;
 
   // —— 角色画像分支 —— //
-  const [selectedRole, setSelectedRole] = useState<"all" | string>("all");
+  // Default to the curated systems/kernel view instead of the ~170-badge "All" wall.
+  const [selectedRole, setSelectedRole] = useState<"all" | string>("SystemsKernelEngineer");
   const roleEntries = useMemo<[string, { label: string; skills: string[] }][]>(
     () => (roles ? Object.entries(roles) : []),
     [roles]
