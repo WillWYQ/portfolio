@@ -167,3 +167,17 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .cursor-blink {
   animation: cursor-blink 1.1s steps(1) infinite;
 }
+
+/* Accessibility: collapse CSS animations/transitions (aurora drift, spinning
+   text, cursor blink, …) when the OS asks for reduced motion. Framer-motion
+   is handled separately via <MotionConfig reducedMotion="user">. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

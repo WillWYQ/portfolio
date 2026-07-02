@@ -32,9 +32,18 @@ export function StarField() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Reduced motion: keep the starry sky but render it as a single static
+    // frame (no twinkle, no drift, no rAF loop).
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    let redraw: (() => void) | null = null;
+
     const setSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      // Resizing wipes the bitmap; with no animation loop running, repaint once.
+      redraw?.();
     };
     setSize();
     window.addEventListener("resize", setSize);
@@ -57,10 +66,14 @@ export function StarField() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (const s of stars) {
-        s.x = (s.x + s.vx + canvas.width) % canvas.width;
-        s.y = (s.y + s.vy + canvas.height) % canvas.height;
+        if (!prefersReducedMotion) {
+          s.x = (s.x + s.vx + canvas.width) % canvas.width;
+          s.y = (s.y + s.vy + canvas.height) % canvas.height;
+        }
 
-        const tw = 0.5 + 0.5 * Math.sin(t * s.twinkleSpeed + s.phase);
+        const tw = prefersReducedMotion
+          ? 0.65
+          : 0.5 + 0.5 * Math.sin(t * s.twinkleSpeed + s.phase);
         const alpha = s.baseAlpha * (0.3 + 0.7 * tw);
         const color = STAR_COLORS[s.colorIdx];
 
@@ -81,9 +94,12 @@ export function StarField() {
       }
 
       t++;
-      rafRef.current = requestAnimationFrame(render);
+      if (!prefersReducedMotion) {
+        rafRef.current = requestAnimationFrame(render);
+      }
     };
 
+    if (prefersReducedMotion) redraw = render;
     rafRef.current = requestAnimationFrame(render);
 
     return () => {

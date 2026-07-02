@@ -2,6 +2,7 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProviderProps } from "next-themes/dist/types";
+import { MotionConfig } from "framer-motion";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return (
@@ -14,7 +15,8 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
       disableTransitionOnChange
       {...props}
     >
-      {children}
+      {/* Honor OS-level reduced-motion for all framer-motion animations */}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </NextThemesProvider>
   );
 }
