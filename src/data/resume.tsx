@@ -35,7 +35,7 @@ export const DATA = {
     },
     {
       label: "AI Software Resume",
-      filePath: "/AI_Software_Resume_Yueqiao_Wang.docx",
+      filePath: "/AI_Software_Resume_Yueqiao_Wang_Jun26.docx",
       downloadName: "Yueqiao-Wang-AI-Resume.docx",
     }
   ],
@@ -423,7 +423,9 @@ export const DATA = {
       longDescription:
         "MorpheOS is a teaching-focused microkernel for RISC-V. It covers early boot/bring-up, trap/exception handling, timer-driven preemption, and PLIC external interrupts. The kernel integrates OpenSBI and is validated on QEMU with GDB-based bring-up and debugging. I also authored hands-on documentation and lab materials to guide students through kernel subsystems and debugging workflows.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
-      links: [{ type: "GitHub", href: "https://github.com/rhit-netsos/morpheos", icon: <Icons.github className="size-3" /> }],
+      // NOTE: repo is private (github.com/rhit-netsos/morpheos 404s publicly) — re-add the
+      // GitHub link once a public mirror or writeup exists.
+      links: [],
       images: ["/MorpheOS/MorpheOS.png", "/MorpheOS/MorpheOSQemu.png"],
       imageFolder: "MorpheOS",
       video: "",
