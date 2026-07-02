@@ -8,6 +8,7 @@ import { navbar, socials } from "@/config/site";
 export const DATA = {
   name: "Yueqiao Wang",
   initials: "YW",
+  tagline: "Systems & Embedded Software Engineer",
   url: "https://career.yueqiao.dev",
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",

@@ -71,23 +71,29 @@ export default function Page() {
       {/* HERO */}
       <section id="hero">
         <div className="mx-auto w-full max-w-4xl space-y-8">
-          <div className="gap-2 flex justify-between">
+          {/* Stack on phones: the fixed 240px avatar otherwise squeezes the
+              headline column to ~90px and wraps it one word per line. */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:gap-2">
             <div className="flex-col flex flex-1 space-y-1.5">
               <div className="inline-flex items-center gap-2 self-start rounded-full border border-black/5 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-900 shadow-sm dark:border-white/10 dark:bg-white/10 dark:text-white/80">
                 <span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.9)]" />
                 Available for Work: Globally
               </div>
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-patrick"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <h1>
+                <BlurFadeText
+                  delay={BLUR_FADE_DELAY}
+                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-patrick"
+                  yOffset={8}
+                  text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                />
+              </h1>
+              <p>
+                <BlurFadeText
+                  className="max-w-[600px] md:text-xl"
+                  delay={BLUR_FADE_DELAY}
+                  text={DATA.description}
+                />
+              </p>
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <div className="flex flex-wrap gap-3 pt-2">
                   {heroResumeButtons.map((button, index) => (
@@ -106,7 +112,7 @@ export default function Page() {
                 </div>
               </BlurFade>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY * 2} className="self-start overflow-visible p-4" yOffset={0}>
+            <BlurFade delay={BLUR_FADE_DELAY * 2} className="self-center sm:self-start overflow-visible p-4" yOffset={0}>
  
               <CoolMode >
                 <button className="relative group overflow-visible flex items-center justify-center w-[240px] h-[240px]">
@@ -118,7 +124,9 @@ export default function Page() {
                   className="fill-foreground text-foreground/60"
                   
                 >
-                  <Avatar className="size-29 border">
+                  {/* size-32 (8rem) — size-29 doesn't exist in Tailwind's scale, which
+                      left the avatar with no dimensions at all */}
+                  <Avatar className="size-32 border">
                     <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                     <AvatarFallback>{DATA.initials}</AvatarFallback>
                   </Avatar>

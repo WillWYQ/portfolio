@@ -33,9 +33,10 @@ const BlurFadeText = ({
   const combinedVariants = variant || defaultVariants;
   const characters = useMemo(() => Array.from(text), [text]);
 
+  // span (not div) so callers can wrap this in semantic h1/p elements
   if (animateByCharacter) {
     return (
-      <div className="flex">
+      <span className="flex">
         <AnimatePresence>
           {characters.map((char, i) => (
             <motion.span
@@ -56,12 +57,12 @@ const BlurFadeText = ({
             </motion.span>
           ))}
         </AnimatePresence>
-      </div>
+      </span>
     );
   }
 
   return (
-    <div className="flex">
+    <span className="flex">
       <AnimatePresence>
         <motion.span
           initial="hidden"
@@ -79,7 +80,7 @@ const BlurFadeText = ({
           {text}
         </motion.span>
       </AnimatePresence>
-    </div>
+    </span>
   );
 };
 

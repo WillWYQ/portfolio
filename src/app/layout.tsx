@@ -30,7 +30,7 @@ const fontShareTechMono = Share_Tech_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} — ${DATA.tagline}`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   publisher: DATA.name,
   // manifest: "/manifest.webmanifest",
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} — ${DATA.tagline}`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} — ${DATA.tagline}`,
     card: "summary_large_image",
     images: ["/og.png"],
   },
