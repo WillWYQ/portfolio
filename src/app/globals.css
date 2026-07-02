@@ -157,3 +157,13 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Terminal cursor blink (404 page) */
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
