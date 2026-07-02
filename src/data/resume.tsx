@@ -624,8 +624,11 @@ export const DATA = {
       longDescription:
         "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
       technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
+      // "Website" link dropped: willsleep.dev now hosts an unrelated personal
+      // page, not evidence of the static-hosting work described above (this
+      // portfolio, on career.yueqiao.dev, is the evidence). Cloud Storage
+      // still points at the real NextCloud instance this project describes.
       links: [
-        { type: "Website", href: "https://willsleep.dev/", icon: <Icons.globe className="size-3" /> },
         { type: "Cloud Storage", href: "https://cloud.willsleep.dev/", icon: <Icons.globe className="size-3" /> },
       ],
       images: "",
