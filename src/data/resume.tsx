@@ -16,7 +16,7 @@ export const DATA = {
     "Computer Engineering @ RHIT ('26), cum laude.\nMinor in Computer Science & Economics.\nOS & Computer Architecture • Embedded/Robotics • Web.",
   summary:
     "I'm a computer engineering graduate focused on low-level OS (RISC-V microkernels), computer architecture research, and hands-on firmware/embedded/robotics. I love to work at the intersection of the humanities and technology. I'm here for the hard problems and the quiet joy when a project finally comes alive. Recent work includes a teaching-focused microkernel (MorpheOS), PIM/DPU simulation studies, open-source educational robotics, a full VPN tunnel in C, an ML pipeline predicting job-search outcomes, and campus apps like ParkSmart. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.jpg",
   avatarStatement: "Explore • Build • Share • ",
   heroResumeButtons: [
     // {
@@ -427,7 +427,7 @@ export const DATA = {
       // NOTE: repo is private (github.com/rhit-netsos/morpheos 404s publicly) — re-add the
       // GitHub link once a public mirror or writeup exists.
       links: [],
-      images: ["/MorpheOS/MorpheOS.png", "/MorpheOS/MorpheOSQemu.png"],
+      images: ["/MorpheOS/MorpheOS.jpg", "/MorpheOS/MorpheOSQemu.png"],
       imageFolder: "MorpheOS",
       video: "",
     },
@@ -524,7 +524,7 @@ export const DATA = {
         "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
       technologies: ["uPIMulator", "Python", "Bash", "Linux"],
       links: [],
-      image: "/pimdpu.png",
+      image: "/pimdpu.jpg",
       video: "",
     },
 
@@ -598,9 +598,9 @@ export const DATA = {
       links: [{ type: "GitHub", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
       imageFolder: "LazyPlant",
       images: [
-        "/LazyPlant/IMG_8267.png",
-        "/LazyPlant/IMG_8352.png",
-        "/LazyPlant/IMG_8353.png",
+        "/LazyPlant/IMG_8267.jpg",
+        "/LazyPlant/IMG_8352.jpg",
+        "/LazyPlant/IMG_8353.jpg",
       ],
       video: "",
     },
