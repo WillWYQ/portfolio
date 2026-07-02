@@ -1,7 +1,7 @@
 // Generates the site icons from the same "YW" blue-tile monogram used in
 // public/og.png, so tab icon / bookmark / share card read as one brand:
 //   src/app/favicon.ico          (32px PNG wrapped in ICO)
-//   src/app/apple-touch-icon.png (180px, full-bleed square — iOS rounds it)
+//   src/app/apple-icon.png (180px, full-bleed square — iOS rounds it)
 // Run: node scripts/generate-icons.mjs   (requires macOS `sips` for resizing)
 import { ImageResponse } from "next/og.js";
 import { writeFileSync } from "node:fs";
@@ -68,6 +68,6 @@ writeFileSync(resolve(appDir, "favicon.ico"), Buffer.concat([header, png32]));
 const square512 = await renderTile({ size: 512, radius: 0 });
 const tmpSquare = resolve(tmpdir(), "yw-icon-square-512.png");
 writeFileSync(tmpSquare, square512);
-sipsResize(tmpSquare, resolve(appDir, "apple-touch-icon.png"), 180);
+sipsResize(tmpSquare, resolve(appDir, "apple-icon.png"), 180);
 
-console.log("wrote src/app/favicon.ico and src/app/apple-touch-icon.png");
+console.log("wrote src/app/favicon.ico and src/app/apple-icon.png");
