@@ -25,7 +25,11 @@ export function StarField() {
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    if (resolvedTheme !== "dark") return;
+    // Must also gate on `mounted`: on the very first client render the canvas
+    // isn't in the DOM yet (we return null below), so an effect keyed only on
+    // resolvedTheme would bail on the null ref and never re-run when landing
+    // directly in dark mode.
+    if (!mounted || resolvedTheme !== "dark") return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -106,7 +110,7 @@ export function StarField() {
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener("resize", setSize);
     };
-  }, [resolvedTheme]);
+  }, [mounted, resolvedTheme]);
 
   if (!mounted || resolvedTheme !== "dark") return null;
 
