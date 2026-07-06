@@ -425,8 +425,9 @@ export const DATA = {
       longDescription:
         "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design — deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
       technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
-      links: [],
-      image: "",
+      links: [
+        { type: "GitHub", href: "https://github.com/WillWYQ/wirechild-vpn", icon: <Icons.github className="size-3" /> },],
+        image: "",
       video: "",
     },
     {
