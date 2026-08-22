@@ -13,9 +13,9 @@ export const DATA = {
   location: "Terre Haute, IN",
   locationLink: "https://www.google.com/maps/place/Terre+Haute,+IN",
   description:
-    "Systems & embedded software engineer — B.S. Computer Engineering, Rose-Hulman '26, cum laude.\nRISC-V microkernel bring-up · VPN tunnel in C · cryogenic instrumentation firmware.\nOpen to systems, kernel, embedded & security roles.",
+    "Systems & embedded software engineer, B.S. Computer Engineering, Rose-Hulman '26, cum laude.\nRISC-V microkernel bring-up · VPN tunnel in C · cryogenic instrumentation firmware.\nOpen to systems, kernel, embedded & security roles.",
   summary:
-    "I work below the application layer. For the past year I've been building **MorpheOS**, a teaching-focused RISC-V microkernel: boot flow, trap/exception handling, timer-driven preemption, and PLIC interrupts — validated on QEMU and debugged with GDB down to trap-handler misfires and stack corruption. Along the way I wrote a **VPN tunnel in C** (custom UDP protocol, anti-replay, multi-client sessions), lead the **ESP32-P4 control stack** for a cryogenic superconducting-film tester (±0.5 K at 77 K), and studied **PIM/DPU scaling** with cycle-accurate simulators. I want the problems where the stack trace ends in assembly. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
+    "I work below the application layer. For the past year I've been building **MorpheOS**, a teaching-focused RISC-V microkernel: boot flow, trap/exception handling, timer-driven preemption, and PLIC interrupts, validated on QEMU and debugged with GDB down to trap-handler misfires and stack corruption. Along the way I wrote a VPN tunnel in C (custom UDP protocol, anti-replay, multi-client sessions), lead the ESP32-P4 control stack for a cryogenic superconducting-film tester (±0.5 K at 77 K), and studied PIM/DPU scaling with cycle-accurate simulators. I want the problems where the stack trace ends in assembly. Explore my [projects](/#projects) and [experience](/#work), or [say hi](/#contact) below.",
   avatarUrl: "/me.jpg",
   avatarStatement: "Explore • Build • Share • ",
   heroResumeButtons: [
@@ -246,7 +246,7 @@ export const DATA = {
       start: "Nov 2025",
       end: "Mar 2026",
       description:
-        "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around actionable written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
+        "Graded CSSE230 by reviewing programming labs, proofs, and analysis writeups on recursion, balanced trees, heaps, graphs, and asymptotic reasoning. Checked correctness and runtime claims against rubric expectations, documented clarifications for the instructional team, and turned around concrete written feedback that tied code structure to algorithmic tradeoffs. Coordinated with faculty to sync grading scripts and maintain consistency across sections.",
     },
     {
       department: "Department of Electrical & Computer Engineering",
@@ -285,7 +285,7 @@ export const DATA = {
       start: "Mar 2023",
       end: "Jun 2025",
       description:
-        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity. Gained leadership, budgeting, and organizational skills.",
+        "Oversaw budgeting and transparent reporting for a 50-member student association. Coordinated with campus offices to secure funding for cultural events, while improving documentation practices for continuity.",
     },
     {
       department: "Department of Electrical & Computer Engineering",
@@ -423,7 +423,7 @@ export const DATA = {
       description:
         "Full VPN tunnel in C over UDP; custom WireChild protocol with a SHA3-256-derived keystream cipher (educational crypto), sequence-number anti-replay, server-assigned virtual IPs, TUN device bring-up, and Docker-based integration test.",
       longDescription:
-        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design — deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer—independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing. Deepened understanding of OS-level networking subsystems, VPN protocol architecture, and applied cryptography.",
+        "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design, deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer: independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing.",
       technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
       links: [
         { type: "GitHub", href: "https://github.com/WillWYQ/wirechild-vpn", icon: <Icons.github className="size-3" /> },],
@@ -468,7 +468,7 @@ export const DATA = {
       description:
         "Designed datapath/control; Verilog implementation, ModelSim simulation, tests/benchmarks, and simple compiler pipeline.",
       longDescription:
-        "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration. Practiced RTL design trade-offs between multi-cycle vs pipelined approaches, reinforcing understanding of assembly-level execution and microarchitecture fundamentals.",
+        "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration.",
       technologies: ["Verilog", "ISA Design", "ALU/Control Unit", "ModelSim", "Computer Architecture"],
       links: [],
       image: "",
@@ -501,7 +501,7 @@ export const DATA = {
       description:
         "End-to-end ML pipeline on 100K records; 7 classifier families with GridSearchCV; 91% accuracy via gradient boosting; ONNX-exported model deployed in a serverless Next.js browser app.",
       longDescription:
-        "Led model development for a 3-person team (MA 415 final project, Rose-Hulman, Spring 2026). Built a full Python ML pipeline on a 100,000-record public dataset: data cleaning (leakage control, dropped high-missingness columns), preprocessing (one-hot encoding, StandardScaler, 80/20 split), and feature engineering (degree-2 polynomial terms, greedy forward feature selection). Trained and tuned 7 classifier families with GridSearchCV—logistic regression (Ridge/Lasso), linear SVM, KNN, decision tree, random forest, gradient boosting—raising binary offer-prediction accuracy from a 66% baseline to 91% with gradient boosting. Independently diagnosed and investigated data leakage from interview-count features through cascade experiments; framed this openly as a modeling maturity highlight. Also improved harder 4-class accuracy from 34% to ~45%, correctly diagnosing the ceiling as genuine class overlap. Exported the best model to ONNX for fully client-side browser inference; built a Next.js 14 + TypeScript + Tailwind + shadcn/ui prediction app deployed via GitHub Actions CI/CD. Produced a reusable CLI training pipeline (data prep → train → GridSearchCV → serialized models + comparison reports). Achieved 94.64% project score.",
+        "Led model development for a 3-person team (MA 415 final project, Rose-Hulman, Spring 2026). Built a full Python ML pipeline on a 100,000-record public dataset: data cleaning (leakage control, dropped high-missingness columns), preprocessing (one-hot encoding, StandardScaler, 80/20 split), and feature engineering (degree-2 polynomial terms, greedy forward feature selection). Trained and tuned 7 classifier families with GridSearchCV (logistic regression [Ridge/Lasso], linear SVM, KNN, decision tree, random forest, gradient boosting), raising binary offer-prediction accuracy from a 66% baseline to 91% with gradient boosting. Independently diagnosed and investigated data leakage from interview-count features through cascade experiments. Also improved harder 4-class accuracy from 34% to ~45%, correctly diagnosing the ceiling as genuine class overlap. Exported the best model to ONNX for fully client-side browser inference; built a Next.js 14 + TypeScript + Tailwind + shadcn/ui prediction app deployed via GitHub Actions CI/CD. Produced a reusable CLI training pipeline (data prep → train → GridSearchCV → serialized models + comparison reports). Achieved 94.64% project score.",
       technologies: ["Python", "ONNX", "Model Tuning", "scikit-learn", "pandas", "NumPy", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
       links: [
         { type: "Website", href: "https://jobprediction-project.willsleep.dev/", icon: <Icons.globe className="size-3" /> }
@@ -515,7 +515,7 @@ export const DATA = {
       description:
         "ESP32 modular firmware with PID steering, Wi-Fi telemetry, and real-time web dashboard.",
       longDescription:
-        "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing. Practiced embedded C++, I²C drivers, Wi-Fi networking, CSV logging, and Git-based code review workflow.",
+        "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing.",
       technologies: ["ESP32", "C++", "PID Control", "WebSocket", "LittleFS", "I²C"],
       imageFolder: "OAOfirmware",
       video: "",
@@ -545,7 +545,7 @@ export const DATA = {
       description:
         "Two-person chat using TCP sockets in C; custom reliability protocol over UDP; focused on error handling and robustness.",
       longDescription:
-        "Built an IP-based chat application in C supporting both TCP and UDP. Designed and implemented a custom reliable UDP messaging protocol that ensured message ordering and integrity over unreliable channels. Debugged with packet captures and refined error handling for networked systems. Collaborated in a 2-person team, sharing workload evenly; took primary responsibility for protocol design and sockets API usage. Strengthened skills in low-level network programming, custom protocol design, and debugging distributed systems.",
+        "Built an IP-based chat application in C supporting both TCP and UDP. Designed and implemented a custom reliable UDP messaging protocol that ensured message ordering and integrity over unreliable channels. Debugged with packet captures and refined error handling for networked systems. Collaborated in a 2-person team, sharing workload evenly; took primary responsibility for protocol design and sockets API usage.",
       technologies: ["C", "TCP/UDP", "Sockets API", "Wireshark"],
       links: [
         { type: "PDF", href: "/pdf/socketChat.pdf", icon: <Icons.text className="size-3" /> },
@@ -562,7 +562,7 @@ export const DATA = {
       description:
         "MSP432-based automated plant care; low-power modes, interrupts, DAC, SPI, RTC, NeoPixel, and instrumentation.",
       longDescription:
-        "Built an embedded system on a TI MSP432 to automate plant care. Integrated soil moisture, light, and temperature sensors; controlled pump, grow light, and fan via configurable profiles. Wrote drivers for NeoPixel LEDs and sensor interfacing, using interrupts and ADC sampling. Implemented real-time scheduling with the microcontroller RTC. Led a 2-person team, collaborating on mechanical and hardware integration. Practiced low-power firmware design, SPI/UART/I²C protocols, and oscilloscope-based debugging.",
+        "Built an embedded system on a TI MSP432 to automate plant care. Integrated soil moisture, light, and temperature sensors; controlled pump, grow light, and fan via configurable profiles. Wrote drivers for NeoPixel LEDs and sensor interfacing, using interrupts and ADC sampling. Implemented real-time scheduling with the microcontroller RTC. Led a 2-person team, collaborating on mechanical and hardware integration.",
       technologies: ["MSP432", "Embedded C", "SPI", "I²C", "RTC"],
       links: [{ type: "GitHub", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
       imageFolder: "LazyPlant",
@@ -581,7 +581,7 @@ export const DATA = {
       description:
         "Automated power supply/load control and data collection via MATLAB/Simulink, Python, PyVISA, and Raspberry Pi; ~30% efficiency gain.",
       longDescription:
-        "Developed an automated test program to control power supply/load and collect data via MATLAB, Simulink, Python, PyVISA, and Raspberry Pi. Standardized testing workflows across sub-teams, improving efficiency by ~30% and reducing manual effort. Implemented CSV logging, automated batch runs, and register-level device interfacing. Collaborated with cross-functional hardware/software teams to unify procedures, enhance data reliability, and increase throughput.",
+        "Developed an automated test program to control power supply/load and collect data via MATLAB, Simulink, Python, PyVISA, and Raspberry Pi. Standardized testing workflows across sub-teams, improving efficiency by ~30% and reducing manual effort. Implemented CSV logging, automated batch runs, and register-level device interfacing. Collaborated with cross-functional hardware/software teams to standardize procedures and improve data reliability.",
       technologies: ["MATLAB", "Simulink", "Python", "PyVISA", "Raspberry Pi"],
       links: [],
       image: "",
@@ -595,7 +595,7 @@ export const DATA = {
       description:
         "Altera DE2 design with combinational/sequential logic, SRAM, and FSM for real-time gameplay.",
       longDescription:
-        "Implemented a Guitar Hero-style game on an Altera DE2 FPGA in Verilog. Developed sequential and combinational logic for note timing and state-machine driven game flow. Led a 2-person team, coordinating feature planning and module integration. Gained experience in FPGA workflow, Verilog design, and real-time digital logic implementation.",
+        "Implemented a Guitar Hero-style game on an Altera DE2 FPGA in Verilog. Developed sequential and combinational logic for note timing and state-machine driven game flow. Led a 2-person team, coordinating feature planning and module integration.",
       technologies: ["FPGA", "Verilog", "Quartus", "SRAM", "FSM"],
       links: [],
       image: "",
@@ -609,7 +609,7 @@ export const DATA = {
       description:
         "Java-based evolutionary simulator with real-time GUI visualization; OOP design and parallelization.",
       longDescription:
-        "Developed a simulator with Java Swing to visualize population evolution under genetic algorithm operators (selection, crossover, mutation). Designed the class structure with one teammate, integrating components through regular design reviews. Practiced Java OOP, GUI development, exception handling, and concurrency for parallel fitness evaluations. Strengthened ability to translate algorithmic design into interactive visualization.",
+        "Developed a simulator with Java Swing to visualize population evolution under genetic algorithm operators (selection, crossover, mutation). Designed the class structure with one teammate, integrating components through regular design reviews, and used concurrency to parallelize fitness evaluations across the population.",
       technologies: ["Java", "Swing/GUI", "OOP"],
       links: [],
       image: "",
@@ -643,7 +643,7 @@ export const DATA = {
       description:
         "Mobile-friendly web app for reporting/viewing real-time parking availability on campus; UI design, implementation, user feedback loop.",
       longDescription:
-        "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption. Strengthened skills in full-stack development, requirement analysis, and stakeholder communication.",
+        "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption.",
       technologies: ["JavaScript", "HTML", "CSS", "Firebase", "UX Design"],
       image: "",
       video: "",
@@ -656,7 +656,7 @@ export const DATA = {
       description:
         "Event management mini-app built with Vue + WeChat platform; improved registration efficiency for 200+ users.",
       longDescription:
-        "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback. Enhanced skills in full-stack JavaScript (Vue, cloud functions, database management) and cross-functional communication.",
+        "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback.",
       technologies: ["Vue.js", "WeChat Cloud", "JavaScript", "Database"],
       links: [],
       image: "",
@@ -670,7 +670,7 @@ export const DATA = {
       description:
         "Self-hosted WordPress + Nextcloud + mail + file distribution; hardened and optimized on Debian/Apache/PHP/MySQL.",
       longDescription:
-        "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources. Gained practical skills in system administration, web infrastructure, and security hardening.",
+        "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources.",
       technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud", "Self-initiated", "WordPress", "Email Server"],
       links: [
 
