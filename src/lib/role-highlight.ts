@@ -16,10 +16,13 @@ export function readRoleHighlightStorage(): RoleHighlightStorage {
     if (
       typeof parsed === "object" &&
       parsed !== null &&
-      (typeof parsed.role === "string" || parsed.role === null) &&
       typeof parsed.answered === "boolean"
     ) {
-      return { role: parsed.role, answered: parsed.answered };
+      const role =
+        typeof parsed.role === "string" && VALID_ROLE_KEYS.includes(parsed.role)
+          ? parsed.role
+          : null;
+      return { role, answered: parsed.answered };
     }
     return DEFAULT_STORAGE;
   } catch {
@@ -56,3 +59,5 @@ export const MORE_ROLE_KEYS = [
   "RoboticsMechatronics",
   "DevOpsInfra",
 ] as const;
+
+const VALID_ROLE_KEYS: readonly string[] = [...PRIMARY_ROLE_KEYS, ...MORE_ROLE_KEYS];

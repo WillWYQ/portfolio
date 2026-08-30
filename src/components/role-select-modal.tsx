@@ -1,7 +1,7 @@
 // src/components/role-select-modal.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRoleHighlight } from "@/components/role-highlight-provider";
@@ -12,6 +12,7 @@ export function RoleSelectModal() {
   const { hasAnswered, selectRole, skip } = useRoleHighlight();
   const [mounted, setMounted] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const firstButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => setMounted(true), []);
 
@@ -23,6 +24,17 @@ export function RoleSelectModal() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [hasAnswered, skip]);
+
+  useEffect(() => {
+    if (hasAnswered) return;
+    const orig = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = orig; };
+  }, [hasAnswered]);
+
+  useEffect(() => {
+    if (!hasAnswered) firstButtonRef.current?.focus();
+  }, [hasAnswered]);
 
   if (!mounted) return null;
 
@@ -37,7 +49,7 @@ export function RoleSelectModal() {
           className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
           role="dialog"
           aria-modal="true"
-          aria-label="What role are you hiring for?"
+          aria-labelledby="role-select-modal-title"
         >
           <motion.div
             className="fixed inset-0 bg-black/60 backdrop-blur-sm"
@@ -54,16 +66,17 @@ export function RoleSelectModal() {
             transition={{ type: "spring", stiffness: 320, damping: 32 }}
           >
             <div className="space-y-1">
-              <h2 className="text-lg font-bold">What role are you hiring for?</h2>
+              <h2 id="role-select-modal-title" className="text-lg font-bold">What role are you hiring for?</h2>
               <p className="text-sm text-muted-foreground">
                 I&apos;ll highlight the skills, projects, and experience most relevant to it.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {PRIMARY_ROLE_KEYS.map((key) => (
+              {PRIMARY_ROLE_KEYS.map((key, index) => (
                 <button
                   key={key}
+                  ref={index === 0 ? firstButtonRef : undefined}
                   onClick={() => selectRole(key)}
                   className="px-3 py-1.5 text-sm rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
                 >

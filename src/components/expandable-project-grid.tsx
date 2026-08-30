@@ -471,6 +471,10 @@ export function ExpandableProjectGrid({
     </AnimatePresence>
   );
 
+  const anyProjectMatch = selectedRole
+    ? projects.some((p) => p.roles?.includes(selectedRole))
+    : false;
+
   return (
     <>
       <div
@@ -483,7 +487,7 @@ export function ExpandableProjectGrid({
           const col = project.gridSize?.col ?? 1;
           const row = project.gridSize?.row ?? 1;
           const isMatch = selectedRole ? !!project.roles?.includes(selectedRole) : false;
-          const isDimmed = selectedRole ? !isMatch : false;
+          const isDimmed = selectedRole && anyProjectMatch ? !isMatch : false;
 
           return (
             <WobbleCard
@@ -492,7 +496,7 @@ export function ExpandableProjectGrid({
                 col >= 2 && "sm:col-span-2",
                 col >= 3 && "lg:col-span-3",
                 row >= 2 && "row-span-2",
-                isMatch && "ring-2 ring-indigo-400/60 shadow-[0_0_24px_rgba(99,102,241,0.35)]",
+                isMatch && "rounded-2xl ring-2 ring-indigo-400/60 shadow-[0_0_24px_rgba(99,102,241,0.35)]",
                 isDimmed && "opacity-50"
               )}
               onClick={() => setActiveCard(project)}

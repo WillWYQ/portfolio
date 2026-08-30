@@ -48,6 +48,9 @@ export default function Page() {
     selectedRole && (DATA as any).roles?.[selectedRole]?.pitch
       ? ((DATA as any).roles[selectedRole].pitch as string)
       : null;
+  const anyWorkMatch = selectedRole
+    ? DATA.work.some((w: any) => w.roles?.includes(selectedRole))
+    : false;
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -181,7 +184,7 @@ export default function Page() {
           </BlurFade>
           {DATA.work.map((work: any, id: number) => {
             const isMatch = selectedRole ? !!work.roles?.includes(selectedRole) : false;
-            const isDimmed = selectedRole ? !isMatch : false;
+            const isDimmed = selectedRole && anyWorkMatch ? !isMatch : false;
             return (
               <BlurFade key={`${work.title}-${work.start}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
                 <ResumeCard
