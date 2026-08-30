@@ -19,6 +19,7 @@ export interface ProjectItem {
   description: string;
   longDescription?: string;
   technologies?: readonly string[];
+  roles?: readonly string[];
   image?: string;
   images?: readonly string[];
   imageFolder?: string;
@@ -411,8 +412,10 @@ function ExpandedCard({
 // ─── Main grid ────────────────────────────────────────────────────
 export function ExpandableProjectGrid({
   projects,
+  selectedRole,
 }: {
   projects: readonly ProjectItem[];
+  selectedRole: string | null;
 }) {
   const [activeCard, setActiveCard] = useState<ProjectItem | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -468,6 +471,10 @@ export function ExpandableProjectGrid({
     </AnimatePresence>
   );
 
+  const anyProjectMatch = selectedRole
+    ? projects.some((p) => p.roles?.includes(selectedRole))
+    : false;
+
   return (
     <>
       <div
@@ -479,6 +486,8 @@ export function ExpandableProjectGrid({
         {projects.map((project) => {
           const col = project.gridSize?.col ?? 1;
           const row = project.gridSize?.row ?? 1;
+          const isMatch = selectedRole ? !!project.roles?.includes(selectedRole) : false;
+          const isDimmed = selectedRole && anyProjectMatch ? !isMatch : false;
 
           return (
             <WobbleCard
@@ -486,7 +495,9 @@ export function ExpandableProjectGrid({
               containerClassName={cn(
                 col >= 2 && "sm:col-span-2",
                 col >= 3 && "lg:col-span-3",
-                row >= 2 && "row-span-2"
+                row >= 2 && "row-span-2",
+                isMatch && "rounded-2xl ring-2 ring-indigo-400/60 shadow-[0_0_24px_rgba(99,102,241,0.35)]",
+                isDimmed && "opacity-50"
               )}
               onClick={() => setActiveCard(project)}
             >

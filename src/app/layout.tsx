@@ -8,6 +8,7 @@ import { Space_Grotesk as FontSans, Patrick_Hand, Share_Tech_Mono } from "next/f
 import "./globals.css";
 import { Pointer } from "@/components/magicui/pointer";
 import { StarField } from "@/components/star-field";
+import { RoleHighlightProvider } from "@/components/role-highlight-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -170,7 +171,9 @@ export default function RootLayout({
           {/* ── Content sits above (z-10) ── */}
           <div className="relative" style={{ zIndex: 10 }}>
             <TooltipProvider delayDuration={0}>
-              {children}
+              <RoleHighlightProvider>
+                {children}
+              </RoleHighlightProvider>
               <Navbar />
             </TooltipProvider>
           </div>

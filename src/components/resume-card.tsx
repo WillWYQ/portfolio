@@ -18,6 +18,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string | React.ReactNode;
+  className?: string;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,6 +29,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  className,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -44,16 +46,15 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className={[
+      <Card className={cn(
         "flex p-4",
-        // Glassmorphism — stars show through in dark mode
         "bg-white/85 dark:bg-slate-950/65 backdrop-blur-sm",
-        // Starlight border glow
         "border border-slate-200/60 dark:border-slate-700/30",
         "shadow-[0_0_22px_rgba(99,102,241,0.07)] dark:shadow-[0_0_28px_rgba(99,102,241,0.20)]",
         "transition-shadow duration-300",
         "hover:shadow-[0_0_28px_rgba(99,102,241,0.13)] dark:hover:shadow-[0_0_36px_rgba(99,102,241,0.32)]",
-      ].join(" ")}>
+        className
+      )}>
         <div className="flex-none">
           <Avatar className="border size-12 my-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
