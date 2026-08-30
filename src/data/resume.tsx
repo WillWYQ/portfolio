@@ -105,6 +105,7 @@ export const DATA = {
   roles: {
     SystemsKernelEngineer: {
       label: "Systems / Kernel",
+      pitch: "I want the bugs where the stack trace ends in assembly.",
       skills: [
         "C", "C++", "Assembly", "RISC-V", "QEMU", "OpenSBI", "GDB", "Make",
         "Linux", "Unix System Operation", "Interrupts", "System Calls",
@@ -114,6 +115,7 @@ export const DATA = {
     },
     ComputerArchitectureRTL: {
       label: "Computer Architecture / RTL",
+      pitch: "I care what happens between the ISA and the transistors.",
       skills: [
         "Verilog", "RISC-V", "Micro Architecture", "Instruction Set Architecture",
         "FPGA", "RTL Simulation", "ModelSim", "Quartus Prime",
@@ -123,6 +125,7 @@ export const DATA = {
     },
     FPGAEngineer: {
       label: "FPGA / Digital Design",
+      pitch: "I'll happily trade a compiler for a synthesis tool.",
       skills: [
         "Verilog", "FPGA", "Quartus Prime", "ModelSim",
         "Finite State Machines (FSM)", "Timing Closure Basics",
@@ -131,6 +134,7 @@ export const DATA = {
     },
     EmbeddedFirmwareEngineer: {
       label: "Embedded / Firmware",
+      pitch: "If it has a datasheet, I want to read it before I ship it.",
       skills: [
         "C", "Embedded C Development", "MSP432", "ESP32", "Raspberry Pi", "Arduino", "micro:bit",
         "Interrupt Handling", "Timer-Based Scheduling", "Real-Time Event Control",
@@ -140,6 +144,7 @@ export const DATA = {
     },
     HPCPerformanceEngineer: {
       label: "HPC / Performance",
+      pitch: "I'd rather shave 5% off a hot loop than add a feature.",
       skills: [
         "Linux", "Python", "MATLAB & Simulink",
         "Omniperf", "Performance Metrics", "Roofline Analysis", "Analytical Modeling",
@@ -148,6 +153,7 @@ export const DATA = {
     },
     RoboticsMechatronics: {
       label: "Robotics / Mechatronics",
+      pitch: "I like problems where the bug might be a loose wire, not just bad code.",
       skills: [
         "Raspberry Pi", "ESP32", "Arduino", "Sensor and Actuator Integration",
         "Real-Time Event Control", "Robotics", "SolidWorks", "3D Modeling", "3D Printing"
@@ -155,6 +161,7 @@ export const DATA = {
     },
     FullStackWebEngineer: {
       label: "Full-Stack Web",
+      pitch: "I can take a project from spec to a browser tab, database-free or not.",
       skills: [
         "JavaScript", "TypeScript", "HTML", "CSS", "Next.js", "React", "Vue", "Node.js", "Express.js",
         "TailwindCSS", "shadcn/ui", "Firebase", "MySQL", "MariaDB", "MongoDB",
@@ -164,6 +171,7 @@ export const DATA = {
     },
     DevOpsInfra: {
       label: "DevOps / Infra",
+      pitch: "I keep my own servers up, so I don't panic when yours goes down.",
       skills: [
         "Linux", "Docker", "Git", "GitHub", "GitLab",
         "Nginx", "Apache", "VPS", "Server Hardening",
@@ -172,6 +180,7 @@ export const DATA = {
     },
     DataMLEngineer: {
       label: "Data / ML",
+      pitch: "I want the model that's 91% right, not the one that's 100% overfit.",
       skills: [
         "Python", "scikit-learn", "pandas", "NumPy",
         "Gradient Boosting", "Random Forests", "SVM", "KNN", "Logistic Regression",
@@ -183,6 +192,7 @@ export const DATA = {
     },
     NetworkSecurityEngineer: {
       label: "Network / Security",
+      pitch: "I like protocols enough to write my own, replay attacks and all.",
       skills: [
         "C", "TCP/IP", "UDP", "Socket Programming", "TUN/TAP",
         "VPN", "Network Security", "Wireshark", "pcap",
@@ -201,6 +211,7 @@ export const DATA = {
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Research", "Leadership"],
+      roles: ["SystemsKernelEngineer"],
       location: "Terre Haute, IN",
       title: "Researcher (Continuing Contribution)",
       logoUrl: "/rhit.png",
@@ -214,6 +225,7 @@ export const DATA = {
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
+      roles: ["SystemsKernelEngineer"],
       location: "Terre Haute, IN",
       title: "CSSE332 Operating Systems — Grader",
       logoUrl: "/rhit.png",
@@ -227,6 +239,7 @@ export const DATA = {
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Research", "Leadership"],
+      roles: ["RoboticsMechatronics", "EmbeddedFirmwareEngineer"],
       location: "Terre Haute, IN",
       title: "Lab Manager & Researcher ",
       logoUrl: "/MERL/logo.png",
@@ -253,6 +266,7 @@ export const DATA = {
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
+      roles: ["NetworkSecurityEngineer"],
       location: "Terre Haute, IN",
       title: "ECE312 Communication Networks — Grader",
       logoUrl: "/rhitece.png",
@@ -292,6 +306,7 @@ export const DATA = {
       company: "Rose-Hulman Institute of Technology",
       href: "https://www.rose-hulman.edu/",
       badges: ["Teaching"],
+      roles: ["EmbeddedFirmwareEngineer"],
       location: "Terre Haute, IN",
       title: "Embedded Systems Development — Teaching Assistant",
       logoUrl: "/rhitece.png",
@@ -407,6 +422,7 @@ export const DATA = {
       longDescription:
         "MorpheOS is a teaching-focused microkernel for RISC-V. It covers early boot/bring-up, trap/exception handling, timer-driven preemption, and PLIC external interrupts. The kernel integrates OpenSBI and is validated on QEMU with GDB-based bring-up and debugging. I also authored hands-on documentation and lab materials to guide students through kernel subsystems and debugging workflows.",
       technologies: ["RISC-V", "C/ASM", "OpenSBI", "QEMU", "GDB", "Make"],
+      roles: ["SystemsKernelEngineer", "ComputerArchitectureRTL"],
       // NOTE: repo is private (github.com/rhit-netsos/morpheos 404s publicly) — re-add the
       // GitHub link once a public mirror or writeup exists.
       links: [],
@@ -425,6 +441,7 @@ export const DATA = {
       longDescription:
         "Implemented a full VPN tunnel in C over UDP with a custom WireChild protocol: packet confidentiality via a SHA3-256-derived keystream cipher (an educational design, deliberately not production-grade crypto), sequence-number anti-replay protection, and server-assigned virtual IPs. Built TUN device bring-up (TUN/TAP interface configuration), multi-client session management via hash maps, keepalive reaping for session cleanup, and a Docker-based integration demo with concurrent ping validation. Sole developer: independently selected cryptographic primitives, defined the virtual IP assignment and session state model, and tested through containerized integration testing.",
       technologies: ["C", "UDP", "TUN/TAP", "SHA3-256", "Docker", "Linux Networking"],
+      roles: ["NetworkSecurityEngineer", "SystemsKernelEngineer"],
       links: [
         { type: "GitHub", href: "https://github.com/WillWYQ/wirechild-vpn", icon: <Icons.github className="size-3" /> },],
         image: "",
@@ -441,6 +458,7 @@ export const DATA = {
       longDescription:
         "Leading the electronics/software that power Rose-Hulman's cryogenic superconducting film tester. Designed the ESP32-P4 Edge Computing Subsystem that drives the PSU/DMM over isolated RS-232 (SCPI), samples the cryogenic PT1000 via ADS124S08, enforces guards/interlocks, and streams telemetry over a single WebUSB/CDC link. Implemented the Temperature Sensing Subsystem with a 4-wire Kelvin interface, calibration routines, and SPI driver to hold ±0.5 K accuracy at 77 K. Built the semiautomatic measurement software: an on-device touchscreen graphical UI (LVGL) and a WebUSB host dashboard for connect→configure→run→export, a YAML recipe format that compiles into MCU state machines, and logging that emits CSV+JSON with firmware hashes, instrument IDs, and guard outcomes.",
       technologies: ["ESP32-P4", "ADS124S08", "PT1000", "TinyUSB/WebUSB", "SCPI", "YAML", "LVGL"],
+      roles: ["EmbeddedFirmwareEngineer"],
       links: [],
       image: "",
       imageFolder: "CYRO",
@@ -456,6 +474,7 @@ export const DATA = {
       longDescription:
         "Explored UPMEM PIM systems using uPIMulator across configurations from 1 to 16 DPUs per rank. Built Python/Bash automation to run parameter sweeps and collect metrics, analyzing end-to-end latency, throughput, and bandwidth utilization tradeoffs. Summarized findings with reproducible scripts and plots.",
       technologies: ["uPIMulator", "Python", "Bash", "Linux"],
+      roles: ["HPCPerformanceEngineer", "ComputerArchitectureRTL"],
       links: [],
       image: "/pimdpu.jpg",
       video: "",
@@ -470,6 +489,7 @@ export const DATA = {
       longDescription:
         "Co-designed and implemented a simplified multi-cycle RISC-V ISA in Verilog with a 4-person team. Focused on branch instructions, control unit, ALU, and pipeline datapath integration. Validated correctness via ModelSim with benchmark programs and compiler integration.",
       technologies: ["Verilog", "ISA Design", "ALU/Control Unit", "ModelSim", "Computer Architecture"],
+      roles: ["ComputerArchitectureRTL", "FPGAEngineer"],
       links: [],
       image: "",
       video: "",
@@ -485,6 +505,7 @@ export const DATA = {
       longDescription:
         "Architected a database-free marketplace (Next.js 15/TypeScript) where all content is driven from a single content folder, letting non-technical sellers manage inventory without touching application code. Designed a distance-tiered pricing engine that resolves buyer location entirely client-side via the browser Geolocation API (haversine, zero server calls), keeping visitor coordinates private. Engineered a git-free image pipeline using Cloudflare R2 CDN with a lightweight JSON manifest, keeping deploys within free static-hosting limits on GitHub Pages. Drove a spec-first, AI-assisted workflow with Claude Code, hardening a ~270 KB internally consistent design corpus (7 versioned docs, v0.2.0–v0.9.0) through 10+ AI-led multi-pass consistency audits that caught orphaned schema fields, broken build ordering, and dependency cycles before any code was written. Authored a 14-phase, agent-executable implementation plan with machine-checkable acceptance criteria (type-check + lint gates). Shipped two portable AI assistant skills (/setup, /update-items) that generate site config and item metadata from seller photos and notes.",
       technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Cloudflare R2", "GitHub Actions", "Claude Code"],
+      roles: ["FullStackWebEngineer"],
       links: [
         { type: "GitHub", href: "https://github.com/WillWYQ/usedExchange", icon: <Icons.github className="size-3" /> },
         { type: "Website", href: "https://usedexchangeproject.willsleep.dev", icon: <Icons.globe className="size-3" /> }
@@ -503,6 +524,7 @@ export const DATA = {
       longDescription:
         "Led model development for a 3-person team (MA 415 final project, Rose-Hulman, Spring 2026). Built a full Python ML pipeline on a 100,000-record public dataset: data cleaning (leakage control, dropped high-missingness columns), preprocessing (one-hot encoding, StandardScaler, 80/20 split), and feature engineering (degree-2 polynomial terms, greedy forward feature selection). Trained and tuned 7 classifier families with GridSearchCV (logistic regression [Ridge/Lasso], linear SVM, KNN, decision tree, random forest, gradient boosting), raising binary offer-prediction accuracy from a 66% baseline to 91% with gradient boosting. Independently diagnosed and investigated data leakage from interview-count features through cascade experiments. Also improved harder 4-class accuracy from 34% to ~45%, correctly diagnosing the ceiling as genuine class overlap. Exported the best model to ONNX for fully client-side browser inference; built a Next.js 14 + TypeScript + Tailwind + shadcn/ui prediction app deployed via GitHub Actions CI/CD. Produced a reusable CLI training pipeline (data prep → train → GridSearchCV → serialized models + comparison reports). Achieved 94.64% project score.",
       technologies: ["Python", "ONNX", "Model Tuning", "scikit-learn", "pandas", "NumPy", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
+      roles: ["DataMLEngineer", "FullStackWebEngineer"],
       links: [
         { type: "Website", href: "https://jobprediction-project.willsleep.dev/", icon: <Icons.globe className="size-3" /> }
       ],
@@ -517,6 +539,7 @@ export const DATA = {
       longDescription:
         "Developed C++ firmware for an ESP32-based autonomous vehicle. Implemented a modular RUN/STOP/PIT-STOP state machine, PID steering control, and proportional throttle. Integrated HuskyLens for line tracking, INA219 sensors for power monitoring, and PWM drivers for actuators. Built an on-device Wi-Fi dashboard (ESPAsyncWebServer + WebSocket + LittleFS) for real-time telemetry, parameter tuning, and CSV export. Served as software lead in a 4-person team, owning firmware and controls logic while collaborating on circuit integration and bench testing.",
       technologies: ["ESP32", "C++", "PID Control", "WebSocket", "LittleFS", "I²C"],
+      roles: ["EmbeddedFirmwareEngineer", "RoboticsMechatronics"],
       imageFolder: "OAOfirmware",
       video: "",
       links: [{ type: "GitHub", href: "https://github.com/Rose-Hulman-ECE-Junior-Design/junior-design-project-team13-brtw", icon: <Icons.github className="size-3" /> }],
@@ -533,6 +556,7 @@ export const DATA = {
       longDescription:
         "Open-source educational robotics stack spanning firmware (C), control and tooling (JS/Python), electronics (OrCAD), and mechanicals (SolidWorks). Focused on approachable, hands-on learning: hardware abstractions, safe defaults, and rich docs/tutorials. Supported community outreach and classroom usage, balancing simplicity and real capability.",
       technologies: ["Arduino", "Raspberry Pi", "C", "JS", "Python", "OrCAD", "SolidWorks"],
+      roles: ["RoboticsMechatronics", "EmbeddedFirmwareEngineer"],
       links: [{ type: "Website", href: "https://merl-rose-hulman.github.io", icon: <Icons.globe className="size-3" /> }],
       imageFolder: "MERL",
       video: "",
@@ -547,6 +571,7 @@ export const DATA = {
       longDescription:
         "Built an IP-based chat application in C supporting both TCP and UDP. Designed and implemented a custom reliable UDP messaging protocol that ensured message ordering and integrity over unreliable channels. Debugged with packet captures and refined error handling for networked systems. Collaborated in a 2-person team, sharing workload evenly; took primary responsibility for protocol design and sockets API usage.",
       technologies: ["C", "TCP/UDP", "Sockets API", "Wireshark"],
+      roles: ["NetworkSecurityEngineer"],
       links: [
         { type: "PDF", href: "/pdf/socketChat.pdf", icon: <Icons.text className="size-3" /> },
       ],
@@ -564,6 +589,7 @@ export const DATA = {
       longDescription:
         "Built an embedded system on a TI MSP432 to automate plant care. Integrated soil moisture, light, and temperature sensors; controlled pump, grow light, and fan via configurable profiles. Wrote drivers for NeoPixel LEDs and sensor interfacing, using interrupts and ADC sampling. Implemented real-time scheduling with the microcontroller RTC. Led a 2-person team, collaborating on mechanical and hardware integration.",
       technologies: ["MSP432", "Embedded C", "SPI", "I²C", "RTC"],
+      roles: ["EmbeddedFirmwareEngineer"],
       links: [{ type: "GitHub", href: "https://github.com/WillWYQ/LazyPlant", icon: <Icons.github className="size-3" /> }],
       imageFolder: "LazyPlant",
       images: [
@@ -583,6 +609,7 @@ export const DATA = {
       longDescription:
         "Developed an automated test program to control power supply/load and collect data via MATLAB, Simulink, Python, PyVISA, and Raspberry Pi. Standardized testing workflows across sub-teams, improving efficiency by ~30% and reducing manual effort. Implemented CSV logging, automated batch runs, and register-level device interfacing. Collaborated with cross-functional hardware/software teams to standardize procedures and improve data reliability.",
       technologies: ["MATLAB", "Simulink", "Python", "PyVISA", "Raspberry Pi"],
+      roles: ["EmbeddedFirmwareEngineer"],
       links: [],
       image: "",
       video: "",
@@ -597,6 +624,7 @@ export const DATA = {
       longDescription:
         "Implemented a Guitar Hero-style game on an Altera DE2 FPGA in Verilog. Developed sequential and combinational logic for note timing and state-machine driven game flow. Led a 2-person team, coordinating feature planning and module integration.",
       technologies: ["FPGA", "Verilog", "Quartus", "SRAM", "FSM"],
+      roles: ["FPGAEngineer"],
       links: [],
       image: "",
       video: "",
@@ -625,6 +653,7 @@ export const DATA = {
       longDescription:
         "Launched and maintain a personal website and self-hosted NextCloud instance on a Microsoft Azure VPS. The website is statically hosted on GitHub Pages, while the NextCloud instance runs on Ubuntu with Apache, PHP, and PostgreSQL. Configured Cloudflare DNS for domain management, SSL/TLS for secure connections, and Cloudflare Tunnel to enable secure access to the NextCloud instance from anywhere. Regularly perform maintenance tasks, security updates, and optimizations to ensure reliability and performance. Crafting API routes on the VPS to support additional features on the static site and exploring further integrations with Cloudflare services.",
       technologies: ["Unix/Ubuntu", "Apache", "PHP", "PostgreSQL", "Nextcloud", "Self-initiated", "Azure VPS", "Cloudflare DNS/Tunnel/SSL"],
+      roles: ["DevOpsInfra"],
       // "Website" link dropped: willsleep.dev now hosts an unrelated personal
       // page, not evidence of the static-hosting work described above (this
       // portfolio, on career.yueqiao.dev, is the evidence). Cloud Storage
@@ -645,6 +674,7 @@ export const DATA = {
       longDescription:
         "Engineered a mobile-friendly app using JavaScript/HTML/CSS and Firebase to display live campus parking availability. Implemented both reporting of available spaces and real-time visualization for users. Sole developer responsible for UI/UX design, back-end integration, and stakeholder communication. Gathered requirements from campus management and iterated features to improve adoption.",
       technologies: ["JavaScript", "HTML", "CSS", "Firebase", "UX Design"],
+      roles: ["FullStackWebEngineer"],
       image: "",
       video: "",
     },
@@ -658,6 +688,7 @@ export const DATA = {
       longDescription:
         "Developed a Model UN management app as a WeChat Mini Program using Vue.js front-end and WeChat cloud functions as back-end. The app replaced manual registration and improved sign-up efficiency by ~50% for 200+ users. Implemented features for delegate registration, scheduling, and real-time announcements. Served as the sole software developer in a 4-person cross-time-zone team, translating non-technical requirements into software and iterating based on organizer feedback.",
       technologies: ["Vue.js", "WeChat Cloud", "JavaScript", "Database"],
+      roles: ["FullStackWebEngineer"],
       links: [],
       image: "",
       video: "",
@@ -672,6 +703,7 @@ export const DATA = {
       longDescription:
         "Established and maintained a WordPress-based site and NextCloud collaboration suite for a student community. Configured VPS servers with Debian/Ubuntu, Apache/Nginx, and MySQL/MariaDB. Integrated security controls (SSL/TLS, access permissions) to ensure reliability. Troubleshot server issues through forums and online resources.",
       technologies: ["Unix/Debian", "Apache", "PHP", "MySQL", "Nextcloud", "Self-initiated", "WordPress", "Email Server"],
+      roles: ["DevOpsInfra"],
       links: [
 
         { type: "Website V2 Archive", href: "https://web.archive.org/web/20240718112637/https://wic.monster/", icon: <Icons.globe className="size-3" /> },
