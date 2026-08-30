@@ -6,6 +6,9 @@ import { CoolMode } from "@/components/magicui/cool-mode";
 import { SpinningText } from "@/components/magicui/spinning-text";
 import { ExpandableProjectGrid } from "@/components/expandable-project-grid";
 import { ResumeCard } from "@/components/resume-card";
+import { RoleSelectModal } from "@/components/role-select-modal";
+import { RoleHeroSelector } from "@/components/role-hero-selector";
+import { useRoleHighlight } from "@/components/role-highlight-provider";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -40,8 +43,15 @@ export default function Page() {
     ((DATA as unknown as { heroResumeButtons?: HeroResumeButton[] })
       .heroResumeButtons ?? []) as HeroResumeButton[];
 
+  const { selectedRole } = useRoleHighlight();
+  const rolePitch =
+    selectedRole && (DATA as any).roles?.[selectedRole]?.pitch
+      ? ((DATA as any).roles[selectedRole].pitch as string)
+      : null;
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <RoleSelectModal />
       <GoogleAnalytics gaId="G-X4L3QV064E" />
 
       {/* Structured Data */}
@@ -94,6 +104,10 @@ export default function Page() {
                   text={DATA.description}
                 />
               </p>
+              {rolePitch && (
+                <p className="text-sm font-medium text-foreground/80 pt-1">{rolePitch}</p>
+              )}
+              <RoleHeroSelector />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <div className="flex flex-wrap gap-3 pt-2">
                   {heroResumeButtons.map((button, index) => (
@@ -165,21 +179,32 @@ export default function Page() {
               </p>
             </div>
           </BlurFade>
-          {DATA.work.map((work: any, id: number) => (
-            <BlurFade key={`${work.title}-${work.start}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-              <ResumeCard
-                key={`${work.title}-${work.start}`}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.title}
-                subtitle={`${work.department} · ${work.company}`}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
+          {DATA.work.map((work: any, id: number) => {
+            const isMatch = selectedRole ? !!work.roles?.includes(selectedRole) : false;
+            const isDimmed = selectedRole ? !isMatch : false;
+            return (
+              <BlurFade key={`${work.title}-${work.start}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+                <ResumeCard
+                  key={`${work.title}-${work.start}`}
+                  logoUrl={work.logoUrl}
+                  altText={work.company}
+                  title={work.title}
+                  subtitle={`${work.department} · ${work.company}`}
+                  href={work.href}
+                  badges={work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                  className={
+                    isMatch
+                      ? "ring-2 ring-indigo-400/60 shadow-[0_0_24px_rgba(99,102,241,0.35)]"
+                      : isDimmed
+                      ? "opacity-50"
+                      : undefined
+                  }
+                />
+              </BlurFade>
+            );
+          })}
         </div>
       </section>
 
@@ -263,7 +288,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <ExpandableProjectGrid projects={DATA.projects as any} />
+            <ExpandableProjectGrid projects={DATA.projects as any} selectedRole={selectedRole} />
           </BlurFade>
         </div>
       </section>
@@ -318,8 +343,16 @@ function SkillsSection() {
   const categorized = (DATA as any).categorizedSkills as CategoriesMap | undefined;
 
   // —— 角色画像分支 —— //
-  // Default to the curated systems/kernel view instead of the ~170-badge "All" wall.
-  const [selectedRole, setSelectedRole] = useState<"all" | string>("SystemsKernelEngineer");
+  // Default to the curated systems/kernel view instead of the ~170-badge "All" wall,
+  // but sync to the hero's role selection once the visitor picks one.
+  const { selectedRole: contextRole } = useRoleHighlight();
+  const [selectedRole, setSelectedRole] = useState<"all" | string>(
+    contextRole ?? "SystemsKernelEngineer"
+  );
+
+  useEffect(() => {
+    if (contextRole) setSelectedRole(contextRole);
+  }, [contextRole]);
   const roleEntries = useMemo<[string, { label: string; skills: string[] }][]>(
     () => (roles ? Object.entries(roles) : []),
     [roles]
